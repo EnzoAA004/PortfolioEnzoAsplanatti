@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfolio de Enzo Asplanatti, estudiante avanzado de Ingeniería Informática orientado a Backend y Full Stack. Java, Spring Boot, Python, FastAPI, TypeScript, Next.js, microservicios y arquitecturas event-driven."
+      content="Portfolio de Enzo Asplanatti, estudiante avanzado de Ingeniería Informática orientado a Backend y Full Stack. Java, Spring Boot, Kafka, Python, FastAPI, TypeScript, React y arquitecturas de microservicios."
     />
     <meta name="theme-color" content="#11110f" />
     <title>Enzo Asplanatti | Backend & Full Stack</title>
@@ -28,9 +28,7 @@
           <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
 
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar idioma">
-          EN
-        </button>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button>
       </div>
     </header>
 
@@ -38,25 +36,25 @@
       <section class="hero" id="top">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow" data-es="BACKEND · FULL STACK · SOFTWARE ENGINEERING" data-en="BACKEND · FULL STACK · SOFTWARE ENGINEERING">
-              BACKEND · FULL STACK · SOFTWARE ENGINEERING
-            </p>
-
+            <p class="eyebrow">BACKEND · FULL STACK · SOFTWARE ENGINEERING</p>
             <h1>
               <span data-es="Construyo software con foco en" data-en="I build software focused on">Construyo software con foco en</span>
               <strong data-es="arquitectura, lógica y producto." data-en="architecture, logic and product.">arquitectura, lógica y producto.</strong>
             </h1>
-
-            <p class="hero-lead" data-es="Estudiante avanzado de Ingeniería Informática en UADE, orientado a Backend y Full Stack. Desarrollo APIs, sistemas distribuidos, productos web y soluciones con IA usando Java/Spring Boot, Python/FastAPI y TypeScript/React." data-en="Advanced Computer Engineering student at UADE focused on Backend and Full Stack development. I build APIs, distributed systems, web products and AI-assisted solutions using Java/Spring Boot, Python/FastAPI and TypeScript/React.">
-              Estudiante avanzado de Ingeniería Informática en UADE, orientado a Backend y Full Stack. Desarrollo APIs, sistemas distribuidos, productos web y soluciones con IA usando Java/Spring Boot, Python/FastAPI y TypeScript/React.
+            <p
+              class="hero-lead"
+              data-es="Estudiante avanzado de Ingeniería Informática en UADE, orientado a Backend y Full Stack. Mi experiencia práctica incluye APIs REST, microservicios, arquitecturas event-driven, productos web/mobile, seguridad y soluciones con IA y datos."
+              data-en="Advanced Computer Engineering student at UADE focused on Backend and Full Stack development. My hands-on work includes REST APIs, microservices, event-driven architectures, web/mobile products, security and AI/data solutions."
+            >
+              Estudiante avanzado de Ingeniería Informática en UADE, orientado a Backend y Full Stack. Mi experiencia práctica incluye APIs REST, microservicios, arquitecturas event-driven, productos web/mobile, seguridad y soluciones con IA y datos.
             </p>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#projects" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
-              <a class="button button-secondary" href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer" data-es="GitHub" data-en="GitHub">GitHub</a>
+              <a class="button button-secondary" href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer">GitHub</a>
             </div>
 
-            <div class="availability" aria-label="Disponibilidad profesional">
+            <div class="availability">
               <span class="availability-dot" aria-hidden="true"></span>
               <span data-es="Abierto a oportunidades Backend / Full Stack" data-en="Open to Backend / Full Stack opportunities">Abierto a oportunidades Backend / Full Stack</span>
             </div>
@@ -72,25 +70,25 @@
               <div>
                 <h2>Enzo Andrea Asplanatti</h2>
                 <p data-es="Ingeniería Informática · UADE" data-en="Computer Engineering · UADE">Ingeniería Informática · UADE</p>
-                <p data-es="Buenos Aires, Argentina" data-en="Buenos Aires, Argentina">Buenos Aires, Argentina</p>
+                <p>Buenos Aires, Argentina</p>
               </div>
             </div>
             <div class="metric-grid">
               <div>
-                <strong>2026</strong>
-                <span data-es="Graduación estimada" data-en="Expected graduation">Graduación estimada</span>
+                <strong>7</strong>
+                <span data-es="Casos seleccionados" data-en="Selected case studies">Casos seleccionados</span>
               </div>
               <div>
                 <strong>B2</strong>
                 <span data-es="Inglés · Cambridge FCE" data-en="English · Cambridge FCE">Inglés · Cambridge FCE</span>
               </div>
               <div>
-                <strong>4</strong>
-                <span data-es="Casos destacados" data-en="Featured case studies">Casos destacados</span>
+                <strong>Java</strong>
+                <span data-es="Backend principal" data-en="Primary backend stack">Backend principal</span>
               </div>
               <div>
-                <strong>3</strong>
-                <span data-es="Ecosistemas full stack" data-en="Full-stack ecosystems">Ecosistemas full stack</span>
+                <strong>Kafka</strong>
+                <span data-es="Sistemas event-driven" data-en="Event-driven systems">Sistemas event-driven</span>
               </div>
             </div>
           </aside>
@@ -104,23 +102,30 @@
               <p class="section-number">02</p>
               <h2 data-es="Proyectos seleccionados" data-en="Selected projects">Proyectos seleccionados</h2>
             </div>
-            <p data-es="No es una lista de repositorios. Son los proyectos que mejor muestran decisiones de arquitectura, lógica de backend, integración y calidad de ingeniería." data-en="This is not a repository dump. These are the projects that best demonstrate architecture decisions, backend logic, integration and engineering quality.">
-              No es una lista de repositorios. Son los proyectos que mejor muestran decisiones de arquitectura, lógica de backend, integración y calidad de ingeniería.
+            <p
+              data-es="Los casos están elegidos para mostrar cómo resuelvo backend, integración y arquitectura. En proyectos colaborativos indico el contexto del equipo; cuando el código fuente no es público, muestro el diseño técnico sin exponer repositorios privados."
+              data-en="These cases are selected to show how I approach backend, integration and architecture. For collaborative work I make the team context explicit; when source code is private, I present the technical design without exposing private repositories."
+            >
+              Los casos están elegidos para mostrar cómo resuelvo backend, integración y arquitectura. En proyectos colaborativos indico el contexto del equipo; cuando el código fuente no es público, muestro el diseño técnico sin exponer repositorios privados.
             </p>
           </div>
 
           <div class="project-list">
+            <!-- SAXO -->
             <article class="project-card project-featured reveal">
               <div class="project-meta">
                 <span>01</span>
-                <span data-es="PROYECTO PRINCIPAL · EN DESARROLLO" data-en="FLAGSHIP PROJECT · IN DEVELOPMENT">PROYECTO PRINCIPAL · EN DESARROLLO</span>
+                <span data-es="PRODUCTO FULL STACK · EN DESARROLLO" data-en="FULL-STACK PRODUCT · IN DEVELOPMENT">PRODUCTO FULL STACK · EN DESARROLLO</span>
               </div>
               <div class="project-layout">
                 <div class="project-intro">
                   <p class="project-kicker">InstrumentalSW / Saxo</p>
                   <h3 data-es="Transcripción musical asistida por IA para saxofón" data-en="AI-assisted music transcription for saxophone">Transcripción musical asistida por IA para saxofón</h3>
-                  <p data-es="Producto full stack que conecta una interfaz Next.js, una API de producto en Spring Boot y un servicio de IA en FastAPI. El sistema modela carga de audio, revisión de notas, revisiones inmutables y artefactos musicales verificables." data-en="A full-stack product connecting a Next.js interface, a Spring Boot product API and a FastAPI AI service. The system models audio upload, note review, immutable revisions and verifiable music artifacts.">
-                    Producto full stack que conecta una interfaz Next.js, una API de producto en Spring Boot y un servicio de IA en FastAPI. El sistema modela carga de audio, revisión de notas, revisiones inmutables y artefactos musicales verificables.
+                  <p
+                    data-es="Aplicación en desarrollo para convertir audio de saxofón en una representación musical revisable. Integra una interfaz Next.js, una API de producto Spring Boot y un módulo de IA en FastAPI con límites de responsabilidad explícitos."
+                    data-en="An application in development that turns saxophone audio into a reviewable musical representation. It integrates a Next.js UI, a Spring Boot product API and a FastAPI AI module with explicit responsibility boundaries."
+                  >
+                    Aplicación en desarrollo para convertir audio de saxofón en una representación musical revisable. Integra una interfaz Next.js, una API de producto Spring Boot y un módulo de IA en FastAPI con límites de responsabilidad explícitos.
                   </p>
                   <div class="tech-row">
                     <span>Next.js</span><span>TypeScript</span><span>Java 21</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
@@ -129,13 +134,15 @@
                 <div class="project-details">
                   <div class="detail-block">
                     <span class="detail-label" data-es="Arquitectura" data-en="Architecture">Arquitectura</span>
-                    <code>Browser → Next.js → Spring Boot → FastAPI</code>
+                    <div class="architecture-line" aria-label="Next.js a Spring Boot a FastAPI">
+                      <span>Next.js</span><b>→</b><span>Spring Boot</span><b>→</b><span>FastAPI</span>
+                    </div>
                   </div>
                   <ul class="project-points">
-                    <li data-es="Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%." data-en="Iterative TDD development with versioned contracts and ≥ 90% coverage quality gates.">Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%.</li>
-                    <li data-es="Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades entre capas." data-en="Immutable revisions, concurrency control and strict responsibility boundaries between layers.">Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades entre capas.</li>
-                    <li data-es="Pipeline musical con MIDI, MusicXML y SVG, validación de integridad por SHA-256 y descargas seguras." data-en="Music pipeline with MIDI, MusicXML and SVG, SHA-256 integrity validation and safe downloads.">Pipeline musical con MIDI, MusicXML y SVG, validación de integridad por SHA-256 y descargas seguras.</li>
-                    <li data-es="Frontend accesible con edición, reproducción sincronizada y verificación local de audio." data-en="Accessible frontend with editing, synchronized playback and local audio verification.">Frontend accesible con edición, reproducción sincronizada y verificación local de audio.</li>
+                    <li data-es="Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%." data-en="Iterative TDD development with versioned contracts and ≥90% coverage quality gates.">Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%.</li>
+                    <li data-es="Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades." data-en="Immutable revisions, concurrency control and strict responsibility boundaries.">Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades.</li>
+                    <li data-es="MIDI, MusicXML y SVG con validación de integridad mediante SHA-256." data-en="MIDI, MusicXML and SVG artifacts with SHA-256 integrity validation.">MIDI, MusicXML y SVG con validación de integridad mediante SHA-256.</li>
+                    <li data-es="Editor accesible, playback sincronizado y verificación local del audio original." data-en="Accessible editor, synchronized playback and local verification of the original audio.">Editor accesible, playback sincronizado y verificación local del audio original.</li>
                   </ul>
                   <div class="project-links">
                     <a href="https://github.com/EnzoAA004/InstrumentalSW_AIModule" target="_blank" rel="noreferrer">AI Module</a>
@@ -146,58 +153,111 @@
               </div>
             </article>
 
+            <!-- COMPUMUNDO -->
             <article class="project-card reveal">
               <div class="project-meta">
                 <span>02</span>
-                <span data-es="SISTEMAS DISTRIBUIDOS" data-en="DISTRIBUTED SYSTEMS">SISTEMAS DISTRIBUIDOS</span>
+                <span data-es="MICROSERVICIOS · EVENT-DRIVEN · 2025" data-en="MICROSERVICES · EVENT-DRIVEN · 2025">MICROSERVICIOS · EVENT-DRIVEN · 2025</span>
               </div>
               <div class="project-layout">
                 <div class="project-intro">
-                  <p class="project-kicker" data-es="Ecosistema de Microservicios" data-en="Microservices Ecosystem">Ecosistema de Microservicios</p>
-                  <h3 data-es="Arquitectura distribuida con mensajería, observabilidad y seguridad" data-en="Distributed architecture with messaging, observability and security">Arquitectura distribuida con mensajería, observabilidad y seguridad</h3>
-                  <p data-es="Ecosistema multi-módulo en Spring Boot diseñado para resolver configuración, discovery, autenticación, gateway, inventario, órdenes y notificaciones mediante servicios desacoplados." data-en="A multi-module Spring Boot ecosystem designed around configuration, service discovery, authentication, gateway, inventory, orders and notifications through decoupled services.">
-                    Ecosistema multi-módulo en Spring Boot diseñado para resolver configuración, discovery, autenticación, gateway, inventario, órdenes y notificaciones mediante servicios desacoplados.
+                  <p class="project-kicker">CompumundoHiperMegaRed / UniCamart</p>
+                  <h3 data-es="E-commerce tecnológico distribuido por dominios" data-en="Technology e-commerce split across domain services">E-commerce tecnológico distribuido por dominios</h3>
+                  <p
+                    data-es="Proyecto universitario de gran escala con aplicaciones separadas para venta web, CRM/inventario y analítica. La comunicación de eventos se centralizó mediante Middleware + Core para desacoplar a los servicios del broker."
+                    data-en="Large university project with separate applications for web sales, CRM/inventory and analytics. Event communication was centralized through Middleware + Core so domain services remained decoupled from the broker."
+                  >
+                    Proyecto universitario de gran escala con aplicaciones separadas para venta web, CRM/inventario y analítica. La comunicación de eventos se centralizó mediante Middleware + Core para desacoplar a los servicios del broker.
                   </p>
                   <div class="tech-row">
-                    <span>Java 21</span><span>Spring Cloud</span><span>Kafka</span><span>RabbitMQ</span><span>Docker</span><span>Zipkin</span><span>ELK</span>
+                    <span>Java 21</span><span>Spring Boot</span><span>MySQL</span><span>React</span><span>TypeScript</span><span>Kafka</span><span>Keycloak</span><span>Docker</span>
                   </div>
                 </div>
                 <div class="project-details">
-                  <ul class="project-points">
-                    <li data-es="Config Server, Eureka Service Discovery y API Gateway como infraestructura de plataforma." data-en="Config Server, Eureka Service Discovery and API Gateway as platform infrastructure.">Config Server, Eureka Service Discovery y API Gateway como infraestructura de plataforma.</li>
-                    <li data-es="JWT/OAuth2 Resource Server para autenticación y protección de recursos." data-en="JWT/OAuth2 Resource Server for authentication and protected resources.">JWT/OAuth2 Resource Server para autenticación y protección de recursos.</li>
-                    <li data-es="Mensajería asíncrona intercambiable entre RabbitMQ y Kafka." data-en="Asynchronous messaging with interchangeable RabbitMQ and Kafka profiles.">Mensajería asíncrona intercambiable entre RabbitMQ y Kafka.</li>
-                    <li data-es="Tracing distribuido con Zipkin y centralización de logs con Elasticsearch, Logstash y Kibana." data-en="Distributed tracing with Zipkin and centralized logging with Elasticsearch, Logstash and Kibana.">Tracing distribuido con Zipkin y centralización de logs con Elasticsearch, Logstash y Kibana.</li>
-                  </ul>
-                  <div class="project-links">
-                    <a href="https://github.com/EnzoAA004/arquitecturaDeAplicacionesGrupo11" target="_blank" rel="noreferrer" data-es="Ver repositorio" data-en="View repository">Ver repositorio</a>
+                  <div class="system-map" aria-label="Arquitectura conceptual de CompumundoHiperMegaRed">
+                    <div class="system-map-row">
+                      <span class="system-node">Web / Ventas</span>
+                      <span class="system-node">CRM / Inventario</span>
+                      <span class="system-node">Analytics</span>
+                    </div>
+                    <div class="system-flow">↓ eventos / comandos ↓</div>
+                    <div class="system-map-row center">
+                      <span class="system-node accent-node">Middleware</span><b>→</b><span class="system-node accent-node">Core</span><b>→</b><span class="system-node broker-node">Kafka</span>
+                    </div>
+                    <p data-es="El Core concentra el acceso al broker; los módulos de negocio no dependen directamente de Kafka." data-en="Core concentrates broker access; business modules do not depend directly on Kafka.">El Core concentra el acceso al broker; los módulos de negocio no dependen directamente de Kafka.</p>
                   </div>
+                  <ul class="project-points">
+                    <li data-es="Dominios separados: ventas, inventario/catálogo, analítica, middleware y core de mensajería." data-en="Separated domains: sales, inventory/catalog, analytics, middleware and messaging core.">Dominios separados: ventas, inventario/catálogo, analítica, middleware y core de mensajería.</li>
+                    <li data-es="Eventos con identificador UUID, timestamp, módulo de origen y payload." data-en="Events with UUID identifier, timestamp, origin module and payload.">Eventos con identificador UUID, timestamp, módulo de origen y payload.</li>
+                    <li data-es="Autenticación/validación con Keycloak y tokens entre componentes." data-en="Authentication and validation through Keycloak and tokens between components.">Autenticación/validación con Keycloak y tokens entre componentes.</li>
+                    <li data-es="Participación en backend, frontend, bases de datos e integración entre servicios." data-en="Worked across backend, frontend, databases and service integration.">Participación en backend, frontend, bases de datos e integración entre servicios.</li>
+                  </ul>
+                  <div class="project-note" data-es="Proyecto colaborativo. La arquitectura se documenta aquí sin depender de repositorios privados del equipo." data-en="Collaborative project. The architecture is documented here without relying on private team repositories.">Proyecto colaborativo. La arquitectura se documenta aquí sin depender de repositorios privados del equipo.</div>
                 </div>
               </div>
             </article>
 
-            <article class="project-card reveal">
+            <!-- FLORERIA -->
+            <article class="project-card project-backend reveal">
               <div class="project-meta">
                 <span>03</span>
-                <span data-es="FULL STACK · REAL TIME" data-en="FULL STACK · REAL TIME">FULL STACK · REAL TIME</span>
+                <span data-es="BACKEND APLICADO · MICROSERVICIOS" data-en="APPLIED BACKEND · MICROSERVICES">BACKEND APLICADO · MICROSERVICIOS</span>
+              </div>
+              <div class="project-layout">
+                <div class="project-intro">
+                  <p class="project-kicker">Florería Carlitos</p>
+                  <h3 data-es="Ecosistema backend para e-commerce y operación interna" data-en="Backend ecosystem for e-commerce and store operations">Ecosistema backend para e-commerce y operación interna</h3>
+                  <p
+                    data-es="Solución aplicada para separar la venta online de la operatoria interna de una florería. El trabajo principal estuvo en backend: productos, CRM, e-commerce, ventas locales, envíos, analítica y mensajería entre servicios."
+                    data-en="Applied solution separating online sales from a florist's internal operations. My main work was backend-oriented: products, CRM, e-commerce, local sales, shipping, analytics and service-to-service messaging."
+                  >
+                    Solución aplicada para separar la venta online de la operatoria interna de una florería. El trabajo principal estuvo en backend: productos, CRM, e-commerce, ventas locales, envíos, analítica y mensajería entre servicios.
+                  </p>
+                  <div class="tech-row">
+                    <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>MySQL</span><span>Spring Security</span><span>JWT / Keycloak</span><span>Mercado Pago</span><span>VPS</span>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-grid" aria-label="Servicios del ecosistema de Florería Carlitos">
+                    <span>Website</span><span>CRM</span><span>E-commerce</span><span>Local</span><span>Envíos</span><span>Analytics</span><span class="service-core">Core / Eventos</span>
+                  </div>
+                  <ul class="project-points">
+                    <li data-es="Servicios independientes para distintos contextos de negocio y persistencia relacional." data-en="Independent services for different business contexts with relational persistence.">Servicios independientes para distintos contextos de negocio y persistencia relacional.</li>
+                    <li data-es="Mensajería event-driven con Kafka para desacoplar operaciones y analítica." data-en="Kafka-based event-driven messaging to decouple operations and analytics.">Mensajería event-driven con Kafka para desacoplar operaciones y analítica.</li>
+                    <li data-es="Seguridad con Spring Security, JWT/Keycloak y APIs REST documentadas." data-en="Security with Spring Security, JWT/Keycloak and documented REST APIs.">Seguridad con Spring Security, JWT/Keycloak y APIs REST documentadas.</li>
+                    <li data-es="Integración de pagos y despliegue pensado para infraestructura de costo acotado." data-en="Payment integration and deployment designed around cost-conscious infrastructure.">Integración de pagos y despliegue pensado para infraestructura de costo acotado.</li>
+                  </ul>
+                  <div class="project-note" data-es="Código fuente principal privado. El portfolio muestra el alcance técnico sin exponer repositorios ni configuración sensible." data-en="Main source repositories are private. This portfolio shows the technical scope without exposing private code or sensitive configuration.">Código fuente principal privado. El portfolio muestra el alcance técnico sin exponer repositorios ni configuración sensible.</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SUBASTAR -->
+            <article class="project-card reveal">
+              <div class="project-meta">
+                <span>04</span>
+                <span data-es="FULL STACK · MOBILE · REAL TIME" data-en="FULL STACK · MOBILE · REAL TIME">FULL STACK · MOBILE · REAL TIME</span>
               </div>
               <div class="project-layout">
                 <div class="project-intro">
                   <p class="project-kicker">SubastAR</p>
-                  <h3 data-es="Marketplace de subastas con experiencia mobile y eventos en tiempo real" data-en="Auction marketplace with mobile experience and real-time events">Marketplace de subastas con experiencia mobile y eventos en tiempo real</h3>
-                  <p data-es="Aplicación de subastas desarrollada como producto backend + mobile, con dominio de usuarios, publicaciones, imágenes, autenticación y comunicación en tiempo real." data-en="An auction product built across backend and mobile layers, covering users, listings, images, authentication and real-time communication.">
-                    Aplicación de subastas desarrollada como producto backend + mobile, con dominio de usuarios, publicaciones, imágenes, autenticación y comunicación en tiempo real.
+                  <h3 data-es="Marketplace de subastas con actualización en tiempo real" data-en="Auction marketplace with real-time updates">Marketplace de subastas con actualización en tiempo real</h3>
+                  <p
+                    data-es="Producto backend + mobile para publicaciones y subastas, con autenticación, persistencia relacional, imágenes y comunicación en tiempo real. Permite mostrar integración completa desde API hasta cliente móvil."
+                    data-en="Backend + mobile product for listings and auctions, with authentication, relational persistence, images and real-time communication. It demonstrates full integration from API to mobile client."
+                  >
+                    Producto backend + mobile para publicaciones y subastas, con autenticación, persistencia relacional, imágenes y comunicación en tiempo real. Permite mostrar integración completa desde API hasta cliente móvil.
                   </p>
                   <div class="tech-row">
-                    <span>Spring Boot</span><span>Spring Security</span><span>WebSocket</span><span>JWT</span><span>SQL Server</span><span>React Native</span><span>Expo</span>
+                    <span>Java 21</span><span>Spring Boot</span><span>Spring Security</span><span>WebSocket</span><span>JWT</span><span>SQL Server</span><span>React Native</span><span>Expo</span>
                   </div>
                 </div>
                 <div class="project-details">
                   <ul class="project-points">
-                    <li data-es="Backend REST en Java 21 con JPA, seguridad JWT y validación de datos." data-en="Java 21 REST backend with JPA, JWT security and data validation.">Backend REST en Java 21 con JPA, seguridad JWT y validación de datos.</li>
-                    <li data-es="Soporte WebSocket para interacciones que requieren actualización en tiempo real." data-en="WebSocket support for interactions requiring real-time updates.">Soporte WebSocket para interacciones que requieren actualización en tiempo real.</li>
-                    <li data-es="Persistencia en SQL Server, migraciones con Flyway e integración de imágenes con Cloudinary." data-en="SQL Server persistence, Flyway migrations and Cloudinary image integration.">Persistencia en SQL Server, migraciones con Flyway e integración de imágenes con Cloudinary.</li>
-                    <li data-es="Cliente mobile con React Native, Expo Router y TypeScript." data-en="Mobile client with React Native, Expo Router and TypeScript.">Cliente mobile con React Native, Expo Router y TypeScript.</li>
+                    <li data-es="Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas." data-en="REST backend with JPA, validation, JWT security and user/listing/auction domains.">Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas.</li>
+                    <li data-es="WebSocket para interacciones que requieren actualización en tiempo real." data-en="WebSocket for interactions that require real-time updates.">WebSocket para interacciones que requieren actualización en tiempo real.</li>
+                    <li data-es="SQL Server, migraciones Flyway e integración de imágenes con Cloudinary." data-en="SQL Server, Flyway migrations and Cloudinary image integration.">SQL Server, migraciones Flyway e integración de imágenes con Cloudinary.</li>
+                    <li data-es="Cliente React Native / Expo Router con TypeScript." data-en="React Native / Expo Router client with TypeScript.">Cliente React Native / Expo Router con TypeScript.</li>
                   </ul>
                   <div class="project-links">
                     <a href="https://github.com/EnzoAA004/BackEnd-SubastAR-EnzoVersion3eraEntrega" target="_blank" rel="noreferrer">Backend</a>
@@ -207,31 +267,126 @@
               </div>
             </article>
 
+            <!-- MEDICAL APPOINTMENTS -->
             <article class="project-card reveal">
               <div class="project-meta">
-                <span>04</span>
-                <span data-es="DATA SCIENCE" data-en="DATA SCIENCE">DATA SCIENCE</span>
+                <span>05</span>
+                <span data-es="MOBILE · REST API · COLABORATIVO" data-en="MOBILE · REST API · COLLABORATIVE">MOBILE · REST API · COLABORATIVO</span>
               </div>
               <div class="project-layout">
                 <div class="project-intro">
-                  <p class="project-kicker" data-es="Análisis socioeconómico de Argentina" data-en="Socioeconomic Analysis of Argentina">Análisis socioeconómico de Argentina</p>
-                  <h3 data-es="Exploración y modelado de indicadores provinciales" data-en="Exploration and modeling of provincial indicators">Exploración y modelado de indicadores provinciales</h3>
-                  <p data-es="Aplicación interactiva que integra fuentes socioeconómicas de Argentina para comparar provincias, estudiar correlaciones y aplicar modelos de aprendizaje automático." data-en="Interactive application integrating Argentine socioeconomic sources to compare provinces, study correlations and apply machine-learning models.">
-                    Aplicación interactiva que integra fuentes socioeconómicas de Argentina para comparar provincias, estudiar correlaciones y aplicar modelos de aprendizaje automático.
+                  <p class="project-kicker">ViMa · Turnos médicos</p>
+                  <h3 data-es="Aplicación mobile para gestión de turnos y profesionales" data-en="Mobile app for appointment and healthcare professional management">Aplicación mobile para gestión de turnos y profesionales</h3>
+                  <p
+                    data-es="Aplicación móvil desarrollada en equipo con backend Spring Boot y cliente React Native/Expo. Incluye reserva y gestión de turnos, profesionales, estados, notas médicas y notificaciones."
+                    data-en="Team-built mobile application with a Spring Boot backend and React Native/Expo client. It includes appointment booking and management, professionals, status flows, medical notes and notifications."
+                  >
+                    Aplicación móvil desarrollada en equipo con backend Spring Boot y cliente React Native/Expo. Incluye reserva y gestión de turnos, profesionales, estados, notas médicas y notificaciones.
                   </p>
                   <div class="tech-row">
-                    <span>Python</span><span>Pandas</span><span>scikit-learn</span><span>KMeans</span><span>Linear Regression</span><span>Streamlit</span>
+                    <span>Java 17</span><span>Spring Boot</span><span>MySQL</span><span>JWT</span><span>React Native</span><span>Expo</span><span>Redux Toolkit</span><span>REST</span>
                   </div>
                 </div>
                 <div class="project-details">
+                  <div class="mobile-mock" aria-label="Flujo conceptual de la aplicación de turnos médicos">
+                    <div><small data-es="Paciente" data-en="Patient">Paciente</small><strong data-es="Reservar turno" data-en="Book appointment">Reservar turno</strong></div>
+                    <span>→</span>
+                    <div><small>API</small><strong>Spring Boot</strong></div>
+                    <span>→</span>
+                    <div><small data-es="Profesional" data-en="Professional">Profesional</small><strong data-es="Gestionar agenda" data-en="Manage schedule">Gestionar agenda</strong></div>
+                  </div>
                   <ul class="project-points">
-                    <li data-es="Carga, limpieza y combinación de múltiples datasets de educación, conectividad, pobreza y otros indicadores." data-en="Loading, cleaning and combining multiple datasets for education, connectivity, poverty and other indicators.">Carga, limpieza y combinación de múltiples datasets de educación, conectividad, pobreza y otros indicadores.</li>
-                    <li data-es="Análisis exploratorio, correlaciones y visualizaciones interactivas por provincia." data-en="Exploratory analysis, correlations and interactive province-level visualizations.">Análisis exploratorio, correlaciones y visualizaciones interactivas por provincia.</li>
-                    <li data-es="Clustering con KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado." data-en="KMeans clustering, linear regression and decision trees as modeling approaches.">Clustering con KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado.</li>
-                    <li data-es="Interfaz Streamlit para convertir el análisis en una herramienta navegable." data-en="Streamlit interface turning the analysis into an explorable tool.">Interfaz Streamlit para convertir el análisis en una herramienta navegable.</li>
+                    <li data-es="API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores." data-en="REST API with entities, DTOs, repositories, services and controllers for appointments and doctors.">API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores.</li>
+                    <li data-es="Seguridad/autenticación y separación clara entre backend y aplicación mobile." data-en="Authentication/security with clear separation between backend and mobile application.">Seguridad/autenticación y separación clara entre backend y aplicación mobile.</li>
+                    <li data-es="Estado global con Redux Toolkit y navegación de flujos de reserva, detalle y profesionales." data-en="Global state with Redux Toolkit and navigation across booking, detail and professional flows.">Estado global con Redux Toolkit y navegación de flujos de reserva, detalle y profesionales.</li>
+                    <li data-es="Notificaciones y experiencia mobile desarrolladas como parte de un trabajo colaborativo." data-en="Notifications and mobile experience developed as part of collaborative work.">Notificaciones y experiencia mobile desarrolladas como parte de un trabajo colaborativo.</li>
                   </ul>
                   <div class="project-links">
-                    <a href="https://github.com/EnzoAA004/CienciaDeDatosTPO-Grupo03" target="_blank" rel="noreferrer" data-es="Ver repositorio" data-en="View repository">Ver repositorio</a>
+                    <a href="https://github.com/FranEFabrello/Grupo-4" target="_blank" rel="noreferrer" data-es="Frontend del equipo" data-en="Team frontend">Frontend del equipo</a>
+                    <a href="https://github.com/EnzoAA004/DesarrolloAPSI" target="_blank" rel="noreferrer" data-es="Prototipo backend" data-en="Backend prototype">Prototipo backend</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- MUSIC STORE -->
+            <article class="project-card reveal">
+              <div class="project-meta">
+                <span>06</span>
+                <span data-es="BACKEND REST · E-COMMERCE" data-en="REST BACKEND · E-COMMERCE">BACKEND REST · E-COMMERCE</span>
+              </div>
+              <div class="project-layout">
+                <div class="project-intro">
+                  <p class="project-kicker" data-es="Tienda de instrumentos musicales" data-en="Musical instruments store">Tienda de instrumentos musicales</p>
+                  <h3 data-es="API de e-commerce con autenticación y modelo relacional" data-en="E-commerce API with authentication and relational modeling">API de e-commerce con autenticación y modelo relacional</h3>
+                  <p
+                    data-es="Proyecto académico enfocado en construir una API completa para productos, usuarios, compras y autenticación. Fue uno de los proyectos que consolidó mi base en Java/Spring y diseño de endpoints REST."
+                    data-en="Academic project focused on building a complete API for products, users, purchases and authentication. It helped consolidate my Java/Spring foundation and REST endpoint design."
+                  >
+                    Proyecto académico enfocado en construir una API completa para productos, usuarios, compras y autenticación. Fue uno de los proyectos que consolidó mi base en Java/Spring y diseño de endpoints REST.
+                  </p>
+                  <div class="tech-row">
+                    <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span><span>JPA/Hibernate</span><span>React</span><span>Postman</span>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="api-mock" aria-label="Recursos conceptuales de la API de tienda musical">
+                    <span><b>GET</b> /productos</span>
+                    <span><b>POST</b> /auth</span>
+                    <span><b>POST</b> /compras</span>
+                    <span><b>GET</b> /usuarios/me</span>
+                  </div>
+                  <ul class="project-points">
+                    <li data-es="Diseño de endpoints REST y separación Controller → Service → Repository." data-en="REST endpoint design with Controller → Service → Repository separation.">Diseño de endpoints REST y separación Controller → Service → Repository.</li>
+                    <li data-es="Autenticación JWT y protección de operaciones según el usuario." data-en="JWT authentication and protected operations according to user context.">Autenticación JWT y protección de operaciones según el usuario.</li>
+                    <li data-es="Persistencia relacional para catálogo, usuarios y compras." data-en="Relational persistence for catalog, users and purchases.">Persistencia relacional para catálogo, usuarios y compras.</li>
+                    <li data-es="Pruebas manuales y validación del contrato HTTP con Insomnia/Postman." data-en="Manual testing and HTTP contract validation with Insomnia/Postman.">Pruebas manuales y validación del contrato HTTP con Insomnia/Postman.</li>
+                  </ul>
+                  <div class="project-note" data-es="Caso académico documentado en mi CV; el portfolio prioriza el trabajo de API por sobre un frontend histórico." data-en="Academic case documented in my resume; this portfolio emphasizes the API work rather than an older frontend.">Caso académico documentado en mi CV; el portfolio prioriza el trabajo de API por sobre un frontend histórico.</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- DATA SCIENCE -->
+            <article class="project-card reveal">
+              <div class="project-meta">
+                <span>07</span>
+                <span>DATA SCIENCE · STREAMLIT</span>
+              </div>
+              <div class="project-layout">
+                <div class="project-intro">
+                  <p class="project-kicker" data-es="Análisis socioeconómico de Argentina" data-en="Socioeconomic analysis of Argentina">Análisis socioeconómico de Argentina</p>
+                  <h3 data-es="Integración, exploración y modelado de indicadores provinciales" data-en="Integration, exploration and modeling of provincial indicators">Integración, exploración y modelado de indicadores provinciales</h3>
+                  <p
+                    data-es="Trabajo de Data Science que combina fuentes de educación, internet, pobreza y otros indicadores para analizar provincias argentinas. El portfolio usa una visualización conceptual más limpia para explicar el trabajo realizado."
+                    data-en="Data Science project combining education, internet, poverty and other sources to analyze Argentine provinces. The portfolio uses a cleaner conceptual visualization to explain the original work."
+                  >
+                    Trabajo de Data Science que combina fuentes de educación, internet, pobreza y otros indicadores para analizar provincias argentinas. El portfolio usa una visualización conceptual más limpia para explicar el trabajo realizado.
+                  </p>
+                  <div class="tech-row">
+                    <span>Python</span><span>Pandas</span><span>scikit-learn</span><span>KMeans</span><span>Linear Regression</span><span>Decision Tree</span><span>Streamlit</span>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="data-dashboard" aria-label="Visualización conceptual del análisis socioeconómico">
+                    <div class="dashboard-top">
+                      <div><small data-es="Fuentes" data-en="Sources">Fuentes</small><strong>CSV + XLS/XLSX</strong></div>
+                      <div><small data-es="Unidad" data-en="Unit">Unidad</small><strong data-es="Provincia" data-en="Province">Provincia</strong></div>
+                      <div><small data-es="Modelos" data-en="Models">Modelos</small><strong>3</strong></div>
+                    </div>
+                    <div class="chart-mock">
+                      <span style="--h: 38%"></span><span style="--h: 67%"></span><span style="--h: 48%"></span><span style="--h: 82%"></span><span style="--h: 58%"></span><span style="--h: 73%"></span><span style="--h: 44%"></span>
+                    </div>
+                    <div class="dashboard-legend"><i></i><span data-es="Visualización conceptual basada en los indicadores procesados por la app original." data-en="Conceptual visualization based on indicators processed by the original app.">Visualización conceptual basada en los indicadores procesados por la app original.</span></div>
+                  </div>
+                  <ul class="project-points">
+                    <li data-es="Carga, limpieza, normalización y combinación de múltiples fuentes heterogéneas." data-en="Loading, cleaning, normalization and merging of multiple heterogeneous sources.">Carga, limpieza, normalización y combinación de múltiples fuentes heterogéneas.</li>
+                    <li data-es="Análisis exploratorio, correlaciones y comparaciones interactivas por provincia." data-en="Exploratory analysis, correlations and interactive province-level comparisons.">Análisis exploratorio, correlaciones y comparaciones interactivas por provincia.</li>
+                    <li data-es="Clustering KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado." data-en="KMeans clustering, linear regression and decision tree modeling approaches.">Clustering KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado.</li>
+                    <li data-es="Interfaz Streamlit para convertir el notebook/análisis en una herramienta navegable." data-en="Streamlit interface turning the analysis into an explorable application.">Interfaz Streamlit para convertir el notebook/análisis en una herramienta navegable.</li>
+                  </ul>
+                  <div class="project-links">
+                    <a href="https://github.com/EnzoAA004/CienciaDeDatosTPO-Grupo03" target="_blank" rel="noreferrer" data-es="Ver código" data-en="View code">Ver código</a>
                   </div>
                 </div>
               </div>
@@ -248,8 +403,11 @@
           </div>
           <div class="about-content">
             <div class="about-statement reveal">
-              <p data-es="Me interesa entender qué problema resuelve un sistema antes de escribir código. A partir de ahí priorizo contratos claros, separación de responsabilidades, validaciones explícitas y decisiones que puedan defenderse técnicamente." data-en="I like to understand the problem a system solves before writing code. From there, I prioritize clear contracts, responsibility boundaries, explicit validation and technical decisions that can be explained and defended.">
-                Me interesa entender qué problema resuelve un sistema antes de escribir código. A partir de ahí priorizo contratos claros, separación de responsabilidades, validaciones explícitas y decisiones que puedan defenderse técnicamente.
+              <p
+                data-es="Me interesa entender qué problema resuelve un sistema antes de escribir código. Desde ahí priorizo contratos claros, separación de responsabilidades, seguridad, validaciones explícitas y decisiones que pueda defender técnicamente."
+                data-en="I like to understand the problem a system solves before writing code. From there I prioritize clear contracts, responsibility boundaries, security, explicit validation and technical decisions I can defend."
+              >
+                Me interesa entender qué problema resuelve un sistema antes de escribir código. Desde ahí priorizo contratos claros, separación de responsabilidades, seguridad, validaciones explícitas y decisiones que pueda defender técnicamente.
               </p>
             </div>
             <div class="principles-grid">
@@ -261,17 +419,17 @@
               <article class="principle reveal">
                 <span>02</span>
                 <h3 data-es="Arquitectura con intención" data-en="Intentional architecture">Arquitectura con intención</h3>
-                <p data-es="Uso microservicios, mensajería o capas adicionales cuando aportan una separación concreta, no por moda." data-en="I use microservices, messaging or extra layers when they provide a concrete boundary, not as decoration.">Uso microservicios, mensajería o capas adicionales cuando aportan una separación concreta, no por moda.</p>
+                <p data-es="Uso microservicios, eventos o capas adicionales cuando resuelven un límite concreto del sistema." data-en="I use microservices, events or additional layers when they solve a concrete system boundary.">Uso microservicios, eventos o capas adicionales cuando resuelven un límite concreto del sistema.</p>
               </article>
               <article class="principle reveal">
                 <span>03</span>
                 <h3 data-es="Calidad verificable" data-en="Verifiable quality">Calidad verificable</h3>
-                <p data-es="Tests, tipado, linting, contratos y CI son parte del desarrollo, especialmente en los proyectos más recientes." data-en="Tests, typing, linting, contracts and CI are part of development, especially in my most recent projects.">Tests, tipado, linting, contratos y CI son parte del desarrollo, especialmente en los proyectos más recientes.</p>
+                <p data-es="Tests, tipado, linting, contratos y CI forman parte del desarrollo, especialmente en mis proyectos más recientes." data-en="Tests, typing, linting, contracts and CI are part of development, especially in my most recent projects.">Tests, tipado, linting, contratos y CI forman parte del desarrollo, especialmente en mis proyectos más recientes.</p>
               </article>
               <article class="principle reveal">
                 <span>04</span>
                 <h3 data-es="Producto completo" data-en="Whole product">Producto completo</h3>
-                <p data-es="Puedo moverme entre backend, frontend y datos para integrar una solución de punta a punta." data-en="I can move across backend, frontend and data layers to integrate a solution end to end.">Puedo moverme entre backend, frontend y datos para integrar una solución de punta a punta.</p>
+                <p data-es="Puedo moverme entre backend, frontend, mobile y datos para integrar una solución de punta a punta." data-en="I can work across backend, frontend, mobile and data layers to integrate an end-to-end solution.">Puedo moverme entre backend, frontend, mobile y datos para integrar una solución de punta a punta.</p>
               </article>
             </div>
           </div>
@@ -288,36 +446,12 @@
           </div>
 
           <div class="stack-grid">
-            <article class="stack-card reveal">
-              <span class="stack-label">BACKEND</span>
-              <h3>Java / Spring</h3>
-              <p>Java 21, Spring Boot, Spring Security, Spring Data JPA, Spring Cloud, Maven, REST APIs, WebSocket, Flyway.</p>
-            </article>
-            <article class="stack-card reveal">
-              <span class="stack-label">PYTHON / AI</span>
-              <h3>Python / FastAPI</h3>
-              <p>FastAPI, pytest, mypy, Ruff, data pipelines, ML fundamentals, audio processing, scikit-learn.</p>
-            </article>
-            <article class="stack-card reveal">
-              <span class="stack-label">FRONTEND</span>
-              <h3>TypeScript / React</h3>
-              <p>TypeScript, React, Next.js, React Native, Expo Router, accessible UI, responsive interfaces.</p>
-            </article>
-            <article class="stack-card reveal">
-              <span class="stack-label">DATA</span>
-              <h3>SQL / Persistence</h3>
-              <p>PostgreSQL, MySQL, SQL Server, JPA/Hibernate, relational modeling, migrations.</p>
-            </article>
-            <article class="stack-card reveal">
-              <span class="stack-label">DISTRIBUTED</span>
-              <h3>Events / Platform</h3>
-              <p>Kafka, RabbitMQ, API Gateway, Eureka, Config Server, JWT/OAuth2, Keycloak concepts.</p>
-            </article>
-            <article class="stack-card reveal">
-              <span class="stack-label">DEV / QUALITY</span>
-              <h3>Engineering workflow</h3>
-              <p>Git, GitHub, Docker, CI, TDD, automated tests, coverage gates, linting, static typing, Postman/Insomnia.</p>
-            </article>
+            <article class="stack-card reveal"><span class="stack-label">BACKEND</span><h3>Java / Spring</h3><p>Java 17/21, Spring Boot, Spring Security, Spring Data JPA, Maven, REST APIs, WebSocket, Flyway.</p></article>
+            <article class="stack-card reveal"><span class="stack-label">PYTHON / AI</span><h3>Python / FastAPI</h3><p>FastAPI, pytest, mypy, Ruff, data pipelines, audio processing, Pandas y scikit-learn.</p></article>
+            <article class="stack-card reveal"><span class="stack-label">FRONTEND</span><h3>TypeScript / React</h3><p>TypeScript, React, Next.js, React Native, Expo, Redux Toolkit y diseño responsive.</p></article>
+            <article class="stack-card reveal"><span class="stack-label">DATA</span><h3>SQL / Persistence</h3><p>PostgreSQL, MySQL, SQL Server, JPA/Hibernate, modelado relacional y migraciones.</p></article>
+            <article class="stack-card reveal"><span class="stack-label">DISTRIBUTED</span><h3>Events / Security</h3><p>Kafka, RabbitMQ, Keycloak, JWT/OAuth2, API Gateway, Service Discovery y mensajería event-driven.</p></article>
+            <article class="stack-card reveal"><span class="stack-label">QUALITY / INFRA</span><h3>Engineering workflow</h3><p>Git, GitHub, Docker, CI, TDD, automated tests, coverage gates, linting, static typing, Postman/Insomnia.</p></article>
           </div>
         </div>
       </section>
@@ -327,27 +461,19 @@
           <div>
             <p class="section-number">05</p>
             <h2 data-es="Hablemos" data-en="Let's talk">Hablemos</h2>
-            <p data-es="Estoy buscando mi primera experiencia profesional en tecnología, especialmente en posiciones Backend, Full Stack o Software Engineering donde pueda seguir creciendo sobre proyectos reales." data-en="I'm looking for my first professional experience in technology, especially Backend, Full Stack or Software Engineering roles where I can keep growing through real projects.">
-              Estoy buscando mi primera experiencia profesional en tecnología, especialmente en posiciones Backend, Full Stack o Software Engineering donde pueda seguir creciendo sobre proyectos reales.
+            <p
+              data-es="Estoy buscando mi primera experiencia profesional en tecnología, especialmente en posiciones Backend, Full Stack o Software Engineering donde pueda aportar sobre sistemas reales y seguir creciendo."
+              data-en="I'm looking for my first professional experience in technology, especially Backend, Full Stack or Software Engineering roles where I can contribute to real systems and keep growing."
+            >
+              Estoy buscando mi primera experiencia profesional en tecnología, especialmente en posiciones Backend, Full Stack o Software Engineering donde pueda aportar sobre sistemas reales y seguir creciendo.
             </p>
           </div>
           <div class="contact-links">
-            <a href="mailto:enzoandreaasplanatti@gmail.com">
-              <span>Email</span>
-              <strong>enzoandreaasplanatti@gmail.com</strong>
-            </a>
-            <a href="tel:+5491125402106">
-              <span data-es="Teléfono" data-en="Phone">Teléfono</span>
-              <strong>+54 9 11 2540-2106</strong>
-            </a>
-            <a href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer">
-              <span>GitHub</span>
-              <strong>github.com/EnzoAA004</strong>
-            </a>
-            <a href="https://github.com/EnzoAA004/cv-enzo-asplanatti" target="_blank" rel="noreferrer">
-              <span data-es="Currículum" data-en="Resume">Currículum</span>
-              <strong data-es="Ver CV en GitHub" data-en="View resume on GitHub">Ver CV en GitHub</strong>
-            </a>
+            <a href="mailto:enzoandreaasplanatti@gmail.com"><span>Email</span><strong>enzoandreaasplanatti@gmail.com</strong></a>
+            <a href="tel:+5491125402106"><span data-es="Teléfono" data-en="Phone">Teléfono</span><strong>+54 9 11 2540-2106</strong></a>
+            <a href="https://www.linkedin.com/in/enzo-asplanatti" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/enzo-asplanatti</strong></a>
+            <a href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/EnzoAA004</strong></a>
+            <a href="https://github.com/EnzoAA004/cv-enzo-asplanatti" target="_blank" rel="noreferrer"><span data-es="Currículum" data-en="Resume">Currículum</span><strong data-es="Ver CV" data-en="View resume">Ver CV</strong></a>
           </div>
         </div>
       </section>
