@@ -104,10 +104,10 @@
               <h2 data-es="Proyectos seleccionados" data-en="Selected projects">Proyectos seleccionados</h2>
             </div>
             <p
-              data-es="Los casos están elegidos para mostrar cómo resuelvo backend, integración y arquitectura. En proyectos colaborativos indico el contexto del equipo; cuando el código fuente no es público, muestro el diseño técnico sin exponer repositorios privados."
-              data-en="These cases are selected to show how I approach backend, integration and architecture. For collaborative work I make the team context explicit; when source code is private, I present the technical design without exposing private repositories."
+              data-es="Además del contexto técnico, cada proyecto incluye un preview visual mockeado para mostrar la aplicación sin depender de datos reales ni de un entorno deployado."
+              data-en="Besides the technical context, each project includes a mocked visual preview so the application can be understood without relying on real data or a deployed environment."
             >
-              Los casos están elegidos para mostrar cómo resuelvo backend, integración y arquitectura. En proyectos colaborativos indico el contexto del equipo; cuando el código fuente no es público, muestro el diseño técnico sin exponer repositorios privados.
+              Además del contexto técnico, cada proyecto incluye un preview visual mockeado para mostrar la aplicación sin depender de datos reales ni de un entorno deployado.
             </p>
           </div>
 
@@ -122,6 +122,21 @@
                   <div class="tech-row"><span>Next.js</span><span>TypeScript</span><span>Java 21</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Preview conceptual de interfaz" data-en="Conceptual interface preview">Preview conceptual de interfaz</div>
+                  <div class="screen-mock browser-screen saxo-screen" aria-label="Vista mockeada de la app Saxo">
+                    <div class="screen-bar"><i></i><i></i><i></i><span>saxo.app / editor</span></div>
+                    <div class="screen-body stack-body">
+                      <div class="wave-line"></div>
+                      <div class="timeline-grid">
+                        <span></span><span></span><span></span><span></span><span></span>
+                      </div>
+                      <div class="notes-panel">
+                        <div class="notes-staff"></div>
+                        <div class="notes-staff"></div>
+                      </div>
+                      <div class="tag-row"><b>AI Draft</b><b>MIDI</b><b>MusicXML</b><b>SVG</b></div>
+                    </div>
+                  </div>
                   <div class="detail-block">
                     <span class="detail-label" data-es="Arquitectura" data-en="Architecture">Arquitectura</span>
                     <div class="architecture-line" aria-label="Next.js a Spring Boot a FastAPI"><span>Next.js</span><b>→</b><span>Spring Boot</span><b>→</b><span>FastAPI</span></div>
@@ -147,6 +162,18 @@
                   <div class="tech-row"><span>Java 21</span><span>Spring Boot</span><span>MySQL</span><span>React</span><span>TypeScript</span><span>Kafka</span><span>Keycloak</span><span>Docker</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock browser-screen commerce-screen" aria-label="Preview mockeado de CompumundoHiperMegaRed">
+                    <div class="screen-bar"><i></i><i></i><i></i><span>unicamart.web</span></div>
+                    <div class="screen-body dashboard-body">
+                      <div class="side-mini"><span></span><span></span><span></span></div>
+                      <div class="main-mini">
+                        <div class="hero-strip"></div>
+                        <div class="mini-grid"><b></b><b></b><b></b><b></b></div>
+                        <div class="stats-row"><em></em><em></em><em></em></div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="system-map" aria-label="Arquitectura conceptual de CompumundoHiperMegaRed">
                     <div class="system-map-row"><span class="system-node">Web / Ventas</span><span class="system-node">CRM / Inventario</span><span class="system-node">Analytics</span></div>
                     <div class="system-flow">↓ eventos / comandos ↓</div>
@@ -164,7 +191,7 @@
               </div>
             </article>
 
-            <article class="project-card project-backend reveal">
+            <article class="project-card reveal">
               <div class="project-meta"><span>03</span><span data-es="BACKEND APLICADO · MICROSERVICIOS" data-en="APPLIED BACKEND · MICROSERVICES">BACKEND APLICADO · MICROSERVICIOS</span></div>
               <div class="project-layout">
                 <div class="project-intro">
@@ -174,6 +201,15 @@
                   <div class="tech-row"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>MySQL</span><span>Spring Security</span><span>JWT / Keycloak</span><span>Mercado Pago</span><span>VPS</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock browser-screen flower-screen" aria-label="Preview mockeado de Florería Carlitos">
+                    <div class="screen-bar"><i></i><i></i><i></i><span>floreriacarlitos.shop</span></div>
+                    <div class="screen-body flower-body">
+                      <div class="flower-hero"></div>
+                      <div class="product-cards"><b></b><b></b><b></b></div>
+                      <div class="checkout-line"><span></span><span></span></div>
+                    </div>
+                  </div>
                   <div class="service-grid" aria-label="Servicios del ecosistema de Florería Carlitos"><span>Website</span><span>CRM</span><span>E-commerce</span><span>Local</span><span>Envíos</span><span>Analytics</span><span class="service-core">Core / Eventos</span></div>
                   <ul class="project-points">
                     <li data-es="Servicios independientes para distintos contextos de negocio y persistencia relacional." data-en="Independent services for different business contexts with relational persistence.">Servicios independientes para distintos contextos de negocio y persistencia relacional.</li>
@@ -196,6 +232,16 @@
                   <div class="tech-row"><span>Java 21</span><span>Spring Boot</span><span>Spring Security</span><span>WebSocket</span><span>JWT</span><span>SQL Server</span><span>React Native</span><span>Expo</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock phone-screen subastar-screen" aria-label="Preview mockeado de SubastAR">
+                    <div class="phone-notch"></div>
+                    <div class="phone-body">
+                      <div class="phone-title">SubastAR</div>
+                      <div class="auction-card"></div>
+                      <div class="auction-meta"><span></span><span></span><span></span></div>
+                      <div class="bid-row"><b></b><b></b></div>
+                    </div>
+                  </div>
                   <ul class="project-points">
                     <li data-es="Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas." data-en="REST backend with JPA, validation, JWT security and user/listing/auction domains.">Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas.</li>
                     <li data-es="WebSocket para interacciones que requieren actualización en tiempo real." data-en="WebSocket for interactions that require real-time updates.">WebSocket para interacciones que requieren actualización en tiempo real.</li>
@@ -217,6 +263,16 @@
                   <div class="tech-row"><span>Java 17</span><span>Spring Boot</span><span>MySQL</span><span>JWT</span><span>React Native</span><span>Expo</span><span>Redux Toolkit</span><span>REST</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock phone-screen medical-screen" aria-label="Preview mockeado de la app de turnos médicos">
+                    <div class="phone-notch"></div>
+                    <div class="phone-body">
+                      <div class="phone-title">ViMa</div>
+                      <div class="appointment-head"></div>
+                      <div class="appointment-list"><span></span><span></span><span></span></div>
+                      <div class="doctor-pill"></div>
+                    </div>
+                  </div>
                   <div class="mobile-mock" aria-label="Flujo conceptual de la aplicación de turnos médicos"><div><small data-es="Paciente" data-en="Patient">Paciente</small><strong data-es="Reservar turno" data-en="Book appointment">Reservar turno</strong></div><span>→</span><div><small>API</small><strong>Spring Boot</strong></div><span>→</span><div><small data-es="Profesional" data-en="Professional">Profesional</small><strong data-es="Gestionar agenda" data-en="Manage schedule">Gestionar agenda</strong></div></div>
                   <ul class="project-points">
                     <li data-es="API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores." data-en="REST API with entities, DTOs, repositories, services and controllers for appointments and doctors.">API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores.</li>
@@ -239,6 +295,14 @@
                   <div class="tech-row"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span><span>JPA/Hibernate</span><span>React</span><span>Postman</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock browser-screen store-screen" aria-label="Preview mockeado de la tienda de instrumentos musicales">
+                    <div class="screen-bar"><i></i><i></i><i></i><span>music-store.local</span></div>
+                    <div class="screen-body store-body">
+                      <div class="store-hero"></div>
+                      <div class="instrument-grid"><b></b><b></b><b></b><b></b></div>
+                    </div>
+                  </div>
                   <div class="api-mock" aria-label="Recursos conceptuales de la API de tienda musical"><span><b>GET</b> /productos</span><span><b>POST</b> /auth</span><span><b>POST</b> /compras</span><span><b>GET</b> /usuarios/me</span></div>
                   <ul class="project-points">
                     <li data-es="Diseño de endpoints REST y separación Controller → Service → Repository." data-en="REST endpoint design with Controller → Service → Repository separation.">Diseño de endpoints REST y separación Controller → Service → Repository.</li>
@@ -261,6 +325,17 @@
                   <div class="tech-row"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>KMeans</span><span>Linear Regression</span><span>Decision Tree</span><span>Streamlit</span></div>
                 </div>
                 <div class="project-details">
+                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
+                  <div class="screen-mock browser-screen data-screen" aria-label="Preview mockeado del dashboard de análisis socioeconómico">
+                    <div class="screen-bar"><i></i><i></i><i></i><span>analytics.streamlit</span></div>
+                    <div class="screen-body data-body">
+                      <div class="filter-col"><span></span><span></span><span></span></div>
+                      <div class="chart-col">
+                        <div class="big-chart"><b></b><b></b><b></b><b></b><b></b></div>
+                        <div class="small-chart-row"><em></em><em></em></div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="data-dashboard" aria-label="Visualización conceptual del análisis socioeconómico">
                     <div class="dashboard-top"><div><small data-es="Fuentes" data-en="Sources">Fuentes</small><strong>CSV + XLS/XLSX</strong></div><div><small data-es="Unidad" data-en="Unit">Unidad</small><strong data-es="Provincia" data-en="Province">Provincia</strong></div><div><small data-es="Modelos" data-en="Models">Modelos</small><strong>3</strong></div></div>
                     <div class="chart-mock"><span style="--h: 38%"></span><span style="--h: 67%"></span><span style="--h: 48%"></span><span style="--h: 82%"></span><span style="--h: 58%"></span><span style="--h: 73%"></span><span style="--h: 44%"></span></div>
@@ -317,7 +392,8 @@
             <a href="tel:+5491125402106"><span data-es="Teléfono" data-en="Phone">Teléfono</span><strong>+54 9 11 2540-2106</strong></a>
             <a href="https://www.linkedin.com/in/enzo-asplanatti" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/enzo-asplanatti</strong></a>
             <a href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/EnzoAA004</strong></a>
-            <a href="https://github.com/EnzoAA004/cv-enzo-asplanatti" target="_blank" rel="noreferrer"><span data-es="Currículum" data-en="Resume">Currículum</span><strong data-es="Ver CV" data-en="View resume">Ver CV</strong></a>
+            <a href="cv-es.html"><span data-es="Currículum" data-en="Spanish CV">Currículum</span><strong data-es="Abrir CV en español" data-en="Open Spanish CV">Abrir CV en español</strong></a>
+            <a href="resume-en.html"><span data-es="Resume" data-en="Resume">Resume</span><strong data-es="Abrir resume en inglés" data-en="Open English resume">Abrir resume en inglés</strong></a>
           </div>
         </div>
       </section>
