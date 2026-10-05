@@ -305,11 +305,11 @@
 
               <article class="engineering-panel" id="eng-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-engineering-panel="cloud">
                 <div class="engineering-panel-head"><span>DELIVERY / 03</span><strong>Cloud & Delivery</strong><em data-es="Construir también implica operar." data-en="Building also means operating.">Construir también implica operar.</em></div>
-                <p data-es="La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado y un workflow OIDC de staging. El primer apply real sigue pendiente de credenciales y aprobación explícita de costos." data-en="The Cloud phase is now implemented as code: production containers, Terraform for Azure, managed identity, private storage and an OIDC staging workflow. The first real apply is still pending credentials and explicit cost approval.">La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado y un workflow OIDC de staging. El primer apply real sigue pendiente de credenciales y aprobación explícita de costos.</p>
+                <p data-es="La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado, workflow OIDC y bootstrap automatizado para staging. La identidad de deploy queda acotada al resource group de staging; el primer plan/apply real sigue pendiente de autenticar mi suscripción y aprobar costos." data-en="The Cloud phase is implemented as code: production containers, Terraform for Azure, managed identity, private storage, an OIDC workflow and an automated staging bootstrap. The deployment identity is scoped to the staging resource group; the first real plan/apply is still pending subscription authentication and cost approval.">La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado, workflow OIDC y bootstrap automatizado para staging. La identidad de deploy queda acotada al resource group de staging; el primer plan/apply real sigue pendiente de autenticar mi suscripción y aprobar costos.</p>
                 <div class="engineering-proof">
                   <div><span>DELIVERY</span><strong>Docker · GitHub Actions · OIDC workflow</strong></div>
                   <div><span>AZURE IAC</span><strong>Container Apps · PostgreSQL · Blob · ACR · Terraform</strong></div>
-                  <div><span>RUNTIME</span><strong>Managed identity · private API · Log Analytics</strong></div>
+                  <div><span>ACCESS</span><strong>Federated OIDC · RG-scoped RBAC · Managed Identity</strong></div>
                 </div>
                 <div class="engineering-tech"><span>Docker</span><span>GitHub Actions</span><span>Terraform</span><span>Azure Container Apps</span><span>Azure PostgreSQL</span><span>Blob Storage</span><span>Managed Identity</span><span>Spring Cloud</span></div>
                 <div class="engineering-actions"><a href="case-cloud-native.html">Runtime evidence ↗</a><a href="case-amenities.html">Delivery roadmap ↗</a><button type="button" data-project-filter-jump="cloud"><span data-es="Filtrar Cloud / DevOps" data-en="Filter Cloud / DevOps">Filtrar Cloud / DevOps</span> ↓</button></div>
@@ -511,11 +511,11 @@
                     </div>
                   </div>
                   <div class="case-roadmap">
-                    <div><span class="roadmap-state done">DONE</span><strong>Docker + GitHub Actions + Terraform/Azure IaC</strong></div>
-                    <div><span class="roadmap-state next">NEXT</span><strong>First Azure staging apply + live smoke check</strong></div>
+                    <div><span class="roadmap-state done">DONE</span><strong>Docker + CI + Terraform/Azure IaC + OIDC bootstrap</strong></div>
+                    <div><span class="roadmap-state next">NEXT</span><strong>First Azure staging plan/apply + live smoke check</strong></div>
                   </div>
                   <div class="case-status-strip">
-                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend · client · payments · admin · Docker · CI · Terraform/Azure IaC</span>
+                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend · client · payments · admin · Docker · CI · Terraform/Azure IaC · OIDC bootstrap</span>
                   </div>
                 </div>
               </div>
