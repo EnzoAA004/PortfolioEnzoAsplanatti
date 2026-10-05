@@ -1,0 +1,664 @@
+/* ==========================================================================
+   READABILITY PASS — TYPE SCALE + CONTRAST AUDIT
+   Loaded after theme.css.
+   ========================================================================== */
+
+:root {
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --copy-lg: clamp(1rem, .97rem + .12vw, 1.08rem);
+  --copy-md: clamp(.9rem, .88rem + .08vw, .97rem);
+  --ui-md: clamp(.78rem, .76rem + .05vw, .84rem);
+  --ui-sm: clamp(.72rem, .70rem + .04vw, .78rem);
+  --micro-readable: clamp(.68rem, .67rem + .03vw, .73rem);
+  --on-accent: #091014;
+  --on-electric: #071014;
+  --label-strong: #b5bbc4;
+  --label-soft: #939aa5;
+}
+
+html[data-theme="light"] {
+  --muted: #59616b;
+  --on-accent: #ffffff;
+  --on-electric: #ffffff;
+  --label-strong: #4d5660;
+  --label-soft: #626b75;
+}
+
+html[data-theme="dark"] {
+  --muted: #b1b6bf;
+  --label-strong: #b9c0c9;
+  --label-soft: #9da5af;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.68;
+  letter-spacing: -0.006em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-title,
+.case-title,
+.section-heading h2,
+.section-title-sticky h2,
+.contact-section h2 {
+  font-family: var(--font-display);
+  font-weight: 680;
+  text-wrap: balance;
+}
+
+p,
+li {
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Main reading copy
+   -------------------------------------------------------------------------- */
+
+.hero-lead,
+.section-heading > p,
+.system-case-copy > p:not(.project-kicker),
+.archive-heading p,
+.about-statement p,
+.contact-copy p,
+.case-lead,
+.case-sticky p,
+.evidence-intro p {
+  font-size: var(--copy-lg);
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+.capability p,
+.archive-card > p,
+.principle p,
+.stack-card p,
+.case-overview-card p,
+.case-decision p,
+.case-status-list li,
+.saxo-upload-copy p,
+.saxo-review-ui > p,
+.amenities-ui > p {
+  font-size: var(--copy-md);
+  line-height: 1.68;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation, CTA and interactive text
+   -------------------------------------------------------------------------- */
+
+.brand-copy strong {
+  font-size: .92rem;
+  font-weight: 750;
+}
+
+.brand-copy small {
+  font-size: .7rem;
+  font-weight: 650;
+  letter-spacing: .055em;
+}
+
+.nav-links a {
+  font-size: .8rem;
+  font-weight: 650;
+  letter-spacing: -.01em;
+}
+
+.nav-status,
+.lang-toggle,
+.theme-toggle,
+.button,
+.project-filter,
+.case-link,
+.project-links a,
+.case-hero-actions a,
+.archive-links a,
+.case-next-card a {
+  font-family: var(--font-mono);
+  font-size: var(--ui-sm);
+  font-weight: 600;
+}
+
+.button,
+.case-link,
+.case-hero-actions a,
+.case-next-card a {
+  min-height: 46px;
+}
+
+.project-filter {
+  min-height: 38px;
+  padding-inline: 13px;
+}
+
+html[data-theme="light"] .project-filter {
+  color: #4e5761;
+}
+
+html[data-theme="dark"] .project-filter {
+  color: #b0b6bf;
+}
+
+/* Semantic button contrast: audited separately for light and dark themes. */
+.project-filter.is-active,
+.real-button,
+.slot-row span.is-active,
+.admin-actions-mini span:first-child {
+  color: var(--on-electric) !important;
+  border-color: var(--electric) !important;
+  background: var(--electric) !important;
+  font-weight: 700;
+}
+
+.case-link:hover,
+.case-link:focus-visible,
+.case-next-card a,
+html[data-theme="light"] .button-primary {
+  color: var(--on-accent) !important;
+}
+
+html[data-theme="light"] .case-link:hover,
+html[data-theme="light"] .case-link:focus-visible,
+html[data-theme="light"] .case-next-card a {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+html[data-theme="light"] .case-hero-actions a:first-child {
+  color: #fff;
+  border-color: #006d8d;
+  background: #006d8d;
+}
+
+html[data-theme="dark"] .case-hero-actions a:first-child {
+  color: #071014;
+}
+
+/* --------------------------------------------------------------------------
+   Technical labels — preserve the mono language, remove microscopic type
+   -------------------------------------------------------------------------- */
+
+.loader-copy,
+.hero-meta,
+.eyebrow,
+.rail-label,
+.system-caption,
+.core-kicker,
+.system-core small,
+.cap-index,
+.filter-label,
+.system-case-top,
+.case-visual-head,
+.archive-index,
+.archive-card-top,
+.case-back,
+.case-number,
+.case-section-kicker,
+.case-decision .decision-index,
+.case-status-column .status-title,
+.case-visual-label,
+.surface-topbar span,
+.evidence-note,
+.evidence-source-line {
+  font-family: var(--font-mono);
+  font-size: var(--ui-sm);
+  font-weight: 600;
+  letter-spacing: .07em;
+}
+
+.eyebrow,
+.case-number,
+.case-section-kicker,
+.section-number,
+.project-kicker,
+.stack-label {
+  font-weight: 700;
+}
+
+.hero-meta,
+.rail-label,
+.system-caption,
+.core-kicker,
+.system-core small,
+.cap-index,
+.filter-label,
+.system-case-top,
+.case-visual-head,
+.archive-index,
+.archive-card-top,
+.case-back,
+.case-visual-label,
+.surface-topbar span,
+.evidence-note,
+.evidence-source-line {
+  color: var(--label-soft);
+}
+
+/* Small supporting labels that previously sat around 7–9 px */
+.cap-node small,
+.terminal-top b,
+.hero-metrics span,
+.hero-metrics small,
+.cap-tech span,
+.case-proof-grid span,
+.arch-label,
+.arch-node small,
+.arch-node em,
+.arch-connector span,
+.case-data-flow span,
+.case-data-flow small,
+.case-status-strip,
+.mini-app-top strong,
+.mini-booking,
+.roadmap-state,
+.case-roadmap strong,
+.cloud-entry small,
+.cloud-services small,
+.cloud-bus span,
+.cloud-bus b,
+.cloud-observe span,
+.archive-tech span,
+.archive-links a,
+.case-meta span,
+.case-overview-card span,
+.case-proof-row span,
+.arch-layer-label,
+.arch-box small,
+.case-decision .decision-tech span,
+.case-next-card span,
+.saxo-pipeline small,
+.saxo-artifacts span,
+.amenities-product-flow small,
+.cloud-hero-services span,
+.cloud-hero-brokers span,
+.cloud-hero-observe span {
+  font-family: var(--font-mono);
+  font-size: var(--micro-readable);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.cap-node strong,
+.arch-node strong,
+.cloud-entry strong,
+.cloud-services strong,
+.amenities-product-flow strong {
+  font-weight: 700;
+}
+
+/* Hero stats need to read as information, not decoration. */
+.hero-metrics span {
+  font-size: .7rem;
+}
+
+.hero-metrics small {
+  font-size: .73rem;
+  color: var(--label-soft);
+  font-weight: 600;
+}
+
+.hero-metrics strong {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Reconstructed product surfaces / runtime evidence
+   -------------------------------------------------------------------------- */
+
+.saxo-upload-copy .mini-eyebrow,
+.saxo-review-ui .mini-eyebrow,
+.amenities-ui .mini-eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .065em;
+}
+
+.real-field label {
+  font-size: .79rem;
+  font-weight: 700;
+}
+
+.real-control,
+.real-file-control {
+  min-height: 43px;
+  font-size: .72rem;
+  font-weight: 550;
+}
+
+.real-file-control b {
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.real-help {
+  font-size: .69rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.real-button {
+  min-height: 43px;
+  font-size: .73rem;
+}
+
+.review-summary-bar span {
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.review-table-mini > div {
+  min-height: 35px;
+  font-size: .66rem;
+  line-height: 1.35;
+}
+
+.amenity-real-card strong {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.amenity-real-card small {
+  font-size: .68rem;
+  line-height: 1.4;
+}
+
+.amenity-real-card span {
+  font-size: .64rem;
+  font-weight: 600;
+}
+
+.reservation-panel small {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .055em;
+}
+
+.reservation-panel strong {
+  font-size: .79rem;
+  font-weight: 700;
+}
+
+.slot-row span {
+  min-height: 29px;
+  display: inline-flex;
+  align-items: center;
+  font-size: .65rem;
+  font-weight: 600;
+}
+
+.admin-side span {
+  min-height: 35px;
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.admin-main p {
+  font-size: .73rem;
+  line-height: 1.55;
+}
+
+.admin-actions-mini span {
+  min-height: 35px;
+  font-size: .67rem;
+  font-weight: 650;
+}
+
+.runtime-terminal .terminal-heading,
+.runtime-trace .terminal-heading {
+  font-size: .68rem;
+  font-weight: 650;
+}
+
+.runtime-terminal code {
+  font-size: .7rem;
+  line-height: 1.78;
+  font-weight: 500;
+}
+
+.trace-row {
+  min-height: 48px;
+  font-size: .66rem;
+}
+
+.trace-row strong {
+  font-weight: 650;
+}
+
+.trace-row small {
+  font-size: .62rem;
+}
+
+/* --------------------------------------------------------------------------
+   Theme contrast audit — labels, chips, buttons and muted text
+   -------------------------------------------------------------------------- */
+
+html[data-theme="light"] .hero-meta,
+html[data-theme="light"] .rail-label,
+html[data-theme="light"] .system-caption,
+html[data-theme="light"] .core-kicker,
+html[data-theme="light"] .system-core small,
+html[data-theme="light"] .cap-node small,
+html[data-theme="light"] .terminal-top b,
+html[data-theme="light"] .hero-metrics span,
+html[data-theme="light"] .hero-metrics small,
+html[data-theme="light"] .cap-index,
+html[data-theme="light"] .filter-label,
+html[data-theme="light"] .system-case-top,
+html[data-theme="light"] .case-visual-head,
+html[data-theme="light"] .arch-label,
+html[data-theme="light"] .arch-node small,
+html[data-theme="light"] .arch-node em,
+html[data-theme="light"] .case-data-flow small,
+html[data-theme="light"] .case-status-strip,
+html[data-theme="light"] .archive-index,
+html[data-theme="light"] .archive-card-top,
+html[data-theme="light"] .case-back,
+html[data-theme="light"] .case-meta span,
+html[data-theme="light"] .case-visual-label,
+html[data-theme="light"] .case-overview-card span,
+html[data-theme="light"] .case-proof-row span,
+html[data-theme="light"] .arch-layer-label,
+html[data-theme="light"] .arch-box small,
+html[data-theme="light"] .case-decision .decision-index,
+html[data-theme="light"] .case-decision .decision-tech span,
+html[data-theme="light"] .case-status-column .status-title,
+html[data-theme="light"] .evidence-note,
+html[data-theme="light"] .surface-topbar span,
+html[data-theme="light"] .surface-caption,
+html[data-theme="light"] .real-help,
+html[data-theme="light"] .amenity-real-card small,
+html[data-theme="light"] .reservation-panel small,
+html[data-theme="light"] .trace-row small,
+html[data-theme="light"] .evidence-source-line {
+  color: #535c66;
+}
+
+html[data-theme="dark"] .hero-meta,
+html[data-theme="dark"] .rail-label,
+html[data-theme="dark"] .system-caption,
+html[data-theme="dark"] .core-kicker,
+html[data-theme="dark"] .system-core small,
+html[data-theme="dark"] .cap-node small,
+html[data-theme="dark"] .terminal-top b,
+html[data-theme="dark"] .hero-metrics span,
+html[data-theme="dark"] .hero-metrics small,
+html[data-theme="dark"] .cap-index,
+html[data-theme="dark"] .filter-label,
+html[data-theme="dark"] .system-case-top,
+html[data-theme="dark"] .case-visual-head,
+html[data-theme="dark"] .arch-label,
+html[data-theme="dark"] .arch-node small,
+html[data-theme="dark"] .arch-node em,
+html[data-theme="dark"] .case-data-flow small,
+html[data-theme="dark"] .case-status-strip,
+html[data-theme="dark"] .archive-index,
+html[data-theme="dark"] .archive-card-top,
+html[data-theme="dark"] .case-back,
+html[data-theme="dark"] .case-meta span,
+html[data-theme="dark"] .case-visual-label,
+html[data-theme="dark"] .case-overview-card span,
+html[data-theme="dark"] .case-proof-row span,
+html[data-theme="dark"] .arch-layer-label,
+html[data-theme="dark"] .arch-box small,
+html[data-theme="dark"] .case-decision .decision-index,
+html[data-theme="dark"] .case-decision .decision-tech span,
+html[data-theme="dark"] .case-status-column .status-title,
+html[data-theme="dark"] .evidence-note,
+html[data-theme="dark"] .surface-topbar span,
+html[data-theme="dark"] .surface-caption,
+html[data-theme="dark"] .real-help,
+html[data-theme="dark"] .amenity-real-card small,
+html[data-theme="dark"] .reservation-panel small,
+html[data-theme="dark"] .trace-row small,
+html[data-theme="dark"] .evidence-source-line {
+  color: #a8afb9;
+}
+
+/* Hard-coded colors from the dark-first visual system that need a light override. */
+html[data-theme="light"] .cloud-hero-gateway {
+  color: #075d77;
+  border-color: rgba(8,122,155,.34);
+  background: rgba(8,122,155,.08);
+  font-weight: 700;
+}
+
+html[data-theme="light"] .cloud-hero-services span,
+html[data-theme="light"] .cloud-hero-brokers span,
+html[data-theme="light"] .cloud-hero-observe span,
+html[data-theme="light"] .saxo-artifacts span {
+  color: #5b4b20;
+}
+
+html[data-theme="light"] .cloud-hero-services span {
+  color: #4d5660;
+}
+
+html[data-theme="light"] .surface-label {
+  color: #005f7b;
+  border-color: rgba(0,95,123,.25);
+  font-weight: 700;
+}
+
+html[data-theme="light"] .admin-side span.is-active {
+  color: #005f7b;
+  font-weight: 700;
+}
+
+html[data-theme="light"] .roadmap-state.done {
+  color: #245c37;
+  background: rgba(49,120,74,.1);
+}
+
+html[data-theme="light"] .roadmap-state.next {
+  color: #005f7b;
+  background: rgba(8,122,155,.09);
+}
+
+html[data-theme="dark"] .roadmap-state.done {
+  color: #c9efc3;
+}
+
+html[data-theme="dark"] .roadmap-state.next {
+  color: #b9efff;
+}
+
+html[data-theme="light"] .case-link-muted {
+  color: #535c66;
+}
+
+html[data-theme="dark"] .case-link-muted {
+  color: #bcc2cb;
+}
+
+html[data-theme="light"] .archive-tech span,
+html[data-theme="light"] .cap-tech span,
+html[data-theme="light"] .tech-row span,
+html[data-theme="light"] .decision-tech span,
+html[data-theme="light"] .review-summary-bar span {
+  color: #505963;
+  border-color: rgba(23,25,28,.16);
+}
+
+html[data-theme="dark"] .archive-tech span,
+html[data-theme="dark"] .cap-tech span,
+html[data-theme="dark"] .tech-row span,
+html[data-theme="dark"] .decision-tech span,
+html[data-theme="dark"] .review-summary-bar span {
+  color: #b2b9c2;
+}
+
+/* Keep labels readable over transparent/glass surfaces. */
+html[data-theme="light"] .nav-links,
+html[data-theme="light"] .contact-links span {
+  color: #515a64;
+}
+
+html[data-theme="dark"] .nav-links,
+html[data-theme="dark"] .contact-links span {
+  color: #b0b6bf;
+}
+
+/* Focus states visible in both themes. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--electric);
+  outline-offset: 3px;
+}
+
+html[data-theme="light"] ::selection {
+  color: #fff;
+  background: #006d8d;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: do not shrink typography back down on mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  :root {
+    --copy-lg: 1rem;
+    --copy-md: .9rem;
+    --ui-md: .78rem;
+    --ui-sm: .73rem;
+    --micro-readable: .68rem;
+  }
+
+  .nav-links a {
+    font-size: .86rem;
+  }
+
+  .hero-meta {
+    line-height: 1.55;
+  }
+
+  .system-case-top {
+    line-height: 1.5;
+  }
+
+  .review-table-mini > div {
+    grid-template-columns: 40px 1fr 1fr 1fr;
+    gap: 6px;
+    padding-inline: 7px;
+    font-size: .63rem;
+  }
+
+  .runtime-terminal code {
+    font-size: .66rem;
+  }
+}
