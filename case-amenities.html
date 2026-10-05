@@ -1,10 +1,20 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("portfolio-theme");
+          document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+        } catch (_) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <meta name="description" content="Case study de Residential Amenities Platform: ASP.NET Core, Angular/Ionic, PostgreSQL, pagos, concurrencia, auditoría y delivery cloud-ready." />
-    <meta name="theme-color" content="#08090b" />
+    <meta name="theme-color" content="#f4f1e8" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Residential Amenities Platform — Case Study | Enzo Asplanatti" />
     <meta property="og:description" content="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio." />
@@ -16,6 +26,7 @@
     <title>Residential Amenities Platform — Case Study | Enzo Asplanatti</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="case-study.css" />
+    <link rel="stylesheet" href="theme.css" />
   </head>
   <body
     class="case-page"
@@ -42,7 +53,11 @@
         <nav class="nav-links" id="primaryNav" aria-label="Navegación principal">
           <a href="index.html#projects" data-es="Trabajo" data-en="Work">Trabajo</a><a href="index.html#capabilities" data-es="Capacidades" data-en="Capabilities">Capacidades</a><a href="index.html#about" data-es="Perfil" data-en="About">Perfil</a><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
-        <div class="nav-actions"><button class="lang-toggle magnetic" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button></div>
+        <div class="nav-actions"><button class="theme-toggle magnetic" id="themeToggle" type="button" aria-label="Cambiar a tema oscuro" title="Tema">
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          </button>
+          <button class="lang-toggle magnetic" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button></div>
       </div>
     </header>
 

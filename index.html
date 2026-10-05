@@ -1,13 +1,23 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("portfolio-theme");
+          document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+        } catch (_) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <meta
       name="description"
       content="Portfolio de Enzo Asplanatti, estudiante avanzado de Ingeniería Informática orientado a Backend y Full Stack. Java, Spring Boot, Kafka, Python, FastAPI, TypeScript, React y arquitecturas de microservicios."
     />
-    <meta name="theme-color" content="#090a0c" />
+    <meta name="theme-color" content="#f4f1e8" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Enzo Asplanatti | Software Engineer" />
     <meta property="og:description" content="Software Engineering portfolio: backend, cloud delivery, frontend, mobile, data & AI, distributed systems and product engineering." />
@@ -38,6 +48,7 @@
     <title>Enzo Asplanatti | Software Engineer</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="project-visuals.css" />
+    <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
     <div class="page-loader" aria-hidden="true">
@@ -69,6 +80,10 @@
 
         <div class="nav-actions">
           <span class="nav-status"><i></i><span data-es="Disponible" data-en="Available">Disponible</span></span>
+          <button class="theme-toggle magnetic" id="themeToggle" type="button" aria-label="Cambiar a tema oscuro" title="Tema">
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          </button>
           <button class="lang-toggle magnetic" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button>
           <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
             <span></span><span></span>
