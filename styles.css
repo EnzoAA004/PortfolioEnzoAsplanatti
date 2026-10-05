@@ -2362,3 +2362,22 @@ body.menu-open {
     transform: none !important;
   }
 }
+
+
+/* V2 polish */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.cap-node.is-synced {
+  border-color: rgba(114,220,255,.55);
+  background: rgba(114,220,255,.07);
+  box-shadow: 0 0 0 1px rgba(114,220,255,.06), 0 12px 34px rgba(0,0,0,.26), 0 0 30px rgba(114,220,255,.06);
+}
+
+.cap-node {
+  transition: border-color .25s ease, background .25s ease, box-shadow .25s ease, transform .18s ease;
+}
