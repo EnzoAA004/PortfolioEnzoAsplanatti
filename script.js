@@ -282,7 +282,7 @@ if (!prefersReducedMotion && window.gsap) {
       );
     });
 
-    gsap.utils.toArray('.screen-mock').forEach((mock) => {
+    gsap.utils.toArray('.screen-mock, .product-surface').forEach((mock) => {
       gsap.fromTo(
         mock,
         { y: 18, rotateX: 3 },
@@ -388,6 +388,71 @@ if (finePointer && !prefersReducedMotion) {
     });
   });
 }
+
+/* Case study reading progress + section navigation */
+const readingProgress = document.getElementById('readingProgress');
+const caseSections = Array.from(document.querySelectorAll('[data-case-section]'));
+const caseNavItems = Array.from(document.querySelectorAll('[data-case-nav]'));
+
+if (readingProgress) {
+  let scrollTicking = false;
+  const updateReadingProgress = () => {
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = Math.min(1, Math.max(0, window.scrollY / max));
+    readingProgress.style.transform = `scaleX(${progress})`;
+    scrollTicking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(updateReadingProgress);
+  }, { passive: true });
+
+  updateReadingProgress();
+}
+
+if (caseSections.length && caseNavItems.length && 'IntersectionObserver' in window) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+
+      const key = visible.target.dataset.caseSection;
+      caseNavItems.forEach((item) => {
+        item.classList.toggle('is-active', item.dataset.caseNav === key);
+      });
+    },
+    { rootMargin: '-28% 0px -55% 0px', threshold: [0.05, 0.2, 0.45] }
+  );
+
+  caseSections.forEach((section) => sectionObserver.observe(section));
+}
+
+/* Make featured system cards keyboard/click navigable without stealing link clicks */
+document.querySelectorAll('.system-case[data-href]').forEach((card) => {
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'link');
+
+  const openCase = () => {
+    const href = card.dataset.href;
+    if (href) window.location.href = href;
+  };
+
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button')) return;
+    openCase();
+  });
+
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openCase();
+    }
+  });
+});
 
 /* Highlight active capability nodes as the board scrolls */
 if ('IntersectionObserver' in window) {
