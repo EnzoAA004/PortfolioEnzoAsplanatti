@@ -305,14 +305,14 @@
 
               <article class="engineering-panel" id="eng-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-engineering-panel="cloud">
                 <div class="engineering-panel-head"><span>DELIVERY / 03</span><strong>Cloud & Delivery</strong><em data-es="Construir también implica operar." data-en="Building also means operating.">Construir también implica operar.</em></div>
-                <p data-es="La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado, workflow OIDC y bootstrap automatizado para staging. La identidad de deploy queda acotada al resource group de staging; el primer plan/apply real sigue pendiente de autenticar mi suscripción y aprobar costos." data-en="The Cloud phase is implemented as code: production containers, Terraform for Azure, managed identity, private storage, an OIDC workflow and an automated staging bootstrap. The deployment identity is scoped to the staging resource group; the first real plan/apply is still pending subscription authentication and cost approval.">La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado, workflow OIDC y bootstrap automatizado para staging. La identidad de deploy queda acotada al resource group de staging; el primer plan/apply real sigue pendiente de autenticar mi suscripción y aprobar costos.</p>
+                <p data-es="Residential Amenities ya tiene staging real en Azure: infraestructura aplicada con Terraform, Container Apps para web y API, PostgreSQL privado, Blob Storage, ACR, identidad administrada y federación OIDC desde GitHub Actions. El pipeline construye y publica imágenes, despliega revisiones y cierra con smoke checks HTTP sobre el cliente y la API." data-en="Residential Amenities now has a real Azure staging environment: Terraform-applied infrastructure, Container Apps for web and API, private PostgreSQL, Blob Storage, ACR, managed identity and GitHub Actions OIDC federation. The pipeline builds and pushes images, deploys revisions and finishes with HTTP smoke checks across the client and API.">Residential Amenities ya tiene staging real en Azure: infraestructura aplicada con Terraform, Container Apps para web y API, PostgreSQL privado, Blob Storage, ACR, identidad administrada y federación OIDC desde GitHub Actions. El pipeline construye y publica imágenes, despliega revisiones y cierra con smoke checks HTTP sobre el cliente y la API.</p>
                 <div class="engineering-proof">
                   <div><span>DELIVERY</span><strong>Docker · GitHub Actions · OIDC workflow</strong></div>
                   <div><span>AZURE IAC</span><strong>Container Apps · PostgreSQL · Blob · ACR · Terraform</strong></div>
                   <div><span>ACCESS</span><strong>Federated OIDC · RG-scoped RBAC · Managed Identity</strong></div>
                 </div>
                 <div class="engineering-tech"><span>Docker</span><span>GitHub Actions</span><span>Terraform</span><span>Azure Container Apps</span><span>Azure PostgreSQL</span><span>Blob Storage</span><span>Managed Identity</span><span>Spring Cloud</span></div>
-                <div class="engineering-actions"><a href="case-cloud-native.html">Runtime evidence ↗</a><a href="case-amenities.html">Delivery roadmap ↗</a><button type="button" data-project-filter-jump="cloud"><span data-es="Filtrar Cloud / DevOps" data-en="Filter Cloud / DevOps">Filtrar Cloud / DevOps</span> ↓</button></div>
+                <div class="engineering-actions"><a href="case-cloud-native.html">Runtime evidence ↗</a><a href="case-amenities.html">Azure deployment ↗</a><a href="https://resamen-staging-web.lemonsea-e25fd13d.canadacentral.azurecontainerapps.io" target="_blank" rel="noreferrer">Live staging ↗</a><button type="button" data-project-filter-jump="cloud"><span data-es="Filtrar Cloud / DevOps" data-en="Filter Cloud / DevOps">Filtrar Cloud / DevOps</span> ↓</button></div>
               </article>
 
               <article class="engineering-panel" id="eng-frontend" role="tabpanel" aria-labelledby="tab-frontend" data-engineering-panel="frontend">
@@ -488,6 +488,7 @@
 
                   <div class="case-actions">
                     <a class="case-link magnetic" href="case-amenities.html"><span data-es="Ver case study" data-en="View case study">Ver case study</span><b>→</b></a>
+                    <a class="case-link case-link-muted magnetic" href="https://resamen-staging-web.lemonsea-e25fd13d.canadacentral.azurecontainerapps.io" target="_blank" rel="noreferrer"><span data-es="Staging Azure" data-en="Azure staging">Staging Azure</span><b>↗</b></a>
                     <a class="case-link case-link-muted magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform" target="_blank" rel="noreferrer"><span data-es="Repositorio" data-en="Repository">Repositorio</span><b>↗</b></a>
                   </div>
                 </div>
@@ -511,11 +512,11 @@
                     </div>
                   </div>
                   <div class="case-roadmap">
-                    <div><span class="roadmap-state done">DONE</span><strong>Docker + CI + Terraform/Azure IaC + OIDC bootstrap</strong></div>
-                    <div><span class="roadmap-state next">NEXT</span><strong>First Azure staging plan/apply + live smoke check</strong></div>
+                    <div><span class="roadmap-state done">LIVE</span><strong>Azure staging · Terraform apply · OIDC · ACR · Container Apps</strong></div>
+                    <div><span class="roadmap-state done">PROOF</span><strong>Docker image push · revision deploy · client/API smoke check</strong></div>
                   </div>
                   <div class="case-status-strip">
-                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend · client · payments · admin · Docker · CI · Terraform/Azure IaC · OIDC bootstrap</span>
+                    <span><i class="status-live"></i><b data-es="LIVE EN AZURE" data-en="LIVE ON AZURE">LIVE EN AZURE</b> Backend · client · PostgreSQL · ACR · Container Apps · OIDC · smoke-tested delivery</span>
                   </div>
                 </div>
               </div>
