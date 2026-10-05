@@ -905,3 +905,11 @@ html[data-theme="dark"] .case-progress a::before {
     font-size: .66rem;
   }
 }
+
+
+.surface-label {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .055em;
+}
