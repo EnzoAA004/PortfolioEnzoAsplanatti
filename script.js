@@ -26,17 +26,19 @@ function setLanguage(language) {
     );
   }
 
+  const titleKey = language === 'es' ? 'titleEs' : 'titleEn';
   document.title =
-    language === 'es'
-      ? 'Enzo Asplanatti | Software Engineer'
-      : 'Enzo Asplanatti | Software Engineer';
+    document.body?.dataset?.[titleKey] ||
+    'Enzo Asplanatti | Software Engineer';
 
   const description = document.querySelector('meta[name="description"]');
   if (description) {
+    const descriptionKey = language === 'es' ? 'descriptionEs' : 'descriptionEn';
     description.content =
-      language === 'es'
+      document.body?.dataset?.[descriptionKey] ||
+      (language === 'es'
         ? 'Portfolio de Enzo Asplanatti: Software Engineering, Backend, Cloud, Frontend, Mobile, Data & AI, sistemas distribuidos y producto.'
-        : 'Enzo Asplanatti portfolio: Software Engineering, Backend, Cloud, Frontend, Mobile, Data & AI, distributed systems and product.';
+        : 'Enzo Asplanatti portfolio: Software Engineering, Backend, Cloud, Frontend, Mobile, Data & AI, distributed systems and product.');
   }
 }
 
