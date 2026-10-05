@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Case study de Saxo / InstrumentalSW: Next.js, Spring Boot, FastAPI, Postgres, procesamiento de audio, revisión humana y artefactos MIDI/MusicXML/SVG." />
+    <meta name="theme-color" content="#08090b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Saxo / InstrumentalSW — Case Study | Enzo Asplanatti" />
+    <meta property="og:description" content="Arquitectura y decisiones de ingeniería detrás de una plataforma de transcripción musical asistida por IA." />
+    <link rel="canonical" href="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-saxo.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Saxo / InstrumentalSW — Case Study | Enzo Asplanatti</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="case-study.css" />
+  </head>
+  <body
+    class="case-page"
+    data-title-es="Saxo / InstrumentalSW — Case Study | Enzo Asplanatti"
+    data-title-en="Saxo / InstrumentalSW — Case Study | Enzo Asplanatti"
+    data-description-es="Arquitectura y decisiones de ingeniería detrás de una plataforma de transcripción musical asistida por IA."
+    data-description-en="Architecture and engineering decisions behind an AI-assisted music transcription platform."
+  >
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-mark">EA<span>°</span></div>
+      <div class="loader-line"><i></i></div>
+      <span class="loader-copy">CASE STUDY / SAXO</span>
+    </div>
+    <div class="pointer-glow" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand magnetic" href="index.html#top" aria-label="Enzo Asplanatti, inicio">
+          <span class="brand-mark">EA<span>°</span></span>
+          <span class="brand-copy"><strong>Enzo Asplanatti</strong><small>Software Engineer</small></span>
+        </a>
+        <nav class="nav-links" id="primaryNav" aria-label="Navegación principal">
+          <a href="index.html#projects" data-es="Trabajo" data-en="Work">Trabajo</a>
+          <a href="index.html#capabilities" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+          <a href="index.html#about" data-es="Perfil" data-en="About">Perfil</a>
+          <a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="lang-toggle magnetic" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-main">
+      <section class="case-hero">
+        <div class="container case-hero-shell">
+          <div class="case-hero-copy">
+            <a class="case-back" href="index.html#projects">← <span data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</span></a>
+            <div class="case-number"><span>CASE 01</span><i></i><span>AI · PRODUCT · SYSTEMS</span></div>
+            <h1 class="case-title motion-title">Saxo / <em>InstrumentalSW</em></h1>
+            <p class="case-lead" data-es="Una plataforma de transcripción musical asistida por IA donde el objetivo no es reemplazar la revisión humana, sino construir un flujo confiable desde audio original hasta una partitura editable y artefactos verificables." data-en="An AI-assisted music transcription platform designed not to replace human review, but to build a reliable flow from original audio to editable notation and verifiable artifacts.">Una plataforma de transcripción musical asistida por IA donde el objetivo no es reemplazar la revisión humana, sino construir un flujo confiable desde audio original hasta una partitura editable y artefactos verificables.</p>
+            <div class="case-meta">
+              <span>Next.js 16</span><span>Java 21</span><span>Spring Boot</span><span>Python / FastAPI</span><span>PostgreSQL</span><span>S3-compatible storage</span>
+            </div>
+            <div class="case-hero-actions">
+              <a class="magnetic" href="https://github.com/EnzoAA004/InstrumentalSW_AIModule" target="_blank" rel="noreferrer"><span data-es="Repositorio canónico" data-en="Canonical repository">Repositorio canónico</span> ↗</a>
+              <a class="magnetic" href="https://github.com/EnzoAA004/InstrumentalSW_Frontend" target="_blank" rel="noreferrer">Frontend ↗</a>
+              <a class="magnetic" href="https://github.com/EnzoAA004/InstrumentalSW_Backend" target="_blank" rel="noreferrer">Backend ↗</a>
+            </div>
+          </div>
+
+          <div class="case-hero-visual">
+            <div class="case-visual-shell">
+              <div class="case-visual-label"><span>SAXO / SYSTEM MAP</span><span>2026</span></div>
+              <div class="saxo-hero-map">
+                <div class="saxo-wave" aria-hidden="true">
+                  <i style="--h:24%"></i><i style="--h:62%"></i><i style="--h:38%"></i><i style="--h:78%"></i><i style="--h:49%"></i><i style="--h:88%"></i><i style="--h:54%"></i><i style="--h:31%"></i><i style="--h:72%"></i><i style="--h:46%"></i><i style="--h:82%"></i><i style="--h:36%"></i><i style="--h:69%"></i><i style="--h:28%"></i><i style="--h:58%"></i><i style="--h:84%"></i><i style="--h:43%"></i><i style="--h:65%"></i><i style="--h:34%"></i><i style="--h:76%"></i>
+                </div>
+                <div class="saxo-pipeline">
+                  <div><small>EXPERIENCE</small><strong>Next.js</strong></div><span>→</span>
+                  <div><small>PRODUCT API</small><strong>Spring Boot</strong></div><span>→</span>
+                  <div><small>PROCESSING</small><strong>FastAPI</strong></div>
+                </div>
+                <div class="saxo-artifacts"><span>MIDI</span><span>MusicXML</span><span>SVG</span></div>
+              </div>
+            </div>
+            <div class="case-visual-caption"><em>$</em> pipeline.status<br><strong>human-reviewable · versioned · integrity-checked</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="case-section-head reveal">
+            <span class="case-section-kicker">01 / CONTEXT</span>
+            <h2 data-es="El desafío no era solo transcribir audio. Era diseñar un producto confiable alrededor de una salida imperfecta." data-en="The challenge was not just transcribing audio. It was designing a reliable product around an imperfect output.">El desafío no era solo transcribir audio. Era diseñar un producto confiable alrededor de una salida imperfecta.</h2>
+          </div>
+          <div class="case-overview-grid">
+            <article class="case-overview-card reveal"><span>PROBLEM</span><h3 data-es="IA con incertidumbre" data-en="AI with uncertainty">IA con incertidumbre</h3><p data-es="La salida del modelo no se trata como verdad final. Se conserva confianza por evento y se expone una revisión explícita para que el usuario pueda corregir." data-en="Model output is not treated as final truth. Confidence is preserved per event and an explicit review flow lets the user correct the result.">La salida del modelo no se trata como verdad final. Se conserva confianza por evento y se expone una revisión explícita para que el usuario pueda corregir.</p></article>
+            <article class="case-overview-card reveal"><span>SYSTEM</span><h3 data-es="Tres límites claros" data-en="Three clear boundaries">Tres límites claros</h3><p data-es="El navegador habla con Spring Boot; Spring actúa como API de producto; FastAPI queda como servicio interno de procesamiento. El frontend nunca llama directamente al módulo de IA." data-en="The browser talks to Spring Boot; Spring acts as the product API; FastAPI remains an internal processing service. The frontend never calls the AI module directly.">El navegador habla con Spring Boot; Spring actúa como API de producto; FastAPI queda como servicio interno de procesamiento. El frontend nunca llama directamente al módulo de IA.</p></article>
+            <article class="case-overview-card reveal"><span>PRODUCT</span><h3 data-es="Revisión antes que automatismo" data-en="Review before automation">Revisión antes que automatismo</h3><p data-es="Las revisiones son inmutables, los conflictos no pisan trabajo previo y los artefactos descargables se vinculan a una revisión concreta." data-en="Revisions are immutable, conflicts do not overwrite previous work, and downloadable artifacts are tied to a concrete revision.">Las revisiones son inmutables, los conflictos no pisan trabajo previo y los artefactos descargables se vinculan a una revisión concreta.</p></article>
+          </div>
+          <div class="case-proof-row reveal">
+            <div><strong>≥90%</strong><span data-es="quality gate en AI y frontend" data-en="AI and frontend quality gate">quality gate en AI y frontend</span></div>
+            <div><strong>3</strong><span data-es="capas de producto" data-en="product layers">capas de producto</span></div>
+            <div><strong>4</strong><span data-es="tipos de saxofón" data-en="saxophone types">tipos de saxofón</span></div>
+            <div><strong>SHA-256</strong><span data-es="integridad de descargas" data-en="download integrity">integridad de descargas</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section case-architecture-section">
+        <div class="container case-architecture-grid">
+          <div class="case-sticky reveal">
+            <span class="case-section-kicker">02 / ARCHITECTURE</span>
+            <h2 data-es="Separar responsabilidades antes de escalar complejidad." data-en="Separate responsibilities before scaling complexity.">Separar responsabilidades antes de escalar complejidad.</h2>
+            <p data-es="La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna." data-en="The architecture keeps UI, product logic and processing separate. It also lets persistence, queueing and object storage evolve without turning the browser into a direct client of internal infrastructure.">La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna.</p>
+          </div>
+          <div class="case-architecture-canvas reveal">
+            <div class="arch-flow">
+              <div class="arch-layer"><span class="arch-layer-label">CLIENT</span><div class="arch-layer-content"><div class="arch-box accent"><small>NEXT.JS</small><strong>Upload · status · review · edit · playback</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">PRODUCT</span><div class="arch-layer-content"><div class="arch-box"><small>SPRING BOOT</small><strong>Public API · validation · gateway</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">AI / APP</span><div class="arch-layer-content"><div class="arch-box accent"><small>FASTAPI</small><strong>Jobs · reviews · revisions · artifacts</strong></div><div class="arch-box"><small>PROCESSOR</small><strong>Audio → notes → notation</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">DURABLE</span><div class="arch-layer-content"><div class="arch-box gold"><small>POSTGRES</small><strong>Jobs + processing queue</strong></div><div class="arch-box gold"><small>OBJECT STORAGE</small><strong>Original audio + revision artifacts</strong></div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="case-section-head reveal">
+            <span class="case-section-kicker">03 / ENGINEERING DECISIONS</span>
+            <h2 data-es="Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido." data-en="Decisions designed so the system can be explained, tested and corrected.">Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido.</h2>
+          </div>
+          <div class="case-decisions-grid">
+            <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Revisiones inmutables y control de conflicto" data-en="Immutable revisions and conflict control">Revisiones inmutables y control de conflicto</h3><p data-es="Cada edición crea una nueva revisión completa. El cliente debe editar sobre la última revisión conocida; una base obsoleta devuelve conflicto en lugar de sobrescribir silenciosamente." data-en="Each edit creates a complete new revision. The client must edit from the latest known revision; a stale base returns a conflict instead of silently overwriting work.">Cada edición crea una nueva revisión completa. El cliente debe editar sobre la última revisión conocida; una base obsoleta devuelve conflicto en lugar de sobrescribir silenciosamente.</p><div class="decision-tech"><span>immutable history</span><span>409 conflict</span><span>stable IDs</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Playback local con verificación del audio" data-en="Local playback with audio verification">Playback local con verificación del audio</h3><p data-es="El usuario vuelve a seleccionar su archivo original y el navegador valida tamaño y SHA-256 antes de crear un object URL local. El audio no se vuelve a subir para reproducirlo." data-en="The user reselects the original file and the browser validates size and SHA-256 before creating a local object URL. The audio is not uploaded again for playback.">El usuario vuelve a seleccionar su archivo original y el navegador valida tamaño y SHA-256 antes de crear un object URL local. El audio no se vuelve a subir para reproducirlo.</p><div class="decision-tech"><span>Web Crypto</span><span>local object URL</span><span>privacy</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">03</span><h3 data-es="Artefactos descargables con integridad" data-en="Downloadable artifacts with integrity">Artefactos descargables con integridad</h3><p data-es="MIDI, MusicXML y SVG se describen con tipo, tamaño y digest. Spring y el navegador validan metadata, headers, longitud y SHA-256 antes de entregar una descarga." data-en="MIDI, MusicXML and SVG are described by type, size and digest. Spring and the browser validate metadata, headers, length and SHA-256 before delivering a download.">MIDI, MusicXML y SVG se describen con tipo, tamaño y digest. Spring y el navegador validan metadata, headers, longitud y SHA-256 antes de entregar una descarga.</p><div class="decision-tech"><span>MIDI</span><span>MusicXML</span><span>SVG</span><span>SHA-256</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">04</span><h3 data-es="Cola durable sin sumar infraestructura innecesaria" data-en="Durable queue without unnecessary infrastructure">Cola durable sin sumar infraestructura innecesaria</h3><p data-es="Para el MVP, la cola usa PostgreSQL con claims, lease y reintentos acotados en lugar de introducir otro broker solo por arquitectura. El objetivo fue resolver ownership de trabajo de forma durable y explícita." data-en="For the MVP, the queue uses PostgreSQL with claims, leases and bounded retries rather than introducing another broker only for architectural fashion. The goal was durable and explicit work ownership.">Para el MVP, la cola usa PostgreSQL con claims, lease y reintentos acotados en lugar de introducir otro broker solo por arquitectura. El objetivo fue resolver ownership de trabajo de forma durable y explícita.</p><div class="decision-tech"><span>PostgreSQL</span><span>SKIP LOCKED</span><span>worker</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section case-status-section">
+        <div class="container">
+          <div class="case-section-head reveal">
+            <span class="case-section-kicker">04 / STATUS</span>
+            <h2 data-es="Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución." data-en="Show what exists without presenting evolving work as finished.">Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución.</h2>
+          </div>
+          <div class="case-status-board reveal">
+            <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</span></div><h3 data-es="Flujo técnico real" data-en="Real technical flow">Flujo técnico real</h3><ul class="case-status-list"><li>Upload y estado de jobs</li><li>Review de notas y revisiones inmutables</li><li>Playback sincronizado del audio original local</li><li>Downloads MIDI / MusicXML / SVG con verificación</li><li>Postgres para jobs y cola durable</li><li>Object storage privado S3-compatible</li><li>Worker y processor monofónico integrado</li></ul></div>
+            <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="EVOLUCIÓN" data-en="EVOLUTION">EVOLUCIÓN</span></div><h3 data-es="Producto en desarrollo" data-en="Product in development">Producto en desarrollo</h3><ul class="case-status-list"><li data-es="Seguir endureciendo operación multi-worker y consistencia transaccional." data-en="Continue hardening multi-worker operation and transactional consistency.">Seguir endureciendo operación multi-worker y consistencia transaccional.</li><li data-es="Completar experiencia de producto alrededor del pipeline real." data-en="Complete the product experience around the real pipeline.">Completar experiencia de producto alrededor del pipeline real.</li><li data-es="Evolucionar persistencia y operación sin romper contratos versionados." data-en="Evolve persistence and operation without breaking versioned contracts.">Evolucionar persistencia y operación sin romper contratos versionados.</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-next">
+        <div class="container">
+          <div class="case-next-card reveal"><div><span>NEXT CASE</span><h2 data-es="De IA y procesamiento a producto full stack con reglas de negocio reales." data-en="From AI and processing to a full-stack product with real business rules.">De IA y procesamiento a producto full stack con reglas de negocio reales.</h2></div><a href="case-amenities.html"><span>Residential Amenities</span> →</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><span>Enzo Asplanatti</span><span id="footerYear"></span><a href="index.html#top" data-es="Volver al portfolio" data-en="Back to portfolio">Volver al portfolio</a></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
