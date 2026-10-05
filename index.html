@@ -15,7 +15,7 @@
     </script>
     <meta
       name="description"
-      content="Portfolio de Enzo Asplanatti, estudiante avanzado de Ingeniería Informática orientado a Backend y Full Stack. Java, Spring Boot, Kafka, Python, FastAPI, TypeScript, React y arquitecturas de microservicios."
+      content="Portfolio de Enzo Asplanatti, Software Engineer con foco en Backend y experiencia end-to-end en Cloud/Delivery, Frontend, Mobile, Data & AI, sistemas distribuidos y producto."
     />
     <meta name="theme-color" content="#f4f1e8" />
     <meta property="og:type" content="website" />
@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="project-visuals.css" />
     <link rel="stylesheet" href="theme.css" />
     <link rel="stylesheet" href="readability.css" />
+    <link rel="stylesheet" href="engineering-index.css" />
   </head>
   <body>
     <div class="page-loader" aria-hidden="true">
@@ -73,9 +74,9 @@
 
         <nav class="nav-links" id="primaryNav" aria-label="Navegación principal">
           <a href="#projects" data-es="Trabajo" data-en="Work">Trabajo</a>
+          <a href="#engineering-index" data-es="Índice" data-en="Index">Índice</a>
           <a href="#capabilities" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
           <a href="#about" data-es="Perfil" data-en="About">Perfil</a>
-          <a href="#stack" data-es="Stack" data-en="Stack">Stack</a>
           <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
 
@@ -125,6 +126,14 @@
                 <a class="button button-primary magnetic" href="#projects"><span data-es="Explorar trabajo" data-en="Explore work">Explorar trabajo</span><b>↘</b></a>
                 <a class="button button-secondary magnetic" href="https://github.com/EnzoAA004" target="_blank" rel="noreferrer"><span>GitHub</span><b>↗</b></a>
               </div>
+            </div>
+
+            <div class="recruiter-quick motion-up" aria-label="Accesos rápidos">
+              <span class="quick-label" data-es="ACCESO RÁPIDO" data-en="QUICK ACCESS">ACCESO RÁPIDO</span>
+              <a href="cv-es.html"><span>CV ES</span><b>↗</b></a>
+              <a href="resume-en.html"><span>Resume EN</span><b>↗</b></a>
+              <a href="https://www.linkedin.com/in/enzo-asplanatti" target="_blank" rel="noreferrer"><span>LinkedIn</span><b>↗</b></a>
+              <button type="button" class="quick-copy" id="copyEmailButton" data-copy="enzoandreaasplanatti@gmail.com"><span data-copy-label aria-live="polite" data-es="Copiar email" data-en="Copy email">Copiar email</span><b>＋</b></button>
             </div>
 
             <div class="role-rail motion-up" aria-label="Áreas de ingeniería">
@@ -246,11 +255,135 @@
         </div>
       </section>
 
+
+      <section class="section engineering-index-section" id="engineering-index">
+        <div class="container">
+          <div class="section-heading engineering-index-heading reveal">
+            <div>
+              <p class="section-number">03</p>
+              <h2 data-es="Engineering Index." data-en="Engineering Index.">Engineering Index.</h2>
+            </div>
+            <p data-es="Un mapa verificable de qué sé hacer y dónde lo demuestro. No es una lista de keywords: cada área conecta tecnologías con proyectos, decisiones y evidencia concreta." data-en="A verifiable map of what I can do and where I demonstrate it. This is not a keyword list: every area connects technologies with projects, decisions and concrete evidence.">Un mapa verificable de qué sé hacer y dónde lo demuestro. No es una lista de keywords: cada área conecta tecnologías con proyectos, decisiones y evidencia concreta.</p>
+          </div>
+
+          <div class="engineering-index-shell reveal">
+            <div class="engineering-tabs" role="tablist" aria-label="Engineering domains">
+              <button class="engineering-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="eng-backend" id="tab-backend" data-engineering-tab="backend"><span>01</span><strong>Backend</strong><small>APIs · domain · persistence</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-distributed" id="tab-distributed" data-engineering-tab="distributed"><span>02</span><strong>Distributed</strong><small>events · realtime · messaging</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-cloud" id="tab-cloud" data-engineering-tab="cloud"><span>03</span><strong>Cloud / Delivery</strong><small>containers · CI · runtime</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-frontend" id="tab-frontend" data-engineering-tab="frontend"><span>04</span><strong>Frontend</strong><small>web · typed UI · product</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-mobile" id="tab-mobile" data-engineering-tab="mobile"><span>05</span><strong>Mobile</strong><small>Expo · Ionic · app flows</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-data" id="tab-data" data-engineering-tab="data"><span>06</span><strong>Data / AI</strong><small>Python · ML · processing</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-quality" id="tab-quality" data-engineering-tab="quality"><span>07</span><strong>Quality</strong><small>tests · contracts · CI</small></button>
+              <button class="engineering-tab" type="button" role="tab" aria-selected="false" aria-controls="eng-product" id="tab-product" data-engineering-tab="product"><span>08</span><strong>Product</strong><small>payments · QR · operations</small></button>
+            </div>
+
+            <div class="engineering-panels">
+              <article class="engineering-panel is-active" id="eng-backend" role="tabpanel" aria-labelledby="tab-backend" data-engineering-panel="backend">
+                <div class="engineering-panel-head"><span>CORE / 01</span><strong>Backend Engineering</strong><em data-es="Mi especialidad principal." data-en="My primary specialty.">Mi especialidad principal.</em></div>
+                <p data-es="Diseño APIs y lógica de negocio con límites explícitos entre dominio, persistencia, seguridad e integraciones. Java/Spring sigue siendo mi base principal, pero también construyo backend con .NET y servicios Python." data-en="I design APIs and business logic with explicit boundaries between domain, persistence, security and integrations. Java/Spring remains my primary base, while I also build backend with .NET and Python services.">Diseño APIs y lógica de negocio con límites explícitos entre dominio, persistencia, seguridad e integraciones. Java/Spring sigue siendo mi base principal, pero también construyo backend con .NET y servicios Python.</p>
+                <div class="engineering-proof">
+                  <div><span>JAVA / SPRING</span><strong>Saxo · UniCamart · SubastAR · Florería</strong></div>
+                  <div><span>.NET</span><strong>Residential Amenities Platform</strong></div>
+                  <div><span>PYTHON API</span><strong>FastAPI processing service · Saxo</strong></div>
+                </div>
+                <div class="engineering-tech"><span>Java 17/21</span><span>Spring Boot</span><span>ASP.NET Core</span><span>FastAPI</span><span>JPA</span><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span></div>
+                <div class="engineering-actions"><a href="case-saxo.html">Saxo case study ↗</a><a href="case-amenities.html">Amenities case study ↗</a><button type="button" data-project-filter-jump="backend"><span data-es="Filtrar proyectos Backend" data-en="Filter Backend projects">Filtrar proyectos Backend</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-distributed" role="tabpanel" aria-labelledby="tab-distributed" data-engineering-panel="distributed">
+                <div class="engineering-panel-head"><span>SYSTEMS / 02</span><strong>Distributed Systems</strong><em data-es="Mensajería con propósito." data-en="Messaging with purpose.">Mensajería con propósito.</em></div>
+                <p data-es="Trabajo con eventos y comunicación distribuida cuando resuelven desacoplamiento, realtime u ownership entre servicios. El portfolio incluye Kafka, RabbitMQ, WebSocket, middleware, discovery y gateway." data-en="I use events and distributed communication when they solve decoupling, realtime or ownership between services. The portfolio includes Kafka, RabbitMQ, WebSocket, middleware, discovery and gateway.">Trabajo con eventos y comunicación distribuida cuando resuelven desacoplamiento, realtime u ownership entre servicios. El portfolio incluye Kafka, RabbitMQ, WebSocket, middleware, discovery y gateway.</p>
+                <div class="engineering-proof">
+                  <div><span>EVENTS</span><strong>Kafka · UniCamart / Florería</strong></div>
+                  <div><span>REALTIME</span><strong>WebSocket · SubastAR</strong></div>
+                  <div><span>LAB</span><strong>RabbitMQ ↔ Kafka · Spring Cloud</strong></div>
+                </div>
+                <div class="engineering-tech"><span>Kafka</span><span>RabbitMQ</span><span>WebSocket</span><span>Eureka</span><span>API Gateway</span><span>event-driven</span></div>
+                <div class="engineering-actions"><a href="case-cloud-native.html">Cloud-native case ↗</a><button type="button" data-project-filter-jump="distributed"><span data-es="Ver sistemas distribuidos" data-en="View distributed systems">Ver sistemas distribuidos</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-engineering-panel="cloud">
+                <div class="engineering-panel-head"><span>DELIVERY / 03</span><strong>Cloud & Delivery</strong><em data-es="Construir también implica operar." data-en="Building also means operating.">Construir también implica operar.</em></div>
+                <p data-es="Mi evidencia actual está en contenedores, CI, VPS, servicios administrados y observabilidad de laboratorio. No presento Azure/Terraform como implementado todavía: esa etapa sigue explícitamente en roadmap." data-en="My current evidence is in containers, CI, VPS, managed services and lab observability. I do not present Azure/Terraform as implemented yet: that stage remains explicitly on the roadmap.">Mi evidencia actual está en contenedores, CI, VPS, servicios administrados y observabilidad de laboratorio. No presento Azure/Terraform como implementado todavía: esa etapa sigue explícitamente en roadmap.</p>
+                <div class="engineering-proof">
+                  <div><span>DELIVERY</span><strong>Docker Compose · GitHub Actions CI</strong></div>
+                  <div><span>RUNTIME</span><strong>Gateway · discovery · Zipkin · ELK</strong></div>
+                  <div><span>HOSTING</span><strong>VPS · Render · Aiven</strong></div>
+                </div>
+                <div class="engineering-tech"><span>Docker</span><span>GitHub Actions</span><span>Spring Cloud</span><span>Zipkin</span><span>ELK</span><span>Hostinger VPS</span><span>Render</span><span>Aiven</span></div>
+                <div class="engineering-actions"><a href="case-cloud-native.html">Runtime evidence ↗</a><a href="case-amenities.html">Delivery roadmap ↗</a><button type="button" data-project-filter-jump="cloud"><span data-es="Filtrar Cloud / DevOps" data-en="Filter Cloud / DevOps">Filtrar Cloud / DevOps</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-frontend" role="tabpanel" aria-labelledby="tab-frontend" data-engineering-panel="frontend">
+                <div class="engineering-panel-head"><span>EXPERIENCE / 04</span><strong>Frontend Systems</strong><em data-es="UI conectada al dominio." data-en="UI connected to the domain.">UI conectada al dominio.</em></div>
+                <p data-es="Construyo interfaces tipadas y responsive que hacen visible la lógica del sistema: revisión asistida, flujos administrativos, QR, disponibilidad, inventario y experiencias de producto." data-en="I build typed responsive interfaces that make system logic visible: assisted review, administration flows, QR, availability, inventory and product experiences.">Construyo interfaces tipadas y responsive que hacen visible la lógica del sistema: revisión asistida, flujos administrativos, QR, disponibilidad, inventario y experiencias de producto.</p>
+                <div class="engineering-proof">
+                  <div><span>NEXT.JS</span><strong>Saxo · EcoLoop</strong></div>
+                  <div><span>REACT</span><strong>UniCamart</strong></div>
+                  <div><span>ANGULAR / IONIC</span><strong>Residential Amenities</strong></div>
+                </div>
+                <div class="engineering-tech"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Angular</span><span>Ionic</span><span>Tailwind</span></div>
+                <div class="engineering-actions"><a href="case-saxo.html#evidence">Saxo UI evidence ↗</a><a href="case-amenities.html#evidence">Amenities UI evidence ↗</a><button type="button" data-project-filter-jump="frontend"><span data-es="Filtrar Frontend" data-en="Filter Frontend">Filtrar Frontend</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-mobile" role="tabpanel" aria-labelledby="tab-mobile" data-engineering-panel="mobile">
+                <div class="engineering-panel-head"><span>MOBILE / 05</span><strong>Mobile Products</strong><em data-es="Flujos completos, no demos aisladas." data-en="Complete flows, not isolated demos.">Flujos completos, no demos aisladas.</em></div>
+                <p data-es="Trabajé con aplicaciones conectadas a backends reales: autenticación, navegación, estado global, turnos, subastas y experiencia híbrida con Ionic." data-en="I have worked on apps connected to real backends: authentication, navigation, global state, appointments, auctions and hybrid experiences with Ionic.">Trabajé con aplicaciones conectadas a backends reales: autenticación, navegación, estado global, turnos, subastas y experiencia híbrida con Ionic.</p>
+                <div class="engineering-proof">
+                  <div><span>REACT NATIVE</span><strong>SubastAR · ViMa</strong></div>
+                  <div><span>EXPO</span><strong>Navigation · auth · product flows</strong></div>
+                  <div><span>IONIC</span><strong>Residential Amenities</strong></div>
+                </div>
+                <div class="engineering-tech"><span>React Native</span><span>Expo</span><span>Redux Toolkit</span><span>Ionic</span><span>REST</span></div>
+                <div class="engineering-actions"><button type="button" data-project-filter-jump="mobile"><span data-es="Filtrar Mobile" data-en="Filter Mobile">Filtrar Mobile</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-data" role="tabpanel" aria-labelledby="tab-data" data-engineering-panel="data">
+                <div class="engineering-panel-head"><span>DATA / 06</span><strong>Data & AI</strong><em data-es="Modelos integrados a producto." data-en="Models integrated into products.">Modelos integrados a producto.</em></div>
+                <p data-es="Uso Python tanto para análisis como para servicios de procesamiento. La evidencia va desde clustering/regresión y Streamlit hasta un pipeline de audio con FastAPI, revisión humana y artefactos versionados." data-en="I use Python for both analysis and processing services. Evidence ranges from clustering/regression and Streamlit to an audio pipeline with FastAPI, human review and versioned artifacts.">Uso Python tanto para análisis como para servicios de procesamiento. La evidencia va desde clustering/regresión y Streamlit hasta un pipeline de audio con FastAPI, revisión humana y artefactos versionados.</p>
+                <div class="engineering-proof">
+                  <div><span>AI SERVICE</span><strong>Saxo · FastAPI processing</strong></div>
+                  <div><span>DATA SCIENCE</span><strong>KMeans · regression · provincial data</strong></div>
+                  <div><span>PRODUCT</span><strong>Human-in-the-loop review</strong></div>
+                </div>
+                <div class="engineering-tech"><span>Python</span><span>FastAPI</span><span>Pandas</span><span>scikit-learn</span><span>Streamlit</span></div>
+                <div class="engineering-actions"><a href="case-saxo.html">Saxo case study ↗</a><a href="https://github.com/EnzoAA004/CienciaDeDatosTPO-Grupo03" target="_blank" rel="noreferrer">Data Science repo ↗</a><button type="button" data-project-filter-jump="data"><span data-es="Filtrar Data / AI" data-en="Filter Data / AI">Filtrar Data / AI</span> ↓</button></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-quality" role="tabpanel" aria-labelledby="tab-quality" data-engineering-panel="quality">
+                <div class="engineering-panel-head"><span>QUALITY / 07</span><strong>Quality Engineering</strong><em data-es="Decisiones verificables." data-en="Verifiable decisions.">Decisiones verificables.</em></div>
+                <p data-es="En mis proyectos recientes la calidad no queda para el final: tests, typing, linting, contratos, CI y coverage gates forman parte del flujo de trabajo." data-en="In my recent projects, quality is not left for the end: tests, typing, linting, contracts, CI and coverage gates are part of the workflow.">En mis proyectos recientes la calidad no queda para el final: tests, typing, linting, contratos, CI y coverage gates forman parte del flujo de trabajo.</p>
+                <div class="engineering-proof">
+                  <div><span>COVERAGE</span><strong>≥90% gates · Saxo AI / frontend</strong></div>
+                  <div><span>STATIC QUALITY</span><strong>mypy · Ruff · TypeScript</strong></div>
+                  <div><span>CI</span><strong>GitHub Actions · Amenities</strong></div>
+                </div>
+                <div class="engineering-tech"><span>pytest</span><span>mypy</span><span>Ruff</span><span>TDD</span><span>coverage</span><span>GitHub Actions</span><span>contracts</span></div>
+                <div class="engineering-actions"><a href="case-saxo.html#decisions">Saxo engineering decisions ↗</a><a href="case-amenities.html#delivery">Amenities delivery ↗</a></div>
+              </article>
+
+              <article class="engineering-panel" id="eng-product" role="tabpanel" aria-labelledby="tab-product" data-engineering-panel="product">
+                <div class="engineering-panel-head"><span>PRODUCT / 08</span><strong>Product Engineering</strong><em data-es="Tecnología conectada a reglas reales." data-en="Technology connected to real rules.">Tecnología conectada a reglas reales.</em></div>
+                <p data-es="Me interesa construir software con comportamiento de producto: pagos, pricing, reservas, auditoría, QR, revisión humana y flujos administrativos, no únicamente endpoints y pantallas aisladas." data-en="I like building software with product behavior: payments, pricing, reservations, auditability, QR, human review and administrative flows, not just isolated endpoints and screens.">Me interesa construir software con comportamiento de producto: pagos, pricing, reservas, auditoría, QR, revisión humana y flujos administrativos, no únicamente endpoints y pantallas aisladas.</p>
+                <div class="engineering-proof">
+                  <div><span>PAYMENTS</span><strong>Mercado Pago · Amenities / Florería</strong></div>
+                  <div><span>OPERATIONS</span><strong>Admin · audit · reservations · inventory</strong></div>
+                  <div><span>INTERACTION</span><strong>QR · realtime · human review</strong></div>
+                </div>
+                <div class="engineering-tech"><span>Mercado Pago</span><span>pricing</span><span>audit trail</span><span>QR</span><span>admin flows</span><span>human-in-the-loop</span></div>
+                <div class="engineering-actions"><a href="case-amenities.html">Amenities product case ↗</a><a href="case-saxo.html">Saxo product case ↗</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section projects-section" id="projects">
         <div class="container">
           <div class="section-heading reveal">
             <div>
-              <p class="section-number">03</p>
+              <p class="section-number">04</p>
               <h2 data-es="Sistemas seleccionados." data-en="Selected systems.">Sistemas seleccionados.</h2>
             </div>
             <p
@@ -267,6 +400,7 @@
               <button class="project-filter is-active" type="button" data-filter="all" data-es="Todos" data-en="All">Todos</button>
               <button class="project-filter" type="button" data-filter="backend">Backend</button>
               <button class="project-filter" type="button" data-filter="cloud">Cloud / DevOps</button>
+              <button class="project-filter" type="button" data-filter="distributed">Distributed</button>
               <button class="project-filter" type="button" data-filter="frontend">Frontend</button>
               <button class="project-filter" type="button" data-filter="mobile">Mobile</button>
               <button class="project-filter" type="button" data-filter="data">Data / AI</button>
@@ -387,7 +521,7 @@
               </div>
             </article>
 
-            <article class="system-case system-case-cloud reveal" data-project-domains="backend cloud" data-href="case-cloud-native.html" data-cursor="EXPLORE">
+            <article class="system-case system-case-cloud reveal" data-project-domains="backend cloud distributed" data-href="case-cloud-native.html" data-cursor="EXPLORE">
               <div class="system-case-top">
                 <div class="system-case-id"><span>CASE 03</span><i></i><span data-es="CLOUD-NATIVE LAB · OBSERVABILIDAD" data-en="CLOUD-NATIVE LAB · OBSERVABILITY">CLOUD-NATIVE LAB · OBSERVABILIDAD</span></div>
                 <div class="system-case-year">2026</div>
@@ -442,27 +576,27 @@
             <div class="archive-heading reveal">
               <div>
                 <span class="archive-index">04—09</span>
-                <h3 data-es="Más trabajo, menos ruido." data-en="More work, less noise.">Más trabajo, menos ruido.</h3>
+                <h3 data-es="Selected experiments & systems." data-en="Selected experiments & systems.">Selected experiments & systems.</h3>
               </div>
-              <p data-es="Proyectos que completan el mapa técnico sin competir visualmente con los tres casos principales." data-en="Projects that complete the technical map without visually competing with the three primary cases.">Proyectos que completan el mapa técnico sin competir visualmente con los tres casos principales.</p>
+              <p data-es="Proyectos que amplían el mapa técnico: mobile, event-driven, QR, data science y sistemas aplicados, sin competir visualmente con los tres casos principales." data-en="Projects that broaden the technical map: mobile, event-driven, QR, data science and applied systems, without visually competing with the three primary cases.">Proyectos que amplían el mapa técnico: mobile, event-driven, QR, data science y sistemas aplicados, sin competir visualmente con los tres casos principales.</p>
             </div>
 
             <div class="archive-grid">
-              <article class="archive-card reveal" data-project-domains="backend frontend" data-cursor="VIEW">
+              <article class="archive-card reveal" data-project-domains="backend frontend distributed" data-cursor="VIEW">
                 <div class="archive-card-top"><span>04</span><span>EVENT-DRIVEN</span></div>
                 <h4>UniCamart</h4>
                 <p data-es="E-commerce distribuido por dominios con venta web, CRM/inventario, analytics y un core de mensajería desacoplado sobre Kafka." data-en="Domain-distributed e-commerce with web sales, CRM/inventory, analytics and a decoupled Kafka messaging core.">E-commerce distribuido por dominios con venta web, CRM/inventario, analytics y un core de mensajería desacoplado sobre Kafka.</p>
                 <div class="archive-tech"><span>Java 21</span><span>React</span><span>Kafka</span><span>Keycloak</span></div>
               </article>
 
-              <article class="archive-card reveal" data-project-domains="backend cloud" data-cursor="VIEW">
+              <article class="archive-card reveal" data-project-domains="backend cloud distributed" data-cursor="VIEW">
                 <div class="archive-card-top"><span>05</span><span>APPLIED SYSTEM</span></div>
                 <h4>Florería Carlitos</h4>
                 <p data-es="Ecosistema de servicios para e-commerce y operación interna: CRM, ventas locales, envíos, analytics, pagos y eventos." data-en="Service ecosystem for e-commerce and store operations: CRM, local sales, shipping, analytics, payments and events.">Ecosistema de servicios para e-commerce y operación interna: CRM, ventas locales, envíos, analytics, pagos y eventos.</p>
                 <div class="archive-tech"><span>Spring Boot</span><span>Kafka</span><span>Mercado Pago</span><span>VPS</span></div>
               </article>
 
-              <article class="archive-card reveal" data-project-domains="backend mobile" data-cursor="VIEW">
+              <article class="archive-card reveal" data-project-domains="backend mobile distributed" data-cursor="VIEW">
                 <div class="archive-card-top"><span>06</span><span>REAL TIME · MOBILE</span></div>
                 <h4>SubastAR</h4>
                 <p data-es="Marketplace de subastas con backend Spring, cliente React Native/Expo, persistencia relacional e interacciones en tiempo real." data-en="Auction marketplace with a Spring backend, React Native/Expo client, relational persistence and real-time interactions.">Marketplace de subastas con backend Spring, cliente React Native/Expo, persistencia relacional e interacciones en tiempo real.</p>
@@ -505,7 +639,7 @@
 
       <section class="section about-section" id="about">
         <div class="container about-grid">
-          <div class="section-title-sticky reveal"><p class="section-number">04</p><h2 data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</h2></div>
+          <div class="section-title-sticky reveal"><p class="section-number">05</p><h2 data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</h2></div>
           <div class="about-content">
             <div class="about-statement reveal"><p data-es="Me interesa entender qué problema resuelve un sistema antes de escribir código. Desde ahí priorizo contratos claros, separación de responsabilidades, seguridad, validaciones explícitas y decisiones que pueda defender técnicamente." data-en="I like to understand the problem a system solves before writing code. From there I prioritize clear contracts, responsibility boundaries, security, explicit validation and technical decisions I can defend.">Me interesa entender qué problema resuelve un sistema antes de escribir código. Desde ahí priorizo contratos claros, separación de responsabilidades, seguridad, validaciones explícitas y decisiones que pueda defender técnicamente.</p></div>
             <div class="principles-grid">
@@ -520,7 +654,7 @@
 
       <section class="section stack-section" id="stack">
         <div class="container">
-          <div class="section-heading compact reveal"><div><p class="section-number">05</p><h2 data-es="Stack técnico" data-en="Technical stack">Stack técnico</h2></div></div>
+          <div class="section-heading compact reveal"><div><p class="section-number">06</p><h2 data-es="Stack técnico" data-en="Technical stack">Stack técnico</h2></div></div>
           <div class="stack-grid">
             <article class="stack-card reveal"><span class="stack-label">BACKEND</span><h3>Java / Spring</h3><p>Java 17/21, Spring Boot, Spring Security, Spring Data JPA, Maven, REST APIs, WebSocket, Flyway.</p></article>
             <article class="stack-card reveal"><span class="stack-label">PYTHON / AI</span><h3>Python / FastAPI</h3><p>FastAPI, pytest, mypy, Ruff, data pipelines, audio processing, Pandas y scikit-learn.</p></article>
@@ -534,7 +668,7 @@
 
       <section class="section contact-section" id="contact">
         <div class="container contact-grid reveal">
-          <div><p class="section-number">06</p><h2 data-es="Hablemos" data-en="Let's talk">Hablemos</h2><p data-es="Busco mi primera experiencia profesional en tecnología en roles de Software Engineering, Backend, Full Stack o posiciones cercanas a Cloud/Platform donde pueda aportar en sistemas reales y seguir expandiendo mi alcance técnico." data-en="I'm looking for my first professional experience in technology across Software Engineering, Backend, Full Stack or Cloud/Platform-adjacent roles where I can contribute to real systems and keep expanding my technical range.">Busco mi primera experiencia profesional en tecnología en roles de Software Engineering, Backend, Full Stack o posiciones cercanas a Cloud/Platform donde pueda aportar en sistemas reales y seguir expandiendo mi alcance técnico.</p></div>
+          <div><p class="section-number">07</p><h2 data-es="Hablemos" data-en="Let's talk">Hablemos</h2><p data-es="Busco mi primera experiencia profesional en tecnología en roles de Software Engineering, Backend, Full Stack o posiciones cercanas a Cloud/Platform donde pueda aportar en sistemas reales y seguir expandiendo mi alcance técnico." data-en="I'm looking for my first professional experience in technology across Software Engineering, Backend, Full Stack or Cloud/Platform-adjacent roles where I can contribute to real systems and keep expanding my technical range.">Busco mi primera experiencia profesional en tecnología en roles de Software Engineering, Backend, Full Stack o posiciones cercanas a Cloud/Platform donde pueda aportar en sistemas reales y seguir expandiendo mi alcance técnico.</p></div>
           <div class="contact-links">
             <a href="mailto:enzoandreaasplanatti@gmail.com"><span>Email</span><strong>enzoandreaasplanatti@gmail.com</strong></a>
             <a href="tel:+5491125402106"><span data-es="Teléfono" data-en="Phone">Teléfono</span><strong>+54 9 11 2540-2106</strong></a>
