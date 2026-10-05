@@ -15,6 +15,14 @@
   <link rel="stylesheet" href="case-study.css" />
 </head>
 <body class="case-page" data-title-es="Spring Cloud Microservices Lab — Case Study | Enzo Asplanatti" data-title-en="Spring Cloud Microservices Lab — Case Study | Enzo Asplanatti">
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+  <nav class="case-progress" aria-label="Case study progress">
+    <a href="#context" data-case-nav="context" data-label="Context"></a>
+    <a href="#evidence" data-case-nav="evidence" data-label="Runtime"></a>
+    <a href="#architecture" data-case-nav="architecture" data-label="Architecture"></a>
+    <a href="#decisions" data-case-nav="decisions" data-label="Decisions"></a>
+    <a href="#scope" data-case-nav="scope" data-label="Scope"></a>
+  </nav>
   <div class="page-loader" aria-hidden="true"><div class="loader-mark">EA<span>°</span></div><div class="loader-line"><i></i></div><span class="loader-copy">CASE STUDY / CLOUD</span></div>
   <div class="pointer-glow" aria-hidden="true"></div><div class="noise-layer" aria-hidden="true"></div>
   <header class="site-header">
@@ -51,7 +59,7 @@
       </div>
     </section>
 
-    <section class="case-section">
+    <section class="case-section" id="context" data-case-section="context">
       <div class="container">
         <div class="case-section-head reveal"><span class="case-section-kicker">01 / CONTEXT</span><h2 data-es="Entender qué exige operar servicios distribuidos, no solo dividir código." data-en="Understand what operating distributed services requires, not just splitting code.">Entender qué exige operar servicios distribuidos, no solo dividir código.</h2></div>
         <div class="case-overview-grid">
@@ -63,7 +71,47 @@
       </div>
     </section>
 
-    <section class="case-section case-architecture-section">
+    <section class="case-section case-evidence-section" id="evidence" data-case-section="evidence">
+      <div class="container">
+        <div class="evidence-intro reveal">
+          <div><span class="case-section-kicker">02 / RUNTIME EVIDENCE</span><h2 data-es="El valor está en poder levantar, observar y diagnosticar el sistema." data-en="The value is being able to run, observe and diagnose the system.">El valor está en poder levantar, observar y diagnosticar el sistema.</h2></div>
+          <div>
+            <p data-es="En vez de inventar una UI para un proyecto que no la necesita, este caso muestra evidencia del runtime documentado: perfiles Docker, healthchecks, dos brokers alternativos y correlación entre tracing y logs." data-en="Instead of inventing a UI for a project that does not need one, this case shows evidence from the documented runtime: Docker profiles, healthchecks, two alternative brokers and correlation between tracing and logs.">En vez de inventar una UI para un proyecto que no la necesita, este caso muestra evidencia del runtime documentado: perfiles Docker, healthchecks, dos brokers alternativos y correlación entre tracing y logs.</p>
+            <div class="evidence-note"><i></i><span data-es="Contenido visual basado en comandos, servicios y ejemplo de trace del README real." data-en="Visual content based on commands, services and the trace example in the real README.">Contenido visual basado en comandos, servicios y ejemplo de trace del README real.</span></div>
+          </div>
+        </div>
+
+        <article class="product-surface surface-full reveal">
+          <div class="surface-topbar"><i></i><i></i><i></i><span>runtime / observability</span></div>
+          <span class="surface-label">REPOSITORY EVIDENCE</span>
+          <div class="surface-canvas runtime-evidence">
+            <div class="runtime-terminal">
+              <div class="terminal-heading"><span>DOCKER COMPOSE</span><span>profile=rabbitmq</span></div>
+              <code><em>$</em> docker compose --profile rabbitmq up --build<br><br><b>✓</b> config-server :8888<br><b>✓</b> eureka-server :8761<br><b>✓</b> api-gateway :8080<br><b>✓</b> auth-service :8083<br><b>✓</b> inventory-service :8082<br><b>✓</b> notification-service :8084<br><br><em>$</em> curl /actuator/health<br><b>status: UP</b></code>
+            </div>
+            <div class="runtime-trace">
+              <div class="terminal-heading"><span>DISTRIBUTED TRACE</span><span>Zipkin + correlated logs</span></div>
+              <div class="trace-stack">
+                <div class="trace-row"><strong>api-gateway</strong><i style="--w:92%"></i><small>request entry</small></div>
+                <div class="trace-row"><strong>inventory</strong><i style="--w:70%"></i><small>domain work</small></div>
+                <div class="trace-row"><strong>orders</strong><i style="--w:58%"></i><small>workflow</small></div>
+                <div class="trace-row"><strong>notification</strong><i style="--w:35%"></i><small>async event</small></div>
+              </div>
+              <div class="review-table-mini" style="margin-top:18px">
+                <div><span>service</span><span>traceId</span><span>spanId</span><span>level</span></div>
+                <div><b>gateway</b><span>6b3e44…</span><span>6b3e44…</span><span>INFO</span></div>
+                <div><b>inventory</b><span>6b3e44…</span><span>a1b2c3…</span><span>INFO</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="surface-caption"><strong data-es="Runtime real documentado" data-en="Documented real runtime">Runtime real documentado</strong><span>profiles · healthchecks · tracing · correlated logs</span></div>
+        </article>
+
+        <p class="evidence-source-line">Source: <a href="https://github.com/EnzoAA004/arqApps_VersionEnzo/blob/main/README.md" target="_blank" rel="noreferrer">README.md ↗</a> · <a href="https://github.com/EnzoAA004/arqApps_VersionEnzo/blob/main/docker-compose.yml" target="_blank" rel="noreferrer">docker-compose.yml ↗</a> · <a href="https://github.com/EnzoAA004/arqApps_VersionEnzo/blob/main/k6-product-load.js" target="_blank" rel="noreferrer">k6-product-load.js ↗</a></p>
+      </div>
+    </section>
+
+    <section class="case-section case-architecture-section" id="architecture" data-case-section="architecture">
       <div class="container case-architecture-grid">
         <div class="case-sticky reveal"><span class="case-section-kicker">02 / RUNTIME</span><h2 data-es="Operabilidad como parte de la arquitectura." data-en="Operability as part of architecture.">Operabilidad como parte de la arquitectura.</h2><p data-es="Gateway, discovery, seguridad, broker y observabilidad resuelven problemas concretos de enrutamiento, identidad, comunicación y diagnóstico." data-en="Gateway, discovery, security, brokers and observability solve concrete routing, identity, communication and diagnosis problems.">Gateway, discovery, seguridad, broker y observabilidad resuelven problemas concretos de enrutamiento, identidad, comunicación y diagnóstico.</p></div>
         <div class="case-architecture-canvas reveal"><div class="arch-flow">
@@ -76,9 +124,9 @@
       </div>
     </section>
 
-    <section class="case-section">
+    <section class="case-section" id="decisions" data-case-section="decisions">
       <div class="container">
-        <div class="case-section-head reveal"><span class="case-section-kicker">03 / DECISIONS</span><h2 data-es="Diseñar también para diagnosticar." data-en="Design for diagnosis too.">Diseñar también para diagnosticar.</h2></div>
+        <div class="case-section-head reveal"><span class="case-section-kicker">04 / DECISIONS</span><h2 data-es="Diseñar también para diagnosticar." data-en="Design for diagnosis too.">Diseñar también para diagnosticar.</h2></div>
         <div class="case-decisions-grid">
           <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Broker por perfil" data-en="Broker by profile">Broker por perfil</h3><p data-es="RabbitMQ y Kafka se ejecutan como alternativas, lo que permite comparar adaptadores sin reescribir el dominio." data-en="RabbitMQ and Kafka run as alternatives, allowing adapters to be compared without rewriting the domain.">RabbitMQ y Kafka se ejecutan como alternativas, lo que permite comparar adaptadores sin reescribir el dominio.</p><div class="decision-tech"><span>profiles</span><span>RabbitMQ</span><span>Kafka</span></div></article>
           <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Tracing + logs correlacionados" data-en="Tracing + correlated logs">Tracing + logs correlacionados</h3><p data-es="Micrometer/Brave propaga IDs que luego aparecen en logs enviados a Logstash, conectando Zipkin con Kibana." data-en="Micrometer/Brave propagates IDs that then appear in logs sent to Logstash, connecting Zipkin with Kibana.">Micrometer/Brave propaga IDs que luego aparecen en logs enviados a Logstash, conectando Zipkin con Kibana.</p><div class="decision-tech"><span>Micrometer</span><span>Brave</span><span>Zipkin</span><span>ELK</span></div></article>
@@ -88,9 +136,9 @@
       </div>
     </section>
 
-    <section class="case-section case-status-section">
+    <section class="case-section case-status-section" id="scope" data-case-section="scope">
       <div class="container">
-        <div class="case-section-head reveal"><span class="case-section-kicker">04 / SCOPE</span><h2 data-es="Laboratorio de arquitectura, no producción enterprise." data-en="Architecture lab, not enterprise production.">Laboratorio de arquitectura, no producción enterprise.</h2></div>
+        <div class="case-section-head reveal"><span class="case-section-kicker">05 / SCOPE</span><h2 data-es="Laboratorio de arquitectura, no producción enterprise." data-en="Architecture lab, not enterprise production.">Laboratorio de arquitectura, no producción enterprise.</h2></div>
         <div class="case-status-board reveal">
           <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</span></div><h3 data-es="Ecosistema ejecutable" data-en="Executable ecosystem">Ecosistema ejecutable</h3><ul class="case-status-list"><li>Gateway + Eureka + Config Server</li><li>Servicios de identidad y dominio</li><li>RabbitMQ o Kafka</li><li>Zipkin + ELK</li><li>Docker Compose + healthchecks</li><li>k6 load script</li></ul></div>
           <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="ALCANCE HONESTO" data-en="HONEST SCOPE">ALCANCE HONESTO</span></div><h3 data-es="Aprendizaje cloud" data-en="Cloud learning">Aprendizaje cloud</h3><ul class="case-status-list"><li data-es="No se presenta como sistema productivo de alta escala." data-en="It is not presented as a high-scale production system.">No se presenta como sistema productivo de alta escala.</li><li data-es="El foco es operabilidad distribuida y observabilidad." data-en="The focus is distributed operability and observability.">El foco es operabilidad distribuida y observabilidad.</li><li data-es="Los assets orientados a AWS son demostrativos, no un deployment sostenido." data-en="AWS-oriented assets are demonstrative, not a sustained deployment.">Los assets orientados a AWS son demostrativos, no un deployment sostenido.</li></ul></div>
