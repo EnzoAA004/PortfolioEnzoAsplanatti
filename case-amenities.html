@@ -24,6 +24,14 @@
     data-description-es="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio."
     data-description-en="Full-stack product for amenity reservations, payments and administration with real business rules."
   >
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+    <nav class="case-progress" aria-label="Case study progress">
+      <a href="#context" data-case-nav="context" data-label="Context"></a>
+      <a href="#evidence" data-case-nav="evidence" data-label="Interface"></a>
+      <a href="#architecture" data-case-nav="architecture" data-label="Architecture"></a>
+      <a href="#decisions" data-case-nav="decisions" data-label="Decisions"></a>
+      <a href="#delivery" data-case-nav="delivery" data-label="Delivery"></a>
+    </nav>
     <div class="page-loader" aria-hidden="true"><div class="loader-mark">EA<span>°</span></div><div class="loader-line"><i></i></div><span class="loader-copy">CASE STUDY / AMENITIES</span></div>
     <div class="pointer-glow" aria-hidden="true"></div>
     <div class="noise-layer" aria-hidden="true"></div>
@@ -63,7 +71,7 @@
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section" id="context" data-case-section="context">
         <div class="container">
           <div class="case-section-head reveal"><span class="case-section-kicker">01 / CONTEXT</span><h2 data-es="El desafío central fue convertir reglas operativas ambiguas en comportamiento de producto verificable." data-en="The core challenge was turning ambiguous operating rules into verifiable product behavior.">El desafío central fue convertir reglas operativas ambiguas en comportamiento de producto verificable.</h2></div>
           <div class="case-overview-grid">
@@ -75,9 +83,84 @@
         </div>
       </section>
 
-      <section class="case-section case-architecture-section">
+      <section class="case-section case-evidence-section" id="evidence" data-case-section="evidence">
+        <div class="container">
+          <div class="evidence-intro reveal">
+            <div>
+              <span class="case-section-kicker">02 / PRODUCT SURFACES</span>
+              <h2 data-es="Flujos de residente y administración basados en el cliente real." data-en="Resident and administration flows based on the real client.">Flujos de residente y administración basados en el cliente real.</h2>
+            </div>
+            <div>
+              <p data-es="La UI que ves acá reconstruye componentes y textos que ya existen en Angular/Ionic: browsing de amenities, entry point por QR y overview administrativo. No se presenta como captura de producción; es evidencia visual derivada del código implementado." data-en="The UI shown here reconstructs Angular/Ionic components and labels that already exist: amenity browsing, QR reservation entry point and the admin overview. It is not presented as a production screenshot; it is visual evidence derived from implemented code.">La UI que ves acá reconstruye componentes y textos que ya existen en Angular/Ionic: browsing de amenities, entry point por QR y overview administrativo. No se presenta como captura de producción; es evidencia visual derivada del código implementado.</p>
+              <div class="evidence-note"><i></i><span data-es="Basado en amenities.page.ts, reservation-entry-point.page.ts y admin-overview.page.ts." data-en="Based on amenities.page.ts, reservation-entry-point.page.ts and admin-overview.page.ts.">Basado en amenities.page.ts, reservation-entry-point.page.ts y admin-overview.page.ts.</span></div>
+            </div>
+          </div>
+
+          <div class="product-surface-grid">
+            <article class="product-surface surface-wide reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/amenities · resident</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas amenities-ui">
+                <span class="mini-eyebrow">Amenities</span>
+                <h4 data-es="Elegí un espacio y consultá disponibilidad." data-en="Choose an amenity and check availability.">Elegí un espacio y consultá disponibilidad.</h4>
+                <div class="real-field"><label>Building</label><div class="real-control"><span>Edificio piloto — 3A</span><span>⌄</span></div></div>
+                <div class="amenity-card-row">
+                  <div class="amenity-real-card is-selected"><strong>SUM</strong><small>Reservable amenity</small><div><span>Shared use</span><span>Exclusive use</span></div></div>
+                  <div class="amenity-real-card"><strong>Pool</strong><small data-es="Disponible como add-on" data-en="Available as add-on">Disponible como add-on</small><div><span>Resident</span></div></div>
+                  <div class="amenity-real-card"><strong>Barbecue</strong><small data-es="Disponible como add-on" data-en="Available as add-on">Disponible como add-on</small><div><span>Resident</span></div></div>
+                </div>
+                <div class="reservation-flow-mini">
+                  <div class="reservation-panel"><small>AVAILABILITY</small><strong data-es="Ocio compartido / exclusivo" data-en="Shared / exclusive leisure">Ocio compartido / exclusivo</strong><div class="slot-row"><span>10:00</span><span class="is-active">11:00</span><span>12:00</span><span>13:00</span></div></div>
+                  <div class="reservation-panel"><small>EVENT</small><strong data-es="Evento · tarde" data-en="Event · afternoon">Evento · tarde</strong><div class="slot-row"><span>Shared use</span><span class="is-active">Exclusive use</span></div></div>
+                </div>
+              </div>
+              <div class="surface-caption"><strong>Resident amenities</strong><span>availability + quote/create flow</span></div>
+            </article>
+
+            <article class="product-surface surface-narrow reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/reserve/:token</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas amenities-ui">
+                <span class="mini-eyebrow">Reservar amenity</span>
+                <h4>SUM Principal</h4>
+                <p>SUM · Sum</p>
+                <div class="review-summary-bar"><span>Shared use</span><span>Exclusive use</span><span>Suggested: Event</span></div>
+                <div class="reservation-panel"><small data-es="QR RESUELTO" data-en="QR RESOLVED">QR RESUELTO</small><strong data-es="Mismo edificio / mismo contexto" data-en="Same building / same context">Mismo edificio / mismo contexto</strong><div class="slot-row"><span>Availability</span><span class="is-active">Event</span><span>Leisure</span></div></div>
+                <div class="real-button" data-es="Continuar con reserva" data-en="Continue reservation">Continuar con reserva</div>
+              </div>
+              <div class="surface-caption"><strong>QR entry point</strong><span>authorization + resident context</span></div>
+            </article>
+
+            <article class="product-surface surface-full reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/admin · operations</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas admin-overview-mini">
+                <aside class="admin-side">
+                  <span class="is-active">Resumen</span><span>Reservas</span><span>Pagos</span><span>Pricing</span><span>Disponibilidad</span><span>Audit</span>
+                </aside>
+                <div class="admin-main">
+                  <span class="mini-eyebrow">ADMIN</span>
+                  <h5>Resumen</h5>
+                  <p>Acceso read-only a reservas y pagos administrativos.</p>
+                  <div class="admin-actions-mini"><span>Ver reservas</span><span>Ver pagos</span></div>
+                  <div class="review-table-mini" style="margin-top:18px">
+                    <div><span>ID</span><span>Tipo</span><span>Estado</span><span>Pago</span></div>
+                    <div><b>R-1042</b><span>Event</span><span>Pending</span><span>MP</span></div>
+                    <div><b>R-1041</b><span>Leisure</span><span>Confirmed</span><span>Cash</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="surface-caption"><strong>Admin surface</strong><span>reservations · payments · configuration · audit</span></div>
+            </article>
+          </div>
+
+          <p class="evidence-source-line">Source: <a href="https://github.com/EnzoAA004/residential-amenities-platform/blob/main/apps/client/src/app/features/resident/amenities/amenities.page.ts" target="_blank" rel="noreferrer">amenities.page.ts ↗</a> · <a href="https://github.com/EnzoAA004/residential-amenities-platform/blob/main/apps/client/src/app/features/resident/reservations/entry-point/reservation-entry-point.page.ts" target="_blank" rel="noreferrer">reservation-entry-point.page.ts ↗</a> · <a href="https://github.com/EnzoAA004/residential-amenities-platform/blob/main/apps/client/src/app/features/admin/admin-overview.page.ts" target="_blank" rel="noreferrer">admin-overview.page.ts ↗</a></p>
+        </div>
+      </section>
+
+      <section class="case-section case-architecture-section" id="architecture" data-case-section="architecture">
         <div class="container case-architecture-grid">
-          <div class="case-sticky reveal"><span class="case-section-kicker">02 / ARCHITECTURE</span><h2 data-es="Producto completo antes que infraestructura decorativa." data-en="Complete product before decorative infrastructure.">Producto completo antes que infraestructura decorativa.</h2><p data-es="La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment." data-en="The priority was closing the domain, client, payments, security and admin operation. Docker and CI already support development; Azure and Terraform are explicitly the next deployment phase.">La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment.</p></div>
+          <div class="case-sticky reveal"><span class="case-section-kicker">03 / ARCHITECTURE</span><h2 data-es="Producto completo antes que infraestructura decorativa." data-en="Complete product before decorative infrastructure.">Producto completo antes que infraestructura decorativa.</h2><p data-es="La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment." data-en="The priority was closing the domain, client, payments, security and admin operation. Docker and CI already support development; Azure and Terraform are explicitly the next deployment phase.">La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment.</p></div>
           <div class="case-architecture-canvas reveal">
             <div class="arch-flow">
               <div class="arch-layer"><span class="arch-layer-label">CLIENT</span><div class="arch-layer-content"><div class="arch-box accent"><small>ANGULAR + IONIC</small><strong>Resident + Administrator product flows</strong></div></div></div>
@@ -92,9 +175,9 @@
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section" id="decisions" data-case-section="decisions">
         <div class="container">
-          <div class="case-section-head reveal"><span class="case-section-kicker">03 / ENGINEERING DECISIONS</span><h2 data-es="Reglas de negocio convertidas en invariantes del sistema." data-en="Business rules turned into system invariants.">Reglas de negocio convertidas en invariantes del sistema.</h2></div>
+          <div class="case-section-head reveal"><span class="case-section-kicker">04 / ENGINEERING DECISIONS</span><h2 data-es="Reglas de negocio convertidas en invariantes del sistema." data-en="Business rules turned into system invariants.">Reglas de negocio convertidas en invariantes del sistema.</h2></div>
           <div class="case-decisions-grid">
             <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Pricing autoritativo y snapshot histórico" data-en="Authoritative pricing and historical snapshots">Pricing autoritativo y snapshot histórico</h3><p data-es="El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado." data-en="The client does not decide price. The API calculates and preserves the value applied to the reservation so future configuration changes do not rewrite history.">El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado.</p><div class="decision-tech"><span>server authority</span><span>historical snapshot</span></div></article>
             <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Holds y expiración alrededor del pago" data-en="Holds and expiration around payment">Holds y expiración alrededor del pago</h3><p data-es="Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior." data-en="A pending reservation can hold availability for a controlled window. Expiration is treated as part of the domain rather than a later manual correction.">Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior.</p><div class="decision-tech"><span>advisory locks</span><span>holds</span><span>expiration</span></div></article>
@@ -104,9 +187,9 @@
         </div>
       </section>
 
-      <section class="case-section case-status-section">
+      <section class="case-section case-status-section" id="delivery" data-case-section="delivery">
         <div class="container">
-          <div class="case-section-head reveal"><span class="case-section-kicker">04 / DELIVERY</span><h2 data-es="Cloud-ready no significa fingir un deployment que todavía no existe." data-en="Cloud-ready does not mean pretending a deployment already exists.">Cloud-ready no significa fingir un deployment que todavía no existe.</h2></div>
+          <div class="case-section-head reveal"><span class="case-section-kicker">05 / DELIVERY</span><h2 data-es="Cloud-ready no significa fingir un deployment que todavía no existe." data-en="Cloud-ready does not mean pretending a deployment already exists.">Cloud-ready no significa fingir un deployment que todavía no existe.</h2></div>
           <div class="case-status-board reveal">
             <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</span></div><h3 data-es="MVP funcional y validado en CI" data-en="Functional MVP validated in CI">MVP funcional y validado en CI</h3><ul class="case-status-list"><li>Backend de identidad, RBAC, reservas y administración</li><li>Cliente Angular/Ionic para residentes y administradores</li><li>PostgreSQL, pagos Mercado Pago y efectivo</li><li>Control de concurrencia, holds y expiración</li><li>Audit trail append-only</li><li>Docker Compose local + GitHub Actions CI</li></ul></div>
             <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="SIGUIENTE FASE" data-en="NEXT PHASE">SIGUIENTE FASE</span></div><h3>Azure / Terraform</h3><ul class="case-status-list"><li data-es="Diseñar y provisionar infraestructura Azure con IaC." data-en="Design and provision Azure infrastructure with IaC.">Diseñar y provisionar infraestructura Azure con IaC.</li><li data-es="Convertir CI en pipeline de despliegue reproducible." data-en="Turn CI into a reproducible deployment pipeline.">Convertir CI en pipeline de despliegue reproducible.</li><li data-es="Evaluar Puppet solo donde exista una necesidad real de configuración a nivel host." data-en="Evaluate Puppet only where host-level configuration is actually justified.">Evaluar Puppet solo donde exista una necesidad real de configuración a nivel host.</li></ul></div>

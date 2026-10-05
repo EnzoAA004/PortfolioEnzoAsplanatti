@@ -24,6 +24,14 @@
     data-description-es="Arquitectura y decisiones de ingeniería detrás de una plataforma de transcripción musical asistida por IA."
     data-description-en="Architecture and engineering decisions behind an AI-assisted music transcription platform."
   >
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+    <nav class="case-progress" aria-label="Case study progress">
+      <a href="#context" data-case-nav="context" data-label="Context"></a>
+      <a href="#evidence" data-case-nav="evidence" data-label="Interface"></a>
+      <a href="#architecture" data-case-nav="architecture" data-label="Architecture"></a>
+      <a href="#decisions" data-case-nav="decisions" data-label="Decisions"></a>
+      <a href="#status" data-case-nav="status" data-label="Status"></a>
+    </nav>
     <div class="page-loader" aria-hidden="true">
       <div class="loader-mark">EA<span>°</span></div>
       <div class="loader-line"><i></i></div>
@@ -89,7 +97,7 @@
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section" id="context" data-case-section="context">
         <div class="container">
           <div class="case-section-head reveal">
             <span class="case-section-kicker">01 / CONTEXT</span>
@@ -109,10 +117,92 @@
         </div>
       </section>
 
-      <section class="case-section case-architecture-section">
+      <section class="case-section case-evidence-section" id="evidence" data-case-section="evidence">
+        <div class="container">
+          <div class="evidence-intro reveal">
+            <div>
+              <span class="case-section-kicker">02 / PRODUCT SURFACES</span>
+              <h2 data-es="Interfaz reconstruida desde los componentes reales." data-en="Interface reconstructed from the real components.">Interfaz reconstruida desde los componentes reales.</h2>
+            </div>
+            <div>
+              <p data-es="Estas vistas no son mockups inventados para el portfolio: reproducen la estructura, estados y textos que existen en el frontend de Saxo. Sirven para mostrar cómo se ve el producto sin fingir que son capturas de un entorno desplegado." data-en="These views are not invented portfolio mockups: they reproduce the structure, states and labels that exist in the Saxo frontend. They show the product surface without pretending to be screenshots from a deployed environment.">Estas vistas no son mockups inventados para el portfolio: reproducen la estructura, estados y textos que existen en el frontend de Saxo. Sirven para mostrar cómo se ve el producto sin fingir que son capturas de un entorno desplegado.</p>
+              <div class="evidence-note"><i></i><span data-es="Basado en audio-upload-form.tsx, transcription-review.tsx y transcription-revision-editor.tsx." data-en="Based on audio-upload-form.tsx, transcription-review.tsx and transcription-revision-editor.tsx.">Basado en audio-upload-form.tsx, transcription-review.tsx y transcription-revision-editor.tsx.</span></div>
+            </div>
+          </div>
+
+          <div class="product-surface-grid">
+            <article class="product-surface surface-wide reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/ · create transcription</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas saxo-upload-ui">
+                <div class="saxo-upload-copy">
+                  <span class="mini-eyebrow">InstrumentalSW</span>
+                  <h4>Create a transcription job</h4>
+                  <p>Select an MP3 or WAV recording, choose the saxophone and audio mode, then send it securely through the Saxo product API.</p>
+                </div>
+                <div class="real-form">
+                  <div class="real-field"><label>Audio file</label><div class="real-file-control"><span>No file selected</span><b>Choose file</b></div><span class="real-help">MP3 or WAV only. Selecting a file does not upload or play it.</span></div>
+                  <div class="real-field"><label>Saxophone type</label><div class="real-control"><span>Alto</span><span>⌄</span></div></div>
+                  <div class="real-field"><label>Audio mode</label><div class="real-control"><span>Solo saxophone</span><span>⌄</span></div></div>
+                  <div class="real-button">Create transcription job</div>
+                </div>
+              </div>
+              <div class="surface-caption"><strong>Upload flow</strong><span>real labels / implementation-backed</span></div>
+            </article>
+
+            <article class="product-surface surface-narrow reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/review</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas saxo-review-ui">
+                <span class="mini-eyebrow">InstrumentalSW</span>
+                <h4>Transcription notes</h4>
+                <p>Confidence is a model signal, not calibrated accuracy.</p>
+                <div class="review-summary-bar"><span>12 note events</span><span>2 low confidence</span><span>Alto</span></div>
+                <div class="note-timeline-mini" aria-hidden="true">
+                  <span style="--x:5%;--y:18px;--w:20%"></span>
+                  <span style="--x:27%;--y:48px;--w:13%"></span>
+                  <span class="low" style="--x:42%;--y:78px;--w:22%"></span>
+                  <span style="--x:66%;--y:108px;--w:10%"></span>
+                  <span style="--x:78%;--y:48px;--w:16%"></span>
+                </div>
+                <div class="review-table-mini">
+                  <div><span>#</span><span>Written</span><span>Onset</span><span>Confidence</span></div>
+                  <div><b>0</b><span>69</span><span>0.00s</span><span>0.94</span></div>
+                  <div><b>1</b><span>71</span><span>0.52s</span><span>0.88</span></div>
+                  <div><b>2</b><span>72</span><span>1.01s</span><span>low</span></div>
+                </div>
+              </div>
+              <div class="surface-caption"><strong>Review surface</strong><span>timeline + semantic table</span></div>
+            </article>
+
+            <article class="product-surface surface-full reveal">
+              <div class="surface-topbar"><i></i><i></i><i></i><span>/review/edit · immutable revision editor</span></div>
+              <span class="surface-label">IMPLEMENTED UI</span>
+              <div class="surface-canvas">
+                <div class="saxo-review-ui">
+                  <span class="mini-eyebrow">Revision 3 / latest</span>
+                  <h4 data-es="Editor explícito, sin autosave." data-en="Explicit editor, no autosave.">Editor explícito, sin autosave.</h4>
+                  <div class="review-table-mini">
+                    <div><span>ID</span><span>Written MIDI</span><span>Onset</span><span>Offset</span></div>
+                    <div><b>source-0</b><span>69</span><span>0.000</span><span>0.420</span></div>
+                    <div><b>source-1</b><span>71</span><span>0.440</span><span>0.980</span></div>
+                    <div><b>human-…</b><span>72</span><span>1.050</span><span>1.560</span></div>
+                  </div>
+                  <div class="review-summary-bar"><span>Add note</span><span>Discard</span><span>Save revision</span><span>Request artifact regeneration</span></div>
+                </div>
+              </div>
+              <div class="surface-caption"><strong data-es="Revisiones inmutables" data-en="Immutable revisions">Revisiones inmutables</strong><span>stale base → 409 REVISION_CONFLICT</span></div>
+            </article>
+          </div>
+
+          <p class="evidence-source-line">Source: <a href="https://github.com/EnzoAA004/InstrumentalSW_Frontend/blob/main/src/components/audio-upload-form.tsx" target="_blank" rel="noreferrer">audio-upload-form.tsx ↗</a> · <a href="https://github.com/EnzoAA004/InstrumentalSW_Frontend/blob/main/src/components/transcription-review.tsx" target="_blank" rel="noreferrer">transcription-review.tsx ↗</a> · <a href="https://github.com/EnzoAA004/InstrumentalSW_Frontend/blob/main/src/components/transcription-revision-editor.tsx" target="_blank" rel="noreferrer">transcription-revision-editor.tsx ↗</a></p>
+        </div>
+      </section>
+
+      <section class="case-section case-architecture-section" id="architecture" data-case-section="architecture">
         <div class="container case-architecture-grid">
           <div class="case-sticky reveal">
-            <span class="case-section-kicker">02 / ARCHITECTURE</span>
+            <span class="case-section-kicker">03 / ARCHITECTURE</span>
             <h2 data-es="Separar responsabilidades antes de escalar complejidad." data-en="Separate responsibilities before scaling complexity.">Separar responsabilidades antes de escalar complejidad.</h2>
             <p data-es="La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna." data-en="The architecture keeps UI, product logic and processing separate. It also lets persistence, queueing and object storage evolve without turning the browser into a direct client of internal infrastructure.">La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna.</p>
           </div>
@@ -130,10 +220,10 @@
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section" id="decisions" data-case-section="decisions">
         <div class="container">
           <div class="case-section-head reveal">
-            <span class="case-section-kicker">03 / ENGINEERING DECISIONS</span>
+            <span class="case-section-kicker">04 / ENGINEERING DECISIONS</span>
             <h2 data-es="Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido." data-en="Decisions designed so the system can be explained, tested and corrected.">Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido.</h2>
           </div>
           <div class="case-decisions-grid">
@@ -145,10 +235,10 @@
         </div>
       </section>
 
-      <section class="case-section case-status-section">
+      <section class="case-section case-status-section" id="status" data-case-section="status">
         <div class="container">
           <div class="case-section-head reveal">
-            <span class="case-section-kicker">04 / STATUS</span>
+            <span class="case-section-kicker">05 / STATUS</span>
             <h2 data-es="Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución." data-en="Show what exists without presenting evolving work as finished.">Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución.</h2>
           </div>
           <div class="case-status-board reveal">

@@ -3410,3 +3410,21 @@ body.menu-open {
     animation: none !important;
   }
 }
+
+
+/* V2.3 interaction polish */
+.system-case[data-href] {
+  cursor: pointer;
+}
+
+.system-case[data-href]:focus-visible {
+  outline: 1px solid var(--electric);
+  outline-offset: 4px;
+  border-color: rgba(114,220,255,.42);
+  box-shadow: 0 0 0 6px rgba(114,220,255,.035), 0 28px 100px rgba(0,0,0,.28);
+}
+
+.system-case[data-href] .case-link {
+  position: relative;
+  z-index: 3;
+}
