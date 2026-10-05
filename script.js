@@ -65,6 +65,7 @@ function syncThemeButtonLabel() {
       : (isDark ? 'Switch to light theme' : 'Switch to dark theme');
   themeButton.setAttribute('aria-label', label);
   themeButton.setAttribute('title', label);
+  themeButton.setAttribute('aria-pressed', String(isDark));
 }
 
 function setTheme(theme, { persist = true, animate = true } = {}) {
