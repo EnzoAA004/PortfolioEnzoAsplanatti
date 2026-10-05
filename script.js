@@ -159,7 +159,7 @@ if (finePointer && !prefersReducedMotion) {
 }
 
 /* Dynamic project-card light */
-document.querySelectorAll('.project-card').forEach((card) => {
+document.querySelectorAll('.project-card, .system-case, .archive-card').forEach((card) => {
   card.addEventListener('pointermove', (event) => {
     const rect = card.getBoundingClientRect();
     card.style.setProperty('--card-x', `${event.clientX - rect.left}px`);
@@ -262,7 +262,7 @@ if (!prefersReducedMotion && window.gsap) {
       }
     });
 
-    gsap.utils.toArray('.project-card').forEach((card) => {
+    gsap.utils.toArray('.system-case, .archive-card, .project-card').forEach((card) => {
       gsap.fromTo(
         card,
         { y: 46, opacity: 0.68 },
@@ -326,6 +326,65 @@ if (!prefersReducedMotion && window.gsap) {
       });
     });
   }
+}
+
+/* Project domain filtering */
+const projectFilterButtons = Array.from(document.querySelectorAll('.project-filter'));
+const filterableProjects = Array.from(document.querySelectorAll('[data-project-domains]'));
+const filterEmpty = document.getElementById('filterEmpty');
+
+function setProjectFilter(filter) {
+  let visibleCount = 0;
+
+  projectFilterButtons.forEach((button) => {
+    const active = button.dataset.filter === filter;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+
+  filterableProjects.forEach((project) => {
+    const domains = (project.dataset.projectDomains || '').split(/\s+/).filter(Boolean);
+    const visible = filter === 'all' || domains.includes(filter);
+    project.classList.toggle('is-filtered-out', !visible);
+    project.setAttribute('aria-hidden', String(!visible));
+    if (visible) visibleCount += 1;
+  });
+
+  if (filterEmpty) {
+    filterEmpty.hidden = visibleCount !== 0;
+  }
+
+  if (window.ScrollTrigger) {
+    window.ScrollTrigger.refresh();
+  }
+}
+
+projectFilterButtons.forEach((button) => {
+  button.setAttribute('aria-pressed', String(button.classList.contains('is-active')));
+  button.addEventListener('click', () => {
+    setProjectFilter(button.dataset.filter || 'all');
+  });
+});
+
+setProjectFilter('all');
+
+/* Curated-system visual microinteractions */
+if (finePointer && !prefersReducedMotion) {
+  document.querySelectorAll('.system-case').forEach((card) => {
+    const visual = card.querySelector('.system-case-visual');
+    if (!visual) return;
+
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const nx = (event.clientX - rect.left) / rect.width - 0.5;
+      const ny = (event.clientY - rect.top) / rect.height - 0.5;
+      visual.style.transform = `translate3d(${nx * -5}px, ${ny * -5}px, 0)`;
+    });
+
+    card.addEventListener('pointerleave', () => {
+      visual.style.transform = '';
+    });
+  });
 }
 
 /* Highlight active capability nodes as the board scrolls */
