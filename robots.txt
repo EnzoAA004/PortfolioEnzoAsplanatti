@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enzoaa004.github.io/PortfolioEnzoAsplanatti/sitemap.xml
