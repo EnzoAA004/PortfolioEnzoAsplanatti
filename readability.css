@@ -857,3 +857,51 @@ html[data-theme="dark"] .case-data-flow small,
 html[data-theme="dark"] .cloud-bus b {
   color: #abb2bc;
 }
+
+
+/* Final micro-type sweep after static audit. */
+.terminal-card code {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+.amenity-flow span,
+.amenities-building span,
+.cloud-hero-gateway,
+.case-progress a::before,
+.arch-divider,
+.custom-cursor {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.cap-node strong {
+  font-size: .76rem;
+}
+
+html[data-theme="light"] .terminal-card code,
+html[data-theme="light"] .amenity-flow span,
+html[data-theme="light"] .amenities-building span,
+html[data-theme="light"] .case-progress a::before {
+  color: #4f5862;
+}
+
+html[data-theme="dark"] .terminal-card code,
+html[data-theme="dark"] .amenity-flow span,
+html[data-theme="dark"] .amenities-building span,
+html[data-theme="dark"] .case-progress a::before {
+  color: #b2b9c2;
+}
+
+@media (max-width: 650px) {
+  .cap-node strong {
+    font-size: .73rem;
+  }
+
+  .cap-node small {
+    font-size: .66rem;
+  }
+}
