@@ -191,7 +191,11 @@ if (finePointer && !prefersReducedMotion) {
 
       systemFrame.querySelectorAll('.cap-node').forEach((node, index) => {
         const depth = 5 + index * 1.2;
-        node.style.transform = `translate3d(${nx * depth}px, ${ny * depth}px, 0)`;
+        if (node.classList.contains('node-data')) {
+          node.style.transform = `translate3d(calc(-50% + ${nx * depth}px), ${ny * depth}px, 0)`;
+        } else {
+          node.style.transform = `translate3d(${nx * depth}px, ${ny * depth}px, 0)`;
+        }
       });
 
       const core = systemFrame.querySelector('.system-core');
