@@ -1,4 +1,5 @@
 const languageButton = document.getElementById('langToggle');
+const themeButton = document.getElementById('themeToggle');
 const footerYear = document.getElementById('footerYear');
 const menuToggle = document.getElementById('menuToggle');
 const primaryNav = document.getElementById('primaryNav');
@@ -26,6 +27,8 @@ function setLanguage(language) {
     );
   }
 
+  syncThemeButtonLabel();
+
   const titleKey = language === 'es' ? 'titleEs' : 'titleEn';
   document.title =
     document.body?.dataset?.[titleKey] ||
@@ -47,6 +50,56 @@ if (languageButton) {
     setLanguage(currentLanguage === 'es' ? 'en' : 'es');
   });
 }
+
+
+function getCurrentTheme() {
+  return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+}
+
+function syncThemeButtonLabel() {
+  if (!themeButton) return;
+  const isDark = getCurrentTheme() === 'dark';
+  const label =
+    currentLanguage === 'es'
+      ? (isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro')
+      : (isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  themeButton.setAttribute('aria-label', label);
+  themeButton.setAttribute('title', label);
+}
+
+function setTheme(theme, { persist = true, animate = true } = {}) {
+  const nextTheme = theme === 'dark' ? 'dark' : 'light';
+
+  if (animate && !prefersReducedMotion) {
+    document.documentElement.classList.add('theme-switching');
+    window.setTimeout(() => document.documentElement.classList.remove('theme-switching'), 420);
+  }
+
+  document.documentElement.dataset.theme = nextTheme;
+
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) {
+    themeColor.content = nextTheme === 'dark' ? '#090a0c' : '#f4f1e8';
+  }
+
+  if (persist) {
+    try {
+      localStorage.setItem('portfolio-theme', nextTheme);
+    } catch (_) {
+      // Theme still works for the current page when storage is unavailable.
+    }
+  }
+
+  syncThemeButtonLabel();
+}
+
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    setTheme(getCurrentTheme() === 'dark' ? 'light' : 'dark');
+  });
+}
+
+setTheme(getCurrentTheme(), { persist: false, animate: false });
 
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear().toString();
