@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Case study de Residential Amenities Platform: ASP.NET Core, Angular/Ionic, PostgreSQL, pagos, concurrencia, auditoría y delivery cloud-ready." />
+    <meta name="theme-color" content="#08090b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Residential Amenities Platform — Case Study | Enzo Asplanatti" />
+    <meta property="og:description" content="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio." />
+    <link rel="canonical" href="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-amenities.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Residential Amenities Platform — Case Study | Enzo Asplanatti</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="case-study.css" />
+  </head>
+  <body
+    class="case-page"
+    data-title-es="Residential Amenities Platform — Case Study | Enzo Asplanatti"
+    data-title-en="Residential Amenities Platform — Case Study | Enzo Asplanatti"
+    data-description-es="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio."
+    data-description-en="Full-stack product for amenity reservations, payments and administration with real business rules."
+  >
+    <div class="page-loader" aria-hidden="true"><div class="loader-mark">EA<span>°</span></div><div class="loader-line"><i></i></div><span class="loader-copy">CASE STUDY / AMENITIES</span></div>
+    <div class="pointer-glow" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand magnetic" href="index.html#top" aria-label="Enzo Asplanatti, inicio"><span class="brand-mark">EA<span>°</span></span><span class="brand-copy"><strong>Enzo Asplanatti</strong><small>Software Engineer</small></span></a>
+        <nav class="nav-links" id="primaryNav" aria-label="Navegación principal">
+          <a href="index.html#projects" data-es="Trabajo" data-en="Work">Trabajo</a><a href="index.html#capabilities" data-es="Capacidades" data-en="Capabilities">Capacidades</a><a href="index.html#about" data-es="Perfil" data-en="About">Perfil</a><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+        </nav>
+        <div class="nav-actions"><button class="lang-toggle magnetic" id="langToggle" type="button" aria-label="Cambiar idioma">EN</button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button></div>
+      </div>
+    </header>
+
+    <main class="case-main">
+      <section class="case-hero">
+        <div class="container case-hero-shell">
+          <div class="case-hero-copy">
+            <a class="case-back" href="index.html#projects">← <span data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</span></a>
+            <div class="case-number"><span>CASE 02</span><i></i><span>PRODUCT · FULL STACK · DELIVERY</span></div>
+            <h1 class="case-title motion-title">Residential <em>Amenities</em></h1>
+            <p class="case-lead" data-es="Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio y con una arquitectura preparada para evolucionar hacia un servicio alojado." data-en="A product for managing amenity reservations, availability, payments and administration in a pilot building, designed from real business rules and prepared to evolve into a hosted service.">Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio y con una arquitectura preparada para evolucionar hacia un servicio alojado.</p>
+            <div class="case-meta"><span>ASP.NET Core</span><span>Angular</span><span>Ionic</span><span>PostgreSQL</span><span>SignalR</span><span>Docker</span><span>GitHub Actions</span></div>
+            <div class="case-hero-actions"><a class="magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform" target="_blank" rel="noreferrer"><span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span> ↗</a></div>
+          </div>
+
+          <div class="case-hero-visual">
+            <div class="case-visual-shell">
+              <div class="case-visual-label"><span>RAP / PRODUCT MAP</span><span>PILOT</span></div>
+              <div class="amenities-hero-map">
+                <div class="amenities-building"><span>5A</span><span>5B</span><span>4A</span><span>4B</span><span>3A</span><span>3B</span><span>2A</span><span>2B</span><span>1A</span><span>1B</span></div>
+                <div class="amenities-product-flow"><div><small>CLIENT</small><strong>Angular / Ionic</strong></div><span>→</span><div><small>API</small><strong>ASP.NET Core</strong></div><span>→</span><div><small>DATA</small><strong>PostgreSQL</strong></div></div>
+              </div>
+            </div>
+            <div class="case-visual-caption"><em>$</em> delivery.status<br><strong>local containers + CI green · Azure/Terraform next</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="case-section-head reveal"><span class="case-section-kicker">01 / CONTEXT</span><h2 data-es="El desafío central fue convertir reglas operativas ambiguas en comportamiento de producto verificable." data-en="The core challenge was turning ambiguous operating rules into verifiable product behavior.">El desafío central fue convertir reglas operativas ambiguas en comportamiento de producto verificable.</h2></div>
+          <div class="case-overview-grid">
+            <article class="case-overview-card reveal"><span>DOMAIN</span><h3 data-es="Reservas con modalidades distintas" data-en="Reservations with different modes">Reservas con modalidades distintas</h3><p data-es="El sistema diferencia ocio compartido, ocio exclusivo y eventos con ventanas horarias, disponibilidad y políticas propias." data-en="The system distinguishes shared leisure, exclusive leisure and events with their own time windows, availability and policies.">El sistema diferencia ocio compartido, ocio exclusivo y eventos con ventanas horarias, disponibilidad y políticas propias.</p></article>
+            <article class="case-overview-card reveal"><span>CONSISTENCY</span><h3 data-es="Concurrencia y holds" data-en="Concurrency and holds">Concurrencia y holds</h3><p data-es="La disponibilidad y el precio son autoridad del servidor. Locks, holds y expiración evitan reservas incompatibles o estados inconsistentes durante el pago." data-en="Availability and pricing are server-authoritative. Locks, holds and expiration prevent incompatible reservations or inconsistent states during payment.">La disponibilidad y el precio son autoridad del servidor. Locks, holds y expiración evitan reservas incompatibles o estados inconsistentes durante el pago.</p></article>
+            <article class="case-overview-card reveal"><span>OPERATIONS</span><h3 data-es="Administración trazable" data-en="Traceable administration">Administración trazable</h3><p data-es="El panel administrativo incluye consultas, cancelaciones, reprogramación, pricing, disponibilidad, confirmación de efectivo y un audit trail append-only." data-en="The admin panel includes queries, cancellations, rescheduling, pricing, availability, cash confirmation and an append-only audit trail.">El panel administrativo incluye consultas, cancelaciones, reprogramación, pricing, disponibilidad, confirmación de efectivo y un audit trail append-only.</p></article>
+          </div>
+          <div class="case-proof-row reveal"><div><strong>10</strong><span data-es="unidades del piloto" data-en="pilot units">unidades del piloto</span></div><div><strong>2</strong><span data-es="roles principales" data-en="primary roles">roles principales</span></div><div><strong>CI</strong><span data-es="backend + full stack" data-en="backend + full stack">backend + full stack</span></div><div><strong>E2E</strong><span data-es="reserva → pago → admin" data-en="booking → payment → admin">reserva → pago → admin</span></div></div>
+        </div>
+      </section>
+
+      <section class="case-section case-architecture-section">
+        <div class="container case-architecture-grid">
+          <div class="case-sticky reveal"><span class="case-section-kicker">02 / ARCHITECTURE</span><h2 data-es="Producto completo antes que infraestructura decorativa." data-en="Complete product before decorative infrastructure.">Producto completo antes que infraestructura decorativa.</h2><p data-es="La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment." data-en="The priority was closing the domain, client, payments, security and admin operation. Docker and CI already support development; Azure and Terraform are explicitly the next deployment phase.">La prioridad fue cerrar dominio, cliente, pagos, seguridad y operación administrativa. Docker y CI ya acompañan el ciclo de desarrollo; Azure y Terraform quedan explícitamente como siguiente fase de deployment.</p></div>
+          <div class="case-architecture-canvas reveal">
+            <div class="arch-flow">
+              <div class="arch-layer"><span class="arch-layer-label">CLIENT</span><div class="arch-layer-content"><div class="arch-box accent"><small>ANGULAR + IONIC</small><strong>Resident + Administrator product flows</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">API</span><div class="arch-layer-content"><div class="arch-box"><small>ASP.NET CORE</small><strong>RBAC · reservations · pricing · payments · admin</strong></div><div class="arch-box"><small>SIGNALR</small><strong>Realtime-ready communication layer</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">DATA / EXT</span><div class="arch-layer-content"><div class="arch-box gold"><small>POSTGRESQL</small><strong>Domain state + history + audit</strong></div><div class="arch-box gold"><small>MERCADO PAGO</small><strong>Online payment flow</strong></div></div></div>
+              <div class="arch-divider"><i></i></div>
+              <div class="arch-layer"><span class="arch-layer-label">DELIVERY</span><div class="arch-layer-content"><div class="arch-box"><small>IMPLEMENTED</small><strong>Docker Compose + GitHub Actions</strong></div><div class="arch-box accent"><small>NEXT PHASE</small><strong>Azure + Terraform</strong></div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="case-section-head reveal"><span class="case-section-kicker">03 / ENGINEERING DECISIONS</span><h2 data-es="Reglas de negocio convertidas en invariantes del sistema." data-en="Business rules turned into system invariants.">Reglas de negocio convertidas en invariantes del sistema.</h2></div>
+          <div class="case-decisions-grid">
+            <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Pricing autoritativo y snapshot histórico" data-en="Authoritative pricing and historical snapshots">Pricing autoritativo y snapshot histórico</h3><p data-es="El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado." data-en="The client does not decide price. The API calculates and preserves the value applied to the reservation so future configuration changes do not rewrite history.">El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado.</p><div class="decision-tech"><span>server authority</span><span>historical snapshot</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Holds y expiración alrededor del pago" data-en="Holds and expiration around payment">Holds y expiración alrededor del pago</h3><p data-es="Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior." data-en="A pending reservation can hold availability for a controlled window. Expiration is treated as part of the domain rather than a later manual correction.">Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior.</p><div class="decision-tech"><span>advisory locks</span><span>holds</span><span>expiration</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">03</span><h3 data-es="Mercado Pago y efectivo con responsabilidades distintas" data-en="Mercado Pago and cash with distinct responsibilities">Mercado Pago y efectivo con responsabilidades distintas</h3><p data-es="Los pagos online siguen el flujo del proveedor; el efectivo requiere confirmación administrativa. La UI no simula confirmaciones que pertenecen al backend o a un operador." data-en="Online payments follow the provider flow; cash requires admin confirmation. The UI does not simulate confirmations that belong to the backend or an operator.">Los pagos online siguen el flujo del proveedor; el efectivo requiere confirmación administrativa. La UI no simula confirmaciones que pertenecen al backend o a un operador.</p><div class="decision-tech"><span>Mercado Pago</span><span>cash confirmation</span><span>RBAC</span></div></article>
+            <article class="case-decision reveal"><span class="decision-index">04</span><h3 data-es="Documentación como parte del producto" data-en="Documentation as part of the product">Documentación como parte del producto</h3><p data-es="Visión, alcance, requisitos, reglas, decisiones, arquitectura, seguridad, DevOps y FinOps viven versionados junto al código para que las decisiones sean rastreables." data-en="Vision, scope, requirements, rules, decisions, architecture, security, DevOps and FinOps are versioned alongside the code so decisions remain traceable.">Visión, alcance, requisitos, reglas, decisiones, arquitectura, seguridad, DevOps y FinOps viven versionados junto al código para que las decisiones sean rastreables.</p><div class="decision-tech"><span>docs-as-code</span><span>decision log</span><span>roadmap</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section case-status-section">
+        <div class="container">
+          <div class="case-section-head reveal"><span class="case-section-kicker">04 / DELIVERY</span><h2 data-es="Cloud-ready no significa fingir un deployment que todavía no existe." data-en="Cloud-ready does not mean pretending a deployment already exists.">Cloud-ready no significa fingir un deployment que todavía no existe.</h2></div>
+          <div class="case-status-board reveal">
+            <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</span></div><h3 data-es="MVP funcional y validado en CI" data-en="Functional MVP validated in CI">MVP funcional y validado en CI</h3><ul class="case-status-list"><li>Backend de identidad, RBAC, reservas y administración</li><li>Cliente Angular/Ionic para residentes y administradores</li><li>PostgreSQL, pagos Mercado Pago y efectivo</li><li>Control de concurrencia, holds y expiración</li><li>Audit trail append-only</li><li>Docker Compose local + GitHub Actions CI</li></ul></div>
+            <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="SIGUIENTE FASE" data-en="NEXT PHASE">SIGUIENTE FASE</span></div><h3>Azure / Terraform</h3><ul class="case-status-list"><li data-es="Diseñar y provisionar infraestructura Azure con IaC." data-en="Design and provision Azure infrastructure with IaC.">Diseñar y provisionar infraestructura Azure con IaC.</li><li data-es="Convertir CI en pipeline de despliegue reproducible." data-en="Turn CI into a reproducible deployment pipeline.">Convertir CI en pipeline de despliegue reproducible.</li><li data-es="Evaluar Puppet solo donde exista una necesidad real de configuración a nivel host." data-en="Evaluate Puppet only where host-level configuration is actually justified.">Evaluar Puppet solo donde exista una necesidad real de configuración a nivel host.</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-next"><div class="container"><div class="case-next-card reveal"><div><span>NEXT CASE</span><h2 data-es="Ahora, operabilidad distribuida: discovery, gateway, brokers, tracing y logs." data-en="Next: distributed operability — discovery, gateway, brokers, tracing and logs.">Ahora, operabilidad distribuida: discovery, gateway, brokers, tracing y logs.</h2></div><a href="case-cloud-native.html"><span>Cloud-native lab</span> →</a></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><span>Enzo Asplanatti</span><span id="footerYear"></span><a href="index.html#top" data-es="Volver al portfolio" data-en="Back to portfolio">Volver al portfolio</a></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script src="script.js"></script>
+  </body>
+</html>
