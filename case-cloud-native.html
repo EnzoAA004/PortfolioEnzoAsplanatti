@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Case study de microservicios con Spring Boot, Eureka, Gateway, RabbitMQ/Kafka, Zipkin, ELK, Docker y k6." />
+  <meta name="theme-color" content="#08090b" />
+  <link rel="canonical" href="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-cloud-native.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>Spring Cloud Microservices Lab — Case Study | Enzo Asplanatti</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body class="case-page" data-title-es="Spring Cloud Microservices Lab — Case Study | Enzo Asplanatti" data-title-en="Spring Cloud Microservices Lab — Case Study | Enzo Asplanatti">
+  <div class="page-loader" aria-hidden="true"><div class="loader-mark">EA<span>°</span></div><div class="loader-line"><i></i></div><span class="loader-copy">CASE STUDY / CLOUD</span></div>
+  <div class="pointer-glow" aria-hidden="true"></div><div class="noise-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand magnetic" href="index.html#top"><span class="brand-mark">EA<span>°</span></span><span class="brand-copy"><strong>Enzo Asplanatti</strong><small>Software Engineer</small></span></a>
+      <nav class="nav-links" id="primaryNav"><a href="index.html#projects" data-es="Trabajo" data-en="Work">Trabajo</a><a href="index.html#capabilities" data-es="Capacidades" data-en="Capabilities">Capacidades</a><a href="index.html#about" data-es="Perfil" data-en="About">Perfil</a><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></nav>
+      <div class="nav-actions"><button class="lang-toggle magnetic" id="langToggle" type="button">EN</button><button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false"><span></span><span></span></button></div>
+    </div>
+  </header>
+
+  <main class="case-main">
+    <section class="case-hero">
+      <div class="container case-hero-shell">
+        <div>
+          <a class="case-back" href="index.html#projects">← <span data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</span></a>
+          <div class="case-number"><span>CASE 03</span><i></i><span>CLOUD-NATIVE · OBSERVABILITY · EVENTS</span></div>
+          <h1 class="case-title motion-title">Spring Cloud <em>Lab</em></h1>
+          <p class="case-lead" data-es="Laboratorio de arquitectura para practicar discovery, gateway, configuración, identidad, mensajería, tracing, logs centralizados y ejecución reproducible." data-en="Architecture lab for practicing discovery, gateway, configuration, identity, messaging, tracing, centralized logs and reproducible execution.">Laboratorio de arquitectura para practicar discovery, gateway, configuración, identidad, mensajería, tracing, logs centralizados y ejecución reproducible.</p>
+          <div class="case-meta"><span>Java 21</span><span>Spring Boot 3.4</span><span>Eureka</span><span>RabbitMQ / Kafka</span><span>Zipkin</span><span>ELK</span><span>Docker</span><span>k6</span></div>
+          <div class="case-hero-actions"><a class="magnetic" href="https://github.com/EnzoAA004/arqApps_VersionEnzo" target="_blank" rel="noreferrer"><span data-es="Ver laboratorio" data-en="View lab">Ver laboratorio</span> ↗</a></div>
+        </div>
+        <div class="case-hero-visual">
+          <div class="case-visual-shell">
+            <div class="case-visual-label"><span>DISTRIBUTED RUNTIME</span><span>JAVA 21</span></div>
+            <div class="cloud-hero-map">
+              <div class="cloud-hero-gateway">API GATEWAY</div>
+              <div class="cloud-hero-services"><span>AUTH</span><span>INVENTORY</span><span>ORDERS</span><span>NOTIFY</span></div>
+              <div class="cloud-hero-brokers"><span>RabbitMQ</span><span>Kafka</span></div>
+              <div class="cloud-hero-observe"><span>Zipkin</span><span>ELK</span><span>Eureka</span><span>Config Server</span></div>
+            </div>
+          </div>
+          <div class="case-visual-caption"><em>$</em> operability.check<br><strong>discovery · traces · correlated logs · healthchecks</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <div class="case-section-head reveal"><span class="case-section-kicker">01 / CONTEXT</span><h2 data-es="Entender qué exige operar servicios distribuidos, no solo dividir código." data-en="Understand what operating distributed services requires, not just splitting code.">Entender qué exige operar servicios distribuidos, no solo dividir código.</h2></div>
+        <div class="case-overview-grid">
+          <article class="case-overview-card reveal"><span>DISCOVERY</span><h3>Eureka + Config Server</h3><p data-es="Los servicios se descubren dinámicamente y comparten configuración centralizada para reducir dependencias rígidas." data-en="Services discover each other dynamically and share centralized configuration to reduce rigid dependencies.">Los servicios se descubren dinámicamente y comparten configuración centralizada para reducir dependencias rígidas.</p></article>
+          <article class="case-overview-card reveal"><span>MESSAGING</span><h3>RabbitMQ ↔ Kafka</h3><p data-es="Perfiles alternativos permiten comparar brokers manteniendo el dominio desacoplado de la elección de mensajería." data-en="Alternative profiles allow brokers to be compared while keeping the domain decoupled from the messaging choice.">Perfiles alternativos permiten comparar brokers manteniendo el dominio desacoplado de la elección de mensajería.</p></article>
+          <article class="case-overview-card reveal"><span>OBSERVABILITY</span><h3>Zipkin + ELK</h3><p data-es="Tracing distribuido y logs correlacionados por traceId/spanId permiten seguir una operación entre servicios." data-en="Distributed tracing and logs correlated by traceId/spanId allow an operation to be followed across services.">Tracing distribuido y logs correlacionados por traceId/spanId permiten seguir una operación entre servicios.</p></article>
+        </div>
+        <div class="case-proof-row reveal"><div><strong>5+</strong><span data-es="servicios Spring" data-en="Spring services">servicios Spring</span></div><div><strong>2</strong><span data-es="brokers" data-en="brokers">brokers</span></div><div><strong>TRACE</strong><span>Zipkin + IDs</span></div><div><strong>k6</strong><span data-es="carga" data-en="load">carga</span></div></div>
+      </div>
+    </section>
+
+    <section class="case-section case-architecture-section">
+      <div class="container case-architecture-grid">
+        <div class="case-sticky reveal"><span class="case-section-kicker">02 / RUNTIME</span><h2 data-es="Operabilidad como parte de la arquitectura." data-en="Operability as part of architecture.">Operabilidad como parte de la arquitectura.</h2><p data-es="Gateway, discovery, seguridad, broker y observabilidad resuelven problemas concretos de enrutamiento, identidad, comunicación y diagnóstico." data-en="Gateway, discovery, security, brokers and observability solve concrete routing, identity, communication and diagnosis problems.">Gateway, discovery, seguridad, broker y observabilidad resuelven problemas concretos de enrutamiento, identidad, comunicación y diagnóstico.</p></div>
+        <div class="case-architecture-canvas reveal"><div class="arch-flow">
+          <div class="arch-layer"><span class="arch-layer-label">EDGE</span><div class="arch-layer-content"><div class="arch-box accent"><small>GATEWAY</small><strong>Routing + resource server</strong></div></div></div><div class="arch-divider"><i></i></div>
+          <div class="arch-layer"><span class="arch-layer-label">PLATFORM</span><div class="arch-layer-content"><div class="arch-box"><small>EUREKA</small><strong>Discovery</strong></div><div class="arch-box"><small>CONFIG</small><strong>Central config</strong></div></div></div><div class="arch-divider"><i></i></div>
+          <div class="arch-layer"><span class="arch-layer-label">SERVICES</span><div class="arch-layer-content"><div class="arch-box"><small>AUTH</small><strong>Identity</strong></div><div class="arch-box"><small>INVENTORY</small><strong>Domain</strong></div><div class="arch-box"><small>ORDERS</small><strong>Workflow</strong></div><div class="arch-box"><small>NOTIFY</small><strong>Events</strong></div></div></div><div class="arch-divider"><i></i></div>
+          <div class="arch-layer"><span class="arch-layer-label">ASYNC</span><div class="arch-layer-content"><div class="arch-box gold"><small>PROFILE A</small><strong>RabbitMQ</strong></div><div class="arch-box gold"><small>PROFILE B</small><strong>Kafka</strong></div></div></div><div class="arch-divider"><i></i></div>
+          <div class="arch-layer"><span class="arch-layer-label">OBSERVE</span><div class="arch-layer-content"><div class="arch-box accent"><small>ZIPKIN</small><strong>Tracing</strong></div><div class="arch-box accent"><small>ELK</small><strong>Correlated logs</strong></div></div></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <div class="case-section-head reveal"><span class="case-section-kicker">03 / DECISIONS</span><h2 data-es="Diseñar también para diagnosticar." data-en="Design for diagnosis too.">Diseñar también para diagnosticar.</h2></div>
+        <div class="case-decisions-grid">
+          <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Broker por perfil" data-en="Broker by profile">Broker por perfil</h3><p data-es="RabbitMQ y Kafka se ejecutan como alternativas, lo que permite comparar adaptadores sin reescribir el dominio." data-en="RabbitMQ and Kafka run as alternatives, allowing adapters to be compared without rewriting the domain.">RabbitMQ y Kafka se ejecutan como alternativas, lo que permite comparar adaptadores sin reescribir el dominio.</p><div class="decision-tech"><span>profiles</span><span>RabbitMQ</span><span>Kafka</span></div></article>
+          <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Tracing + logs correlacionados" data-en="Tracing + correlated logs">Tracing + logs correlacionados</h3><p data-es="Micrometer/Brave propaga IDs que luego aparecen en logs enviados a Logstash, conectando Zipkin con Kibana." data-en="Micrometer/Brave propagates IDs that then appear in logs sent to Logstash, connecting Zipkin with Kibana.">Micrometer/Brave propaga IDs que luego aparecen en logs enviados a Logstash, conectando Zipkin con Kibana.</p><div class="decision-tech"><span>Micrometer</span><span>Brave</span><span>Zipkin</span><span>ELK</span></div></article>
+          <article class="case-decision reveal"><span class="decision-index">03</span><h3>Docker Compose</h3><p data-es="Profiles, dependencias y healthchecks reducen el arranque manual y hacen reproducible el entorno de laboratorio." data-en="Profiles, dependencies and healthchecks reduce manual startup and make the lab environment reproducible.">Profiles, dependencias y healthchecks reducen el arranque manual y hacen reproducible el entorno de laboratorio.</p><div class="decision-tech"><span>Compose</span><span>healthchecks</span></div></article>
+          <article class="case-decision reveal"><span class="decision-index">04</span><h3>k6 + observability</h3><p data-es="La carga se genera mientras trazas y logs permiten observar dónde aparece latencia o degradación." data-en="Load is generated while traces and logs expose where latency or degradation appears.">La carga se genera mientras trazas y logs permiten observar dónde aparece latencia o degradación.</p><div class="decision-tech"><span>k6</span><span>latency</span><span>traces</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-status-section">
+      <div class="container">
+        <div class="case-section-head reveal"><span class="case-section-kicker">04 / SCOPE</span><h2 data-es="Laboratorio de arquitectura, no producción enterprise." data-en="Architecture lab, not enterprise production.">Laboratorio de arquitectura, no producción enterprise.</h2></div>
+        <div class="case-status-board reveal">
+          <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</span></div><h3 data-es="Ecosistema ejecutable" data-en="Executable ecosystem">Ecosistema ejecutable</h3><ul class="case-status-list"><li>Gateway + Eureka + Config Server</li><li>Servicios de identidad y dominio</li><li>RabbitMQ o Kafka</li><li>Zipkin + ELK</li><li>Docker Compose + healthchecks</li><li>k6 load script</li></ul></div>
+          <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="ALCANCE HONESTO" data-en="HONEST SCOPE">ALCANCE HONESTO</span></div><h3 data-es="Aprendizaje cloud" data-en="Cloud learning">Aprendizaje cloud</h3><ul class="case-status-list"><li data-es="No se presenta como sistema productivo de alta escala." data-en="It is not presented as a high-scale production system.">No se presenta como sistema productivo de alta escala.</li><li data-es="El foco es operabilidad distribuida y observabilidad." data-en="The focus is distributed operability and observability.">El foco es operabilidad distribuida y observabilidad.</li><li data-es="Los assets orientados a AWS son demostrativos, no un deployment sostenido." data-en="AWS-oriented assets are demonstrative, not a sustained deployment.">Los assets orientados a AWS son demostrativos, no un deployment sostenido.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-next"><div class="container"><div class="case-next-card reveal"><div><span>BACK TO WORK</span><h2 data-es="Tres casos, una misma idea: entender el sistema completo." data-en="Three cases, one idea: understand the whole system.">Tres casos, una misma idea: entender el sistema completo.</h2></div><a href="index.html#projects"><span data-es="Ver todos" data-en="View all">Ver todos</span> →</a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>Enzo Asplanatti</span><span id="footerYear"></span><a href="index.html#top" data-es="Volver al portfolio" data-en="Back to portfolio">Volver al portfolio</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script src="script.js"></script>
+</body>
+</html>
