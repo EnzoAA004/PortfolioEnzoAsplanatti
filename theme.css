@@ -17,9 +17,9 @@ html[data-theme="light"] {
   --muted: #68707a;
   --line: rgba(23, 25, 28, 0.13);
   --line-strong: rgba(23, 25, 28, 0.23);
-  --accent: #94701d;
-  --accent-soft: #c0a45e;
-  --electric: #087a9b;
+  --accent: #7b5b13;
+  --accent-soft: #aa8a43;
+  --electric: #006b88;
   --electric-soft: rgba(8, 122, 155, 0.1);
   --success: #31784a;
   --shadow: 0 30px 90px rgba(39, 34, 20, 0.11);
