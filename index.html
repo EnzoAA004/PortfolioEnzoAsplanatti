@@ -305,13 +305,13 @@
 
               <article class="engineering-panel" id="eng-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-engineering-panel="cloud">
                 <div class="engineering-panel-head"><span>DELIVERY / 03</span><strong>Cloud & Delivery</strong><em data-es="Construir también implica operar." data-en="Building also means operating.">Construir también implica operar.</em></div>
-                <p data-es="Mi evidencia actual está en contenedores, CI, VPS, servicios administrados y observabilidad de laboratorio. No presento Azure/Terraform como implementado todavía: esa etapa sigue explícitamente en roadmap." data-en="My current evidence is in containers, CI, VPS, managed services and lab observability. I do not present Azure/Terraform as implemented yet: that stage remains explicitly on the roadmap.">Mi evidencia actual está en contenedores, CI, VPS, servicios administrados y observabilidad de laboratorio. No presento Azure/Terraform como implementado todavía: esa etapa sigue explícitamente en roadmap.</p>
+                <p data-es="La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado y un workflow OIDC de staging. El primer apply real sigue pendiente de credenciales y aprobación explícita de costos." data-en="The Cloud phase is now implemented as code: production containers, Terraform for Azure, managed identity, private storage and an OIDC staging workflow. The first real apply is still pending credentials and explicit cost approval.">La fase Cloud ya está implementada como código: contenedores productivos, Terraform para Azure, identidad administrada, storage privado y un workflow OIDC de staging. El primer apply real sigue pendiente de credenciales y aprobación explícita de costos.</p>
                 <div class="engineering-proof">
-                  <div><span>DELIVERY</span><strong>Docker Compose · GitHub Actions CI</strong></div>
-                  <div><span>RUNTIME</span><strong>Gateway · discovery · Zipkin · ELK</strong></div>
-                  <div><span>HOSTING</span><strong>VPS · Render · Aiven</strong></div>
+                  <div><span>DELIVERY</span><strong>Docker · GitHub Actions · OIDC workflow</strong></div>
+                  <div><span>AZURE IAC</span><strong>Container Apps · PostgreSQL · Blob · ACR · Terraform</strong></div>
+                  <div><span>RUNTIME</span><strong>Managed identity · private API · Log Analytics</strong></div>
                 </div>
-                <div class="engineering-tech"><span>Docker</span><span>GitHub Actions</span><span>Spring Cloud</span><span>Zipkin</span><span>ELK</span><span>Hostinger VPS</span><span>Render</span><span>Aiven</span></div>
+                <div class="engineering-tech"><span>Docker</span><span>GitHub Actions</span><span>Terraform</span><span>Azure Container Apps</span><span>Azure PostgreSQL</span><span>Blob Storage</span><span>Managed Identity</span><span>Spring Cloud</span></div>
                 <div class="engineering-actions"><a href="case-cloud-native.html">Runtime evidence ↗</a><a href="case-amenities.html">Delivery roadmap ↗</a><button type="button" data-project-filter-jump="cloud"><span data-es="Filtrar Cloud / DevOps" data-en="Filter Cloud / DevOps">Filtrar Cloud / DevOps</span> ↓</button></div>
               </article>
 
@@ -511,11 +511,11 @@
                     </div>
                   </div>
                   <div class="case-roadmap">
-                    <div><span class="roadmap-state done">DONE</span><strong>Docker + GitHub Actions CI</strong></div>
-                    <div><span class="roadmap-state next">NEXT</span><strong>Azure + Terraform deployment</strong></div>
+                    <div><span class="roadmap-state done">DONE</span><strong>Docker + GitHub Actions + Terraform/Azure IaC</strong></div>
+                    <div><span class="roadmap-state next">NEXT</span><strong>First Azure staging apply + live smoke check</strong></div>
                   </div>
                   <div class="case-status-strip">
-                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend MVP · client MVP · payments · admin · audit</span>
+                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend · client · payments · admin · Docker · CI · Terraform/Azure IaC</span>
                   </div>
                 </div>
               </div>
