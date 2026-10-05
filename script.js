@@ -404,7 +404,10 @@ if (engineeringTabs.length && engineeringPanels.length) {
     });
 
     engineeringPanels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel === activePanel);
+      const active = panel === activePanel;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+      panel.setAttribute('aria-hidden', String(!active));
     });
 
     if (focus) activeTab.focus();
