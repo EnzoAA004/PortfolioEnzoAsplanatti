@@ -159,7 +159,7 @@
 
         <div class="container hero-metrics motion-up">
           <div><span>01</span><strong>47 / 52</strong><small data-es="materias aprobadas" data-en="courses completed">materias aprobadas</small></div>
-          <div><span>02</span><strong>7+</strong><small data-es="casos técnicos" data-en="technical cases">casos técnicos</small></div>
+          <div><span>02</span><strong>9+</strong><small data-es="casos técnicos" data-en="technical cases">casos técnicos</small></div>
           <div><span>03</span><strong>B2</strong><small>Cambridge FCE</small></div>
           <div><span>04</span><strong>E2E</strong><small data-es="producto a deploy" data-en="product to deploy">producto a deploy</small></div>
         </div>
@@ -234,256 +234,252 @@
           <div class="section-heading reveal">
             <div>
               <p class="section-number">03</p>
-              <h2 data-es="Engineering case studies" data-en="Engineering case studies">Engineering case studies</h2>
+              <h2 data-es="Sistemas seleccionados." data-en="Selected systems.">Sistemas seleccionados.</h2>
             </div>
             <p
-              data-es="Acá no muestro solo stacks: muestro problemas, arquitectura, decisiones técnicas e integración. Los primeros casos representan mejor cómo pienso y construyo sistemas."
-              data-en="This is not just a stack showcase: it is about problems, architecture, technical decisions and integration. The first cases best represent how I think about and build systems."
+              data-es="Priorizo proyectos que muestran amplitud real: arquitectura, producto, frontend, backend, datos, seguridad, observabilidad y delivery. Cada caso distingue lo implementado de lo que todavía está en roadmap."
+              data-en="I prioritize work that shows real range: architecture, product, frontend, backend, data, security, observability and delivery. Each case separates what is implemented from what remains on the roadmap."
             >
-              Acá no muestro solo stacks: muestro problemas, arquitectura, decisiones técnicas e integración. Los primeros casos representan mejor cómo pienso y construyo sistemas.
+              Priorizo proyectos que muestran amplitud real: arquitectura, producto, frontend, backend, datos, seguridad, observabilidad y delivery. Cada caso distingue lo implementado de lo que todavía está en roadmap.
             </p>
           </div>
 
-          <div class="project-list">
-            <article class="project-card project-featured reveal" data-cursor="VIEW CASE">
-              <div class="project-meta"><span>01</span><span data-es="PRODUCTO FULL STACK · EN DESARROLLO" data-en="FULL-STACK PRODUCT · IN DEVELOPMENT">PRODUCTO FULL STACK · EN DESARROLLO</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
+          <div class="project-filter-bar reveal" aria-label="Filtrar proyectos">
+            <span class="filter-label" data-es="VER POR ÁREA" data-en="VIEW BY AREA">VER POR ÁREA</span>
+            <div class="project-filters" role="group" aria-label="Project filters">
+              <button class="project-filter is-active" type="button" data-filter="all" data-es="Todos" data-en="All">Todos</button>
+              <button class="project-filter" type="button" data-filter="backend">Backend</button>
+              <button class="project-filter" type="button" data-filter="cloud">Cloud / DevOps</button>
+              <button class="project-filter" type="button" data-filter="frontend">Frontend</button>
+              <button class="project-filter" type="button" data-filter="mobile">Mobile</button>
+              <button class="project-filter" type="button" data-filter="data">Data / AI</button>
+            </div>
+          </div>
+
+          <div class="featured-systems">
+            <article class="system-case system-case-saxo reveal" data-project-domains="backend frontend data" data-cursor="EXPLORE">
+              <div class="system-case-top">
+                <div class="system-case-id"><span>CASE 01</span><i></i><span data-es="PRODUCTO EN DESARROLLO" data-en="PRODUCT IN DEVELOPMENT">PRODUCTO EN DESARROLLO</span></div>
+                <div class="system-case-year">2026</div>
+              </div>
+              <div class="system-case-grid">
+                <div class="system-case-copy">
                   <p class="project-kicker">InstrumentalSW / Saxo</p>
-                  <h3 data-es="Transcripción musical asistida por IA para saxofón" data-en="AI-assisted music transcription for saxophone">Transcripción musical asistida por IA para saxofón</h3>
-                  <p data-es="Aplicación en desarrollo para convertir audio de saxofón en una representación musical revisable. Integra una interfaz Next.js, una API de producto Spring Boot y un módulo de IA en FastAPI con límites de responsabilidad explícitos." data-en="An application in development that turns saxophone audio into a reviewable musical representation. It integrates a Next.js UI, a Spring Boot product API and a FastAPI AI module with explicit responsibility boundaries.">Aplicación en desarrollo para convertir audio de saxofón en una representación musical revisable. Integra una interfaz Next.js, una API de producto Spring Boot y un módulo de IA en FastAPI con límites de responsabilidad explícitos.</p>
-                  <div class="tech-row"><span>Next.js</span><span>TypeScript</span><span>Java 21</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span></div>
+                  <h3 data-es="Audio → partitura revisable, con una arquitectura que separa producto e IA." data-en="Audio → reviewable score, with an architecture that separates product and AI.">Audio → partitura revisable, con una arquitectura que separa producto e IA.</h3>
+                  <p data-es="Una plataforma de transcripción asistida para saxofón con Next.js en la experiencia, Spring Boot como API de producto y FastAPI como servicio interno de procesamiento. El diseño prioriza contratos versionados, revisión humana, artefactos verificables y límites explícitos entre capas." data-en="An assisted saxophone transcription platform with Next.js for the experience, Spring Boot as the product API and FastAPI as the internal processing service. The design prioritizes versioned contracts, human review, verifiable artifacts and explicit layer boundaries.">Una plataforma de transcripción asistida para saxofón con Next.js en la experiencia, Spring Boot como API de producto y FastAPI como servicio interno de procesamiento. El diseño prioriza contratos versionados, revisión humana, artefactos verificables y límites explícitos entre capas.</p>
+
+                  <div class="case-proof-grid">
+                    <div><strong>≥90%</strong><span data-es="quality gates de cobertura" data-en="coverage quality gates">quality gates de cobertura</span></div>
+                    <div><strong>3</strong><span data-es="capas de producto" data-en="product layers">capas de producto</span></div>
+                    <div><strong>SHA-256</strong><span data-es="integridad de artefactos" data-en="artifact integrity">integridad de artefactos</span></div>
+                  </div>
+
+                  <div class="tech-row"><span>Next.js</span><span>TypeScript</span><span>Java 21</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>S3-compatible storage</span></div>
+
+                  <div class="case-actions">
+                    <a class="case-link magnetic" href="https://github.com/EnzoAA004/InstrumentalSW_AIModule" target="_blank" rel="noreferrer"><span data-es="Repositorio canónico" data-en="Canonical repository">Repositorio canónico</span><b>↗</b></a>
+                    <a class="case-link case-link-muted magnetic" href="https://github.com/EnzoAA004/InstrumentalSW_Frontend" target="_blank" rel="noreferrer">Frontend <b>↗</b></a>
+                  </div>
                 </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Preview conceptual de interfaz" data-en="Conceptual interface preview">Preview conceptual de interfaz</div>
-                  <div class="screen-mock browser-screen saxo-screen" aria-label="Vista mockeada de la app Saxo">
-                    <div class="screen-bar"><i></i><i></i><i></i><span>saxo.app / editor</span></div>
-                    <div class="screen-body stack-body">
-                      <div class="wave-line"></div>
-                      <div class="timeline-grid">
-                        <span></span><span></span><span></span><span></span><span></span>
+
+                <div class="system-case-visual">
+                  <div class="case-visual-head"><span>SYSTEM MAP</span><span>EA / SAXO-01</span></div>
+                  <div class="saxo-architecture">
+                    <div class="arch-column">
+                      <span class="arch-label">EXPERIENCE</span>
+                      <div class="arch-node arch-node-main"><small>Browser</small><strong>Next.js</strong><em>review / edit / playback</em></div>
+                    </div>
+                    <div class="arch-connector"><i></i><span>HTTPS</span></div>
+                    <div class="arch-column">
+                      <span class="arch-label">PRODUCT API</span>
+                      <div class="arch-node arch-node-main"><small>Java 21</small><strong>Spring Boot</strong><em>gateway / validation</em></div>
+                    </div>
+                    <div class="arch-connector"><i></i><span>INTERNAL</span></div>
+                    <div class="arch-column">
+                      <span class="arch-label">AI / PROCESSING</span>
+                      <div class="arch-node arch-node-accent"><small>Python</small><strong>FastAPI</strong><em>pipeline / revisions</em></div>
+                    </div>
+                  </div>
+                  <div class="case-data-flow">
+                    <div><span>01</span><strong>Upload</strong><small>MP3 / WAV</small></div>
+                    <i>→</i>
+                    <div><span>02</span><strong>Process</strong><small>audio → notes</small></div>
+                    <i>→</i>
+                    <div><span>03</span><strong>Review</strong><small>immutable revisions</small></div>
+                    <i>→</i>
+                    <div><span>04</span><strong>Export</strong><small>MIDI / XML / SVG</small></div>
+                  </div>
+                  <div class="case-status-strip">
+                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Postgres jobs · queue/worker · object storage · review/edit · artifacts</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="system-case system-case-amenities reveal" data-project-domains="backend frontend mobile cloud" data-cursor="EXPLORE">
+              <div class="system-case-top">
+                <div class="system-case-id"><span>CASE 02</span><i></i><span data-es="PRODUCT ENGINEERING · PILOTO" data-en="PRODUCT ENGINEERING · PILOT">PRODUCT ENGINEERING · PILOTO</span></div>
+                <div class="system-case-year">2026</div>
+              </div>
+              <div class="system-case-grid">
+                <div class="system-case-copy">
+                  <p class="project-kicker">Residential Amenities Platform</p>
+                  <h3 data-es="Reservas, pagos y administración para amenities con reglas reales de negocio." data-en="Reservations, payments and administration for amenities with real business rules.">Reservas, pagos y administración para amenities con reglas reales de negocio.</h3>
+                  <p data-es="Producto pensado para un edificio piloto de 10 unidades, con backend .NET, cliente Angular/Ionic, PostgreSQL y flujos completos para residentes y administración. Incluye pricing autoritativo de servidor, concurrencia, pagos, auditoría y decisiones de producto documentadas." data-en="A product designed for a 10-unit pilot building, with a .NET backend, Angular/Ionic client, PostgreSQL and complete resident/admin flows. It includes server-authoritative pricing, concurrency control, payments, auditability and documented product decisions.">Producto pensado para un edificio piloto de 10 unidades, con backend .NET, cliente Angular/Ionic, PostgreSQL y flujos completos para residentes y administración. Incluye pricing autoritativo de servidor, concurrencia, pagos, auditoría y decisiones de producto documentadas.</p>
+
+                  <div class="case-proof-grid">
+                    <div><strong>10</strong><span data-es="unidades del piloto" data-en="pilot units">unidades del piloto</span></div>
+                    <div><strong>RBAC</strong><span data-es="residente / administrador" data-en="resident / administrator">residente / administrador</span></div>
+                    <div><strong>CI</strong><span data-es="backend + full stack" data-en="backend + full stack">backend + full stack</span></div>
+                  </div>
+
+                  <div class="tech-row"><span>.NET</span><span>ASP.NET Core</span><span>Angular</span><span>Ionic</span><span>PostgreSQL</span><span>SignalR</span><span>Docker</span><span>GitHub Actions</span></div>
+
+                  <div class="case-actions">
+                    <a class="case-link magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform" target="_blank" rel="noreferrer"><span data-es="Ver ingeniería" data-en="View engineering">Ver ingeniería</span><b>↗</b></a>
+                  </div>
+                </div>
+
+                <div class="system-case-visual">
+                  <div class="case-visual-head"><span>PRODUCT / DELIVERY</span><span>EA / RAP-01</span></div>
+                  <div class="amenity-stack">
+                    <div class="amenity-ui">
+                      <div class="mini-app-top"><span></span><strong>SUM / RESERVAS</strong><i></i></div>
+                      <div class="mini-calendar">
+                        <b></b><b class="is-booked"></b><b></b><b></b><b></b><b class="is-selected"></b><b></b>
+                        <b></b><b></b><b class="is-booked"></b><b></b><b></b><b></b><b></b>
                       </div>
-                      <div class="notes-panel">
-                        <div class="notes-staff"></div>
-                        <div class="notes-staff"></div>
-                      </div>
-                      <div class="tag-row"><b>AI Draft</b><b>MIDI</b><b>MusicXML</b><b>SVG</b></div>
+                      <div class="mini-booking"><span data-es="Evento · tarde" data-en="Event · afternoon">Evento · tarde</span><strong>ARS 5.000</strong></div>
+                    </div>
+                    <div class="amenity-flow">
+                      <span>Angular / Ionic</span><i>→</i><span>ASP.NET Core</span><i>→</i><span>PostgreSQL</span>
+                    </div>
+                    <div class="amenity-modules">
+                      <span>RBAC</span><span>Pricing</span><span>Locks / Holds</span><span>Mercado Pago</span><span>Audit</span><span>Admin</span>
                     </div>
                   </div>
-                  <div class="detail-block">
-                    <span class="detail-label" data-es="Arquitectura" data-en="Architecture">Arquitectura</span>
-                    <div class="architecture-line" aria-label="Next.js a Spring Boot a FastAPI"><span>Next.js</span><b>→</b><span>Spring Boot</span><b>→</b><span>FastAPI</span></div>
+                  <div class="case-roadmap">
+                    <div><span class="roadmap-state done">DONE</span><strong>Docker + GitHub Actions CI</strong></div>
+                    <div><span class="roadmap-state next">NEXT</span><strong>Azure + Terraform deployment</strong></div>
                   </div>
-                  <ul class="project-points">
-                    <li data-es="Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%." data-en="Iterative TDD development with versioned contracts and ≥90% coverage quality gates.">Desarrollo iterativo con TDD, contratos versionados y quality gates de cobertura ≥ 90%.</li>
-                    <li data-es="Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades." data-en="Immutable revisions, concurrency control and strict responsibility boundaries.">Revisiones inmutables, control de concurrencia y separación estricta de responsabilidades.</li>
-                    <li data-es="MIDI, MusicXML y SVG con validación de integridad mediante SHA-256." data-en="MIDI, MusicXML and SVG artifacts with SHA-256 integrity validation.">MIDI, MusicXML y SVG con validación de integridad mediante SHA-256.</li>
-                    <li data-es="Editor accesible, playback sincronizado y verificación local del audio original." data-en="Accessible editor, synchronized playback and local verification of the original audio.">Editor accesible, playback sincronizado y verificación local del audio original.</li>
-                  </ul>
-                  <div class="project-links"><a href="https://github.com/EnzoAA004/InstrumentalSW_AIModule" target="_blank" rel="noreferrer">AI Module</a><a href="https://github.com/EnzoAA004/InstrumentalSW_Backend" target="_blank" rel="noreferrer">Backend</a><a href="https://github.com/EnzoAA004/InstrumentalSW_Frontend" target="_blank" rel="noreferrer">Frontend</a></div>
+                  <div class="case-status-strip">
+                    <span><i class="status-live"></i><b data-es="IMPLEMENTADO" data-en="IMPLEMENTED">IMPLEMENTADO</b> Backend MVP · client MVP · payments · admin · audit</span>
+                  </div>
                 </div>
               </div>
             </article>
 
-            <article class="project-card project-featured-secondary reveal" data-cursor="VIEW SYSTEM">
-              <div class="project-meta"><span>02</span><span data-es="MICROSERVICIOS · EVENT-DRIVEN · 2025" data-en="MICROSERVICES · EVENT-DRIVEN · 2025">MICROSERVICIOS · EVENT-DRIVEN · 2025</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker">CompumundoHiperMegaRed / UniCamart</p>
-                  <h3 data-es="E-commerce tecnológico distribuido por dominios" data-en="Technology e-commerce split across domain services">E-commerce tecnológico distribuido por dominios</h3>
-                  <p data-es="Proyecto universitario de gran escala con aplicaciones separadas para venta web, CRM/inventario y analítica. La comunicación de eventos se centralizó mediante Middleware + Core para desacoplar a los servicios del broker." data-en="Large university project with separate applications for web sales, CRM/inventory and analytics. Event communication was centralized through Middleware + Core so domain services remained decoupled from the broker.">Proyecto universitario de gran escala con aplicaciones separadas para venta web, CRM/inventario y analítica. La comunicación de eventos se centralizó mediante Middleware + Core para desacoplar a los servicios del broker.</p>
-                  <div class="tech-row"><span>Java 21</span><span>Spring Boot</span><span>MySQL</span><span>React</span><span>TypeScript</span><span>Kafka</span><span>Keycloak</span><span>Docker</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock browser-screen commerce-screen" aria-label="Preview mockeado de CompumundoHiperMegaRed">
-                    <div class="screen-bar"><i></i><i></i><i></i><span>unicamart.web</span></div>
-                    <div class="screen-body dashboard-body">
-                      <div class="side-mini"><span></span><span></span><span></span></div>
-                      <div class="main-mini">
-                        <div class="hero-strip"></div>
-                        <div class="mini-grid"><b></b><b></b><b></b><b></b></div>
-                        <div class="stats-row"><em></em><em></em><em></em></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="system-map" aria-label="Arquitectura conceptual de CompumundoHiperMegaRed">
-                    <div class="system-map-row"><span class="system-node">Web / Ventas</span><span class="system-node">CRM / Inventario</span><span class="system-node">Analytics</span></div>
-                    <div class="system-flow">↓ eventos / comandos ↓</div>
-                    <div class="system-map-row center"><span class="system-node accent-node">Middleware</span><b>→</b><span class="system-node accent-node">Core</span><b>→</b><span class="system-node broker-node">Kafka</span></div>
-                    <p data-es="El Core concentra el acceso al broker; los módulos de negocio no dependen directamente de Kafka." data-en="Core concentrates broker access; business modules do not depend directly on Kafka.">El Core concentra el acceso al broker; los módulos de negocio no dependen directamente de Kafka.</p>
-                  </div>
-                  <ul class="project-points">
-                    <li data-es="Dominios separados: ventas, inventario/catálogo, analítica, middleware y core de mensajería." data-en="Separated domains: sales, inventory/catalog, analytics, middleware and messaging core.">Dominios separados: ventas, inventario/catálogo, analítica, middleware y core de mensajería.</li>
-                    <li data-es="Eventos con identificador UUID, timestamp, módulo de origen y payload." data-en="Events with UUID identifier, timestamp, origin module and payload.">Eventos con identificador UUID, timestamp, módulo de origen y payload.</li>
-                    <li data-es="Autenticación/validación con Keycloak y tokens entre componentes." data-en="Authentication and validation through Keycloak and tokens between components.">Autenticación/validación con Keycloak y tokens entre componentes.</li>
-                    <li data-es="Participación en backend, frontend, bases de datos e integración entre servicios." data-en="Worked across backend, frontend, databases and service integration.">Participación en backend, frontend, bases de datos e integración entre servicios.</li>
-                  </ul>
-                  <div class="project-note" data-es="Proyecto colaborativo. La arquitectura se documenta aquí sin depender de repositorios privados del equipo." data-en="Collaborative project. The architecture is documented here without relying on private team repositories.">Proyecto colaborativo. La arquitectura se documenta aquí sin depender de repositorios privados del equipo.</div>
-                </div>
+            <article class="system-case system-case-cloud reveal" data-project-domains="backend cloud" data-cursor="EXPLORE">
+              <div class="system-case-top">
+                <div class="system-case-id"><span>CASE 03</span><i></i><span data-es="CLOUD-NATIVE LAB · OBSERVABILIDAD" data-en="CLOUD-NATIVE LAB · OBSERVABILITY">CLOUD-NATIVE LAB · OBSERVABILIDAD</span></div>
+                <div class="system-case-year">2026</div>
               </div>
-            </article>
+              <div class="system-case-grid">
+                <div class="system-case-copy">
+                  <p class="project-kicker">Spring Cloud Microservices Lab</p>
+                  <h3 data-es="Microservicios operables: discovery, gateway, mensajería, tracing y logs." data-en="Operable microservices: discovery, gateway, messaging, tracing and logs.">Microservicios operables: discovery, gateway, mensajería, tracing y logs.</h3>
+                  <p data-es="Laboratorio de arquitectura con Java 21 y Spring Boot 3.4 para experimentar con concerns que aparecen fuera del CRUD: configuración centralizada, service discovery, API Gateway, seguridad, eventos, observabilidad distribuida y ejecución reproducible con Docker." data-en="Architecture lab with Java 21 and Spring Boot 3.4 for experimenting with concerns beyond CRUD: centralized configuration, service discovery, API Gateway, security, events, distributed observability and reproducible Docker execution.">Laboratorio de arquitectura con Java 21 y Spring Boot 3.4 para experimentar con concerns que aparecen fuera del CRUD: configuración centralizada, service discovery, API Gateway, seguridad, eventos, observabilidad distribuida y ejecución reproducible con Docker.</p>
 
-            <article class="project-card project-featured-secondary reveal" data-cursor="VIEW SYSTEM">
-              <div class="project-meta"><span>03</span><span data-es="BACKEND APLICADO · MICROSERVICIOS" data-en="APPLIED BACKEND · MICROSERVICES">BACKEND APLICADO · MICROSERVICIOS</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker">Florería Carlitos</p>
-                  <h3 data-es="Ecosistema backend para e-commerce y operación interna" data-en="Backend ecosystem for e-commerce and store operations">Ecosistema backend para e-commerce y operación interna</h3>
-                  <p data-es="Solución aplicada para separar la venta online de la operatoria interna de una florería. El trabajo principal estuvo en backend: productos, CRM, e-commerce, ventas locales, envíos, analítica y mensajería entre servicios." data-en="Applied solution separating online sales from a florist's internal operations. My main work was backend-oriented: products, CRM, e-commerce, local sales, shipping, analytics and service-to-service messaging.">Solución aplicada para separar la venta online de la operatoria interna de una florería. El trabajo principal estuvo en backend: productos, CRM, e-commerce, ventas locales, envíos, analítica y mensajería entre servicios.</p>
-                  <div class="tech-row"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>MySQL</span><span>Spring Security</span><span>JWT / Keycloak</span><span>Mercado Pago</span><span>VPS</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock browser-screen flower-screen" aria-label="Preview mockeado de Florería Carlitos">
-                    <div class="screen-bar"><i></i><i></i><i></i><span>floreriacarlitos.shop</span></div>
-                    <div class="screen-body flower-body">
-                      <div class="flower-hero"></div>
-                      <div class="product-cards"><b></b><b></b><b></b></div>
-                      <div class="checkout-line"><span></span><span></span></div>
-                    </div>
+                  <div class="case-proof-grid">
+                    <div><strong>5+</strong><span data-es="servicios Spring" data-en="Spring services">servicios Spring</span></div>
+                    <div><strong>2</strong><span data-es="brokers intercambiables" data-en="interchangeable brokers">brokers intercambiables</span></div>
+                    <div><strong>OTel</strong><span data-es="tracing + logs" data-en="tracing + logs">tracing + logs</span></div>
                   </div>
-                  <div class="service-grid" aria-label="Servicios del ecosistema de Florería Carlitos"><span>Website</span><span>CRM</span><span>E-commerce</span><span>Local</span><span>Envíos</span><span>Analytics</span><span class="service-core">Core / Eventos</span></div>
-                  <ul class="project-points">
-                    <li data-es="Servicios independientes para distintos contextos de negocio y persistencia relacional." data-en="Independent services for different business contexts with relational persistence.">Servicios independientes para distintos contextos de negocio y persistencia relacional.</li>
-                    <li data-es="Mensajería event-driven con Kafka para desacoplar operaciones y analítica." data-en="Kafka-based event-driven messaging to decouple operations and analytics.">Mensajería event-driven con Kafka para desacoplar operaciones y analítica.</li>
-                    <li data-es="Seguridad con Spring Security, JWT/Keycloak y APIs REST documentadas." data-en="Security with Spring Security, JWT/Keycloak and documented REST APIs.">Seguridad con Spring Security, JWT/Keycloak y APIs REST documentadas.</li>
-                    <li data-es="Integración de pagos y despliegue pensado para infraestructura de costo acotado." data-en="Payment integration and deployment designed around cost-conscious infrastructure.">Integración de pagos y despliegue pensado para infraestructura de costo acotado.</li>
-                  </ul>
-                  <div class="project-note" data-es="Código fuente principal privado. El portfolio muestra el alcance técnico sin exponer repositorios ni configuración sensible." data-en="Main source repositories are private. This portfolio shows the technical scope without exposing private code or sensitive configuration.">Código fuente principal privado. El portfolio muestra el alcance técnico sin exponer repositorios ni configuración sensible.</div>
-                </div>
-              </div>
-            </article>
 
-            <article class="project-card reveal">
-              <div class="project-meta"><span>04</span><span data-es="FULL STACK · MOBILE · REAL TIME" data-en="FULL STACK · MOBILE · REAL TIME">FULL STACK · MOBILE · REAL TIME</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker">SubastAR</p>
-                  <h3 data-es="Marketplace de subastas con actualización en tiempo real" data-en="Auction marketplace with real-time updates">Marketplace de subastas con actualización en tiempo real</h3>
-                  <p data-es="Producto backend + mobile para publicaciones y subastas, con autenticación, persistencia relacional, imágenes y comunicación en tiempo real. Permite mostrar integración completa desde API hasta cliente móvil." data-en="Backend + mobile product for listings and auctions, with authentication, relational persistence, images and real-time communication. It demonstrates full integration from API to mobile client.">Producto backend + mobile para publicaciones y subastas, con autenticación, persistencia relacional, imágenes y comunicación en tiempo real. Permite mostrar integración completa desde API hasta cliente móvil.</p>
-                  <div class="tech-row"><span>Java 21</span><span>Spring Boot</span><span>Spring Security</span><span>WebSocket</span><span>JWT</span><span>SQL Server</span><span>React Native</span><span>Expo</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock phone-screen subastar-screen" aria-label="Preview mockeado de SubastAR">
-                    <div class="phone-notch"></div>
-                    <div class="phone-body">
-                      <div class="phone-title">SubastAR</div>
-                      <div class="auction-card"></div>
-                      <div class="auction-meta"><span></span><span></span><span></span></div>
-                      <div class="bid-row"><b></b><b></b></div>
-                    </div>
-                  </div>
-                  <ul class="project-points">
-                    <li data-es="Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas." data-en="REST backend with JPA, validation, JWT security and user/listing/auction domains.">Backend REST con JPA, validación, seguridad JWT y dominio de usuarios/publicaciones/subastas.</li>
-                    <li data-es="WebSocket para interacciones que requieren actualización en tiempo real." data-en="WebSocket for interactions that require real-time updates.">WebSocket para interacciones que requieren actualización en tiempo real.</li>
-                    <li data-es="SQL Server, migraciones Flyway e integración de imágenes con Cloudinary." data-en="SQL Server, Flyway migrations and Cloudinary image integration.">SQL Server, migraciones Flyway e integración de imágenes con Cloudinary.</li>
-                    <li data-es="Cliente React Native / Expo Router con TypeScript." data-en="React Native / Expo Router client with TypeScript.">Cliente React Native / Expo Router con TypeScript.</li>
-                  </ul>
-                  <div class="project-links"><a href="https://github.com/EnzoAA004/BackEnd-SubastAR-EnzoVersion3eraEntrega" target="_blank" rel="noreferrer">Backend</a><a href="https://github.com/EnzoAA004/FrontEnd-SubastAR-EnzoVersion3eraEntrega" target="_blank" rel="noreferrer">Frontend</a></div>
-                </div>
-              </div>
-            </article>
+                  <div class="tech-row"><span>Java 21</span><span>Spring Cloud</span><span>Eureka</span><span>Gateway</span><span>RabbitMQ</span><span>Kafka</span><span>Zipkin</span><span>ELK</span><span>Docker</span><span>k6</span></div>
 
-            <article class="project-card reveal">
-              <div class="project-meta"><span>05</span><span data-es="MOBILE · REST API · COLABORATIVO" data-en="MOBILE · REST API · COLLABORATIVE">MOBILE · REST API · COLABORATIVO</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker">ViMa · Turnos médicos</p>
-                  <h3 data-es="Aplicación mobile para gestión de turnos y profesionales" data-en="Mobile app for appointment and healthcare professional management">Aplicación mobile para gestión de turnos y profesionales</h3>
-                  <p data-es="Aplicación móvil desarrollada en equipo con backend Spring Boot y cliente React Native/Expo. Incluye reserva y gestión de turnos, profesionales, estados, notas médicas y notificaciones." data-en="Team-built mobile application with a Spring Boot backend and React Native/Expo client. It includes appointment booking and management, professionals, status flows, medical notes and notifications.">Aplicación móvil desarrollada en equipo con backend Spring Boot y cliente React Native/Expo. Incluye reserva y gestión de turnos, profesionales, estados, notas médicas y notificaciones.</p>
-                  <div class="tech-row"><span>Java 17</span><span>Spring Boot</span><span>MySQL</span><span>JWT</span><span>React Native</span><span>Expo</span><span>Redux Toolkit</span><span>REST</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock phone-screen medical-screen" aria-label="Preview mockeado de la app de turnos médicos">
-                    <div class="phone-notch"></div>
-                    <div class="phone-body">
-                      <div class="phone-title">ViMa</div>
-                      <div class="appointment-head"></div>
-                      <div class="appointment-list"><span></span><span></span><span></span></div>
-                      <div class="doctor-pill"></div>
-                    </div>
+                  <div class="case-actions">
+                    <a class="case-link magnetic" href="https://github.com/EnzoAA004/arqApps_VersionEnzo" target="_blank" rel="noreferrer"><span data-es="Ver laboratorio" data-en="View lab">Ver laboratorio</span><b>↗</b></a>
                   </div>
-                  <div class="mobile-mock" aria-label="Flujo conceptual de la aplicación de turnos médicos"><div><small data-es="Paciente" data-en="Patient">Paciente</small><strong data-es="Reservar turno" data-en="Book appointment">Reservar turno</strong></div><span>→</span><div><small>API</small><strong>Spring Boot</strong></div><span>→</span><div><small data-es="Profesional" data-en="Professional">Profesional</small><strong data-es="Gestionar agenda" data-en="Manage schedule">Gestionar agenda</strong></div></div>
-                  <ul class="project-points">
-                    <li data-es="API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores." data-en="REST API with entities, DTOs, repositories, services and controllers for appointments and doctors.">API REST con entidades, DTOs, repositorios, servicios y controladores para turnos y doctores.</li>
-                    <li data-es="Seguridad/autenticación y separación clara entre backend y aplicación mobile." data-en="Authentication/security with clear separation between backend and mobile application.">Seguridad/autenticación y separación clara entre backend y aplicación mobile.</li>
-                    <li data-es="Estado global con Redux Toolkit y navegación de flujos de reserva, detalle y profesionales." data-en="Global state with Redux Toolkit and navigation across booking, detail and professional flows.">Estado global con Redux Toolkit y navegación de flujos de reserva, detalle y profesionales.</li>
-                    <li data-es="Notificaciones y experiencia mobile desarrolladas como parte de un trabajo colaborativo." data-en="Notifications and mobile experience developed as part of collaborative work.">Notificaciones y experiencia mobile desarrolladas como parte de un trabajo colaborativo.</li>
-                  </ul>
-                  <div class="project-links"><a href="https://github.com/FranEFabrello/Grupo-4" target="_blank" rel="noreferrer" data-es="Frontend del equipo" data-en="Team frontend">Frontend del equipo</a><a href="https://github.com/EnzoAA004/DesarrolloAPSI" target="_blank" rel="noreferrer" data-es="Prototipo backend" data-en="Backend prototype">Prototipo backend</a></div>
                 </div>
-              </div>
-            </article>
 
-            <article class="project-card reveal">
-              <div class="project-meta"><span>06</span><span data-es="BACKEND REST · E-COMMERCE" data-en="REST BACKEND · E-COMMERCE">BACKEND REST · E-COMMERCE</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker" data-es="Tienda de instrumentos musicales" data-en="Musical instruments store">Tienda de instrumentos musicales</p>
-                  <h3 data-es="API de e-commerce con autenticación y modelo relacional" data-en="E-commerce API with authentication and relational modeling">API de e-commerce con autenticación y modelo relacional</h3>
-                  <p data-es="Proyecto académico enfocado en construir una API completa para productos, usuarios, compras y autenticación. Fue uno de los proyectos que consolidó mi base en Java/Spring y diseño de endpoints REST." data-en="Academic project focused on building a complete API for products, users, purchases and authentication. It helped consolidate my Java/Spring foundation and REST endpoint design.">Proyecto académico enfocado en construir una API completa para productos, usuarios, compras y autenticación. Fue uno de los proyectos que consolidó mi base en Java/Spring y diseño de endpoints REST.</p>
-                  <div class="tech-row"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span><span>JPA/Hibernate</span><span>React</span><span>Postman</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock browser-screen store-screen" aria-label="Preview mockeado de la tienda de instrumentos musicales">
-                    <div class="screen-bar"><i></i><i></i><i></i><span>music-store.local</span></div>
-                    <div class="screen-body store-body">
-                      <div class="store-hero"></div>
-                      <div class="instrument-grid"><b></b><b></b><b></b><b></b></div>
+                <div class="system-case-visual">
+                  <div class="case-visual-head"><span>DISTRIBUTED RUNTIME</span><span>EA / CLOUD-01</span></div>
+                  <div class="cloud-topology">
+                    <div class="cloud-entry"><small>CLIENT</small><strong>API Gateway</strong></div>
+                    <div class="cloud-line vertical"></div>
+                    <div class="cloud-services">
+                      <div><small>IDENTITY</small><strong>Auth</strong></div>
+                      <div><small>DOMAIN</small><strong>Inventory</strong></div>
+                      <div><small>DOMAIN</small><strong>Orders</strong></div>
+                      <div><small>EVENT</small><strong>Notification</strong></div>
+                    </div>
+                    <div class="cloud-bus"><span>RabbitMQ</span><b>OR</b><span>Kafka</span></div>
+                    <div class="cloud-observe">
+                      <span><i></i>Zipkin / traces</span>
+                      <span><i></i>ELK / logs</span>
+                      <span><i></i>Eureka / discovery</span>
                     </div>
                   </div>
-                  <div class="api-mock" aria-label="Recursos conceptuales de la API de tienda musical"><span><b>GET</b> /productos</span><span><b>POST</b> /auth</span><span><b>POST</b> /compras</span><span><b>GET</b> /usuarios/me</span></div>
-                  <ul class="project-points">
-                    <li data-es="Diseño de endpoints REST y separación Controller → Service → Repository." data-en="REST endpoint design with Controller → Service → Repository separation.">Diseño de endpoints REST y separación Controller → Service → Repository.</li>
-                    <li data-es="Autenticación JWT y protección de operaciones según el usuario." data-en="JWT authentication and protected operations according to user context.">Autenticación JWT y protección de operaciones según el usuario.</li>
-                    <li data-es="Persistencia relacional para catálogo, usuarios y compras." data-en="Relational persistence for catalog, users and purchases.">Persistencia relacional para catálogo, usuarios y compras.</li>
-                    <li data-es="Pruebas manuales y validación del contrato HTTP con Insomnia/Postman." data-en="Manual testing and HTTP contract validation with Insomnia/Postman.">Pruebas manuales y validación del contrato HTTP con Insomnia/Postman.</li>
-                  </ul>
-                  <div class="project-note" data-es="Caso académico documentado en mi CV; el portfolio prioriza el trabajo de API por sobre un frontend histórico." data-en="Academic case documented in my resume; this portfolio emphasizes the API work rather than an older frontend.">Caso académico documentado en mi CV; el portfolio prioriza el trabajo de API por sobre un frontend histórico.</div>
+                  <div class="case-status-strip">
+                    <span><i class="status-live"></i><b data-es="EJECUCIÓN" data-en="RUNTIME">EJECUCIÓN</b> Docker Compose profiles · healthchecks · broker switching · load test</span>
+                  </div>
                 </div>
               </div>
             </article>
+          </div>
 
-            <article class="project-card reveal">
-              <div class="project-meta"><span>07</span><span>DATA SCIENCE · STREAMLIT</span></div>
-              <div class="project-layout">
-                <div class="project-intro">
-                  <p class="project-kicker" data-es="Análisis socioeconómico de Argentina" data-en="Socioeconomic analysis of Argentina">Análisis socioeconómico de Argentina</p>
-                  <h3 data-es="Integración, exploración y modelado de indicadores provinciales" data-en="Integration, exploration and modeling of provincial indicators">Integración, exploración y modelado de indicadores provinciales</h3>
-                  <p data-es="Trabajo de Data Science que combina fuentes de educación, internet, pobreza y otros indicadores para analizar provincias argentinas. El portfolio usa una visualización conceptual más limpia para explicar el trabajo realizado." data-en="Data Science project combining education, internet, poverty and other sources to analyze Argentine provinces. The portfolio uses a cleaner conceptual visualization to explain the original work.">Trabajo de Data Science que combina fuentes de educación, internet, pobreza y otros indicadores para analizar provincias argentinas. El portfolio usa una visualización conceptual más limpia para explicar el trabajo realizado.</p>
-                  <div class="tech-row"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>KMeans</span><span>Linear Regression</span><span>Decision Tree</span><span>Streamlit</span></div>
-                </div>
-                <div class="project-details">
-                  <div class="mock-label" data-es="Pantallazo mockeado" data-en="Mock screenshot">Pantallazo mockeado</div>
-                  <div class="screen-mock browser-screen data-screen" aria-label="Preview mockeado del dashboard de análisis socioeconómico">
-                    <div class="screen-bar"><i></i><i></i><i></i><span>analytics.streamlit</span></div>
-                    <div class="screen-body data-body">
-                      <div class="filter-col"><span></span><span></span><span></span></div>
-                      <div class="chart-col">
-                        <div class="big-chart"><b></b><b></b><b></b><b></b><b></b></div>
-                        <div class="small-chart-row"><em></em><em></em></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="data-dashboard" aria-label="Visualización conceptual del análisis socioeconómico">
-                    <div class="dashboard-top"><div><small data-es="Fuentes" data-en="Sources">Fuentes</small><strong>CSV + XLS/XLSX</strong></div><div><small data-es="Unidad" data-en="Unit">Unidad</small><strong data-es="Provincia" data-en="Province">Provincia</strong></div><div><small data-es="Modelos" data-en="Models">Modelos</small><strong>3</strong></div></div>
-                    <div class="chart-mock"><span style="--h: 38%"></span><span style="--h: 67%"></span><span style="--h: 48%"></span><span style="--h: 82%"></span><span style="--h: 58%"></span><span style="--h: 73%"></span><span style="--h: 44%"></span></div>
-                    <div class="dashboard-legend"><i></i><span data-es="Visualización conceptual basada en los indicadores procesados por la app original." data-en="Conceptual visualization based on indicators processed by the original app.">Visualización conceptual basada en los indicadores procesados por la app original.</span></div>
-                  </div>
-                  <ul class="project-points">
-                    <li data-es="Carga, limpieza, normalización y combinación de múltiples fuentes heterogéneas." data-en="Loading, cleaning, normalization and merging of multiple heterogeneous sources.">Carga, limpieza, normalización y combinación de múltiples fuentes heterogéneas.</li>
-                    <li data-es="Análisis exploratorio, correlaciones y comparaciones interactivas por provincia." data-en="Exploratory analysis, correlations and interactive province-level comparisons.">Análisis exploratorio, correlaciones y comparaciones interactivas por provincia.</li>
-                    <li data-es="Clustering KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado." data-en="KMeans clustering, linear regression and decision tree modeling approaches.">Clustering KMeans, regresión lineal y árbol de decisión como aproximaciones de modelado.</li>
-                    <li data-es="Interfaz Streamlit para convertir el análisis en una herramienta navegable." data-en="Streamlit interface turning the analysis into an explorable application.">Interfaz Streamlit para convertir el análisis en una herramienta navegable.</li>
-                  </ul>
-                  <div class="project-links"><a href="https://github.com/EnzoAA004/CienciaDeDatosTPO-Grupo03" target="_blank" rel="noreferrer" data-es="Ver código" data-en="View code">Ver código</a></div>
-                </div>
+          <div class="project-archive">
+            <div class="archive-heading reveal">
+              <div>
+                <span class="archive-index">04—09</span>
+                <h3 data-es="Más trabajo, menos ruido." data-en="More work, less noise.">Más trabajo, menos ruido.</h3>
               </div>
-            </article>
+              <p data-es="Proyectos que completan el mapa técnico sin competir visualmente con los tres casos principales." data-en="Projects that complete the technical map without visually competing with the three primary cases.">Proyectos que completan el mapa técnico sin competir visualmente con los tres casos principales.</p>
+            </div>
+
+            <div class="archive-grid">
+              <article class="archive-card reveal" data-project-domains="backend frontend" data-cursor="VIEW">
+                <div class="archive-card-top"><span>04</span><span>EVENT-DRIVEN</span></div>
+                <h4>UniCamart</h4>
+                <p data-es="E-commerce distribuido por dominios con venta web, CRM/inventario, analytics y un core de mensajería desacoplado sobre Kafka." data-en="Domain-distributed e-commerce with web sales, CRM/inventory, analytics and a decoupled Kafka messaging core.">E-commerce distribuido por dominios con venta web, CRM/inventario, analytics y un core de mensajería desacoplado sobre Kafka.</p>
+                <div class="archive-tech"><span>Java 21</span><span>React</span><span>Kafka</span><span>Keycloak</span></div>
+              </article>
+
+              <article class="archive-card reveal" data-project-domains="backend cloud" data-cursor="VIEW">
+                <div class="archive-card-top"><span>05</span><span>APPLIED SYSTEM</span></div>
+                <h4>Florería Carlitos</h4>
+                <p data-es="Ecosistema de servicios para e-commerce y operación interna: CRM, ventas locales, envíos, analytics, pagos y eventos." data-en="Service ecosystem for e-commerce and store operations: CRM, local sales, shipping, analytics, payments and events.">Ecosistema de servicios para e-commerce y operación interna: CRM, ventas locales, envíos, analytics, pagos y eventos.</p>
+                <div class="archive-tech"><span>Spring Boot</span><span>Kafka</span><span>Mercado Pago</span><span>VPS</span></div>
+              </article>
+
+              <article class="archive-card reveal" data-project-domains="backend mobile" data-cursor="VIEW">
+                <div class="archive-card-top"><span>06</span><span>REAL TIME · MOBILE</span></div>
+                <h4>SubastAR</h4>
+                <p data-es="Marketplace de subastas con backend Spring, cliente React Native/Expo, persistencia relacional e interacciones en tiempo real." data-en="Auction marketplace with a Spring backend, React Native/Expo client, relational persistence and real-time interactions.">Marketplace de subastas con backend Spring, cliente React Native/Expo, persistencia relacional e interacciones en tiempo real.</p>
+                <div class="archive-tech"><span>Java 21</span><span>WebSocket</span><span>React Native</span><span>Cloudinary</span></div>
+                <div class="archive-links"><a href="https://github.com/EnzoAA004/BackEnd-SubastAR-EnzoVersion3eraEntrega" target="_blank" rel="noreferrer">API ↗</a><a href="https://github.com/EnzoAA004/FrontEnd-SubastAR-EnzoVersion3eraEntrega" target="_blank" rel="noreferrer">App ↗</a></div>
+              </article>
+
+              <article class="archive-card reveal" data-project-domains="backend mobile" data-cursor="VIEW">
+                <div class="archive-card-top"><span>07</span><span>MOBILE · TEAM</span></div>
+                <h4>ViMa</h4>
+                <p data-es="Gestión de turnos médicos con Spring Boot, React Native/Expo, JWT, Redux Toolkit, estados y flujos para pacientes y profesionales." data-en="Medical appointment management with Spring Boot, React Native/Expo, JWT, Redux Toolkit and patient/professional flows.">Gestión de turnos médicos con Spring Boot, React Native/Expo, JWT, Redux Toolkit, estados y flujos para pacientes y profesionales.</p>
+                <div class="archive-tech"><span>Java 17</span><span>Expo</span><span>Redux</span><span>REST</span></div>
+                <div class="archive-links"><a href="https://github.com/EnzoAA004/DesarrolloAPSI" target="_blank" rel="noreferrer">Backend ↗</a></div>
+              </article>
+
+              <article class="archive-card reveal" data-project-domains="frontend backend" data-cursor="VIEW">
+                <div class="archive-card-top"><span>08</span><span>PRODUCT · QR</span></div>
+                <h4>EcoLoop</h4>
+                <p data-es="MVP navegable para trazabilidad de envases reutilizables: QR reales, entrega/devolución, Prisma/SQLite, métricas y vista pública mobile-first." data-en="Navigable reusable-container traceability MVP: real QR codes, handout/return flows, Prisma/SQLite, metrics and a mobile-first public view.">MVP navegable para trazabilidad de envases reutilizables: QR reales, entrega/devolución, Prisma/SQLite, métricas y vista pública mobile-first.</p>
+                <div class="archive-tech"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>QR Scanner</span></div>
+                <div class="archive-links"><a href="https://github.com/EnzoAA004/TecnologiaEInnovacion---TPO-EcoLoop" target="_blank" rel="noreferrer">Código ↗</a></div>
+              </article>
+
+              <article class="archive-card reveal" data-project-domains="data" data-cursor="VIEW">
+                <div class="archive-card-top"><span>09</span><span>DATA SCIENCE</span></div>
+                <h4 data-es="Argentina socioeconómica" data-en="Argentina socioeconomic data">Argentina socioeconómica</h4>
+                <p data-es="Integración de fuentes provinciales, EDA, clustering KMeans, regresión lineal y una interfaz Streamlit para explorar resultados." data-en="Provincial data-source integration, EDA, KMeans clustering, linear regression and a Streamlit interface for exploring results.">Integración de fuentes provinciales, EDA, clustering KMeans, regresión lineal y una interfaz Streamlit para explorar resultados.</p>
+                <div class="archive-tech"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>Streamlit</span></div>
+                <div class="archive-links"><a href="https://github.com/EnzoAA004/CienciaDeDatosTPO-Grupo03" target="_blank" rel="noreferrer">Código ↗</a></div>
+              </article>
+            </div>
+
+            <div class="filter-empty" id="filterEmpty" hidden>
+              <span>∅</span>
+              <p data-es="No hay proyectos visibles para este filtro." data-en="No projects are visible for this filter.">No hay proyectos visibles para este filtro.</p>
+            </div>
           </div>
         </div>
       </section>
