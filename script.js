@@ -431,26 +431,13 @@ if (caseSections.length && caseNavItems.length && 'IntersectionObserver' in wind
   caseSections.forEach((section) => sectionObserver.observe(section));
 }
 
-/* Make featured system cards keyboard/click navigable without stealing link clicks */
+/* Featured-system click convenience. Keyboard users keep the explicit case-study link. */
 document.querySelectorAll('.system-case[data-href]').forEach((card) => {
-  card.setAttribute('tabindex', '0');
-  card.setAttribute('role', 'link');
-
-  const openCase = () => {
+  card.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest('a, button')) return;
     const href = card.dataset.href;
     if (href) window.location.href = href;
-  };
-
-  card.addEventListener('click', (event) => {
-    if (event.target.closest('a, button')) return;
-    openCase();
-  });
-
-  card.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openCase();
-    }
   });
 });
 
