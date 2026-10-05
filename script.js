@@ -354,7 +354,7 @@ if (!prefersReducedMotion && window.gsap) {
       );
     });
 
-    gsap.utils.toArray('.capability').forEach((card, index) => {
+    gsap.utils.toArray('.capability, .engineering-index-shell').forEach((card, index) => {
       gsap.from(card, {
         y: 30,
         opacity: 0,
@@ -382,6 +382,108 @@ if (!prefersReducedMotion && window.gsap) {
       });
     });
   }
+}
+
+/* Engineering Index */
+const engineeringTabs = Array.from(document.querySelectorAll('[data-engineering-tab]'));
+const engineeringPanels = Array.from(document.querySelectorAll('[data-engineering-panel]'));
+
+if (engineeringTabs.length && engineeringPanels.length) {
+  document.documentElement.classList.add('engineering-enhanced');
+
+  const activateEngineeringDomain = (domain, { focus = false, animate = true } = {}) => {
+    const activeTab = engineeringTabs.find((tab) => tab.dataset.engineeringTab === domain);
+    const activePanel = engineeringPanels.find((panel) => panel.dataset.engineeringPanel === domain);
+    if (!activeTab || !activePanel) return;
+
+    engineeringTabs.forEach((tab) => {
+      const active = tab === activeTab;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.setAttribute('tabindex', active ? '0' : '-1');
+    });
+
+    engineeringPanels.forEach((panel) => {
+      panel.classList.toggle('is-active', panel === activePanel);
+    });
+
+    if (focus) activeTab.focus();
+
+    if (animate && !prefersReducedMotion && window.gsap) {
+      window.gsap.fromTo(
+        activePanel,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.34, ease: 'power2.out', clearProps: 'opacity,transform' }
+      );
+    }
+  };
+
+  engineeringTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      activateEngineeringDomain(tab.dataset.engineeringTab || 'backend');
+    });
+
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+
+      let nextIndex = index;
+      if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = engineeringTabs.length - 1;
+      else if (event.key === 'ArrowDown' || event.key === 'ArrowRight') nextIndex = (index + 1) % engineeringTabs.length;
+      else nextIndex = (index - 1 + engineeringTabs.length) % engineeringTabs.length;
+
+      const nextTab = engineeringTabs[nextIndex];
+      activateEngineeringDomain(nextTab.dataset.engineeringTab || 'backend', { focus: true });
+    });
+  });
+
+  activateEngineeringDomain('backend', { animate: false });
+}
+
+/* Recruiter quick access */
+const copyEmailButton = document.getElementById('copyEmailButton');
+
+if (copyEmailButton) {
+  const copyLabel = copyEmailButton.querySelector('[data-copy-label]');
+  const email = copyEmailButton.dataset.copy || '';
+
+  const updateCopyLabel = (copied) => {
+    if (!copyLabel) return;
+    copyLabel.textContent = copied
+      ? (currentLanguage === 'es' ? 'Email copiado' : 'Email copied')
+      : (currentLanguage === 'es' ? 'Copiar email' : 'Copy email');
+  };
+
+  copyEmailButton.addEventListener('click', async () => {
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(email);
+      copied = true;
+    } catch (_) {
+      const fallback = document.createElement('textarea');
+      fallback.value = email;
+      fallback.setAttribute('readonly', '');
+      fallback.style.position = 'fixed';
+      fallback.style.opacity = '0';
+      document.body.appendChild(fallback);
+      fallback.select();
+      copied = document.execCommand('copy');
+      fallback.remove();
+    }
+
+    if (!copied) return;
+    copyEmailButton.classList.add('is-copied');
+    updateCopyLabel(true);
+    window.setTimeout(() => {
+      copyEmailButton.classList.remove('is-copied');
+      updateCopyLabel(false);
+    }, 1800);
+  });
+
+  languageButton?.addEventListener('click', () => {
+    window.setTimeout(() => updateCopyLabel(false), 0);
+  });
 }
 
 /* Project domain filtering */
@@ -423,6 +525,17 @@ projectFilterButtons.forEach((button) => {
 });
 
 setProjectFilter('all');
+document.querySelectorAll('[data-project-filter-jump]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.projectFilterJump || 'all';
+    setProjectFilter(filter);
+    document.getElementById('projects')?.scrollIntoView({
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      block: 'start'
+    });
+  });
+});
+
 
 /* Curated-system visual microinteractions */
 if (finePointer && !prefersReducedMotion) {
