@@ -662,3 +662,198 @@ html[data-theme="light"] ::selection {
     font-size: .66rem;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   Additional audit fixes: legacy visuals + remaining hard-coded contrast
+   -------------------------------------------------------------------------- */
+
+.project-meta,
+.marquee-track,
+.scroll-cue,
+.filter-empty,
+.mock-label,
+.screen-bar,
+.tag-row b,
+.system-flow,
+.mobile-mock small,
+.api-mock span,
+.api-mock b,
+.dashboard-top small,
+.dashboard-legend {
+  font-size: var(--ui-sm);
+  font-weight: 600;
+}
+
+.project-meta,
+.marquee-track,
+.scroll-cue,
+.filter-empty {
+  color: var(--label-soft);
+}
+
+.marquee-track {
+  letter-spacing: .08em;
+}
+
+.scroll-cue {
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+
+.project-points {
+  font-size: var(--copy-md);
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.detail-block code {
+  font-size: .82rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.amenity-modules span {
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--label-soft);
+}
+
+.filter-empty {
+  font-size: .76rem;
+}
+
+.case-visual-caption {
+  font-size: .68rem;
+  line-height: 1.62;
+  font-weight: 550;
+}
+
+.review-table-mini > div,
+.slot-row span,
+.admin-side span,
+.admin-main p,
+.runtime-terminal .terminal-heading,
+.runtime-trace .terminal-heading,
+.trace-row,
+.trace-row small {
+  color: var(--label-soft);
+}
+
+/* Light mode: fix remnants of dark-first text colors. */
+html[data-theme="light"] .project-points,
+html[data-theme="light"] .detail-block code,
+html[data-theme="light"] .case-visual-caption,
+html[data-theme="light"] .review-table-mini > div,
+html[data-theme="light"] .slot-row span,
+html[data-theme="light"] .admin-side span,
+html[data-theme="light"] .admin-main p,
+html[data-theme="light"] .runtime-terminal .terminal-heading,
+html[data-theme="light"] .runtime-trace .terminal-heading,
+html[data-theme="light"] .trace-row,
+html[data-theme="light"] .trace-row small,
+html[data-theme="light"] .amenity-modules span,
+html[data-theme="light"] .cloud-observe span,
+html[data-theme="light"] .filter-empty,
+html[data-theme="light"] .project-meta,
+html[data-theme="light"] .marquee-track,
+html[data-theme="light"] .scroll-cue {
+  color: #535c66;
+}
+
+html[data-theme="light"] .detail-block code {
+  border-color: rgba(23,25,28,.16);
+  background: #f8f5ed;
+}
+
+html[data-theme="light"] .amenities-building span:nth-child(4),
+html[data-theme="light"] .amenities-building span:nth-child(7) {
+  color: #005f7b;
+  border-color: rgba(8,122,155,.32);
+  background: rgba(8,122,155,.08);
+  font-weight: 700;
+}
+
+html[data-theme="light"] .project-links a:hover,
+html[data-theme="light"] .project-links a:focus-visible {
+  color: var(--on-accent);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+/* Dark mode: several decorative labels were too close to the background. */
+html[data-theme="dark"] .project-points,
+html[data-theme="dark"] .detail-block code,
+html[data-theme="dark"] .case-visual-caption,
+html[data-theme="dark"] .review-table-mini > div,
+html[data-theme="dark"] .slot-row span,
+html[data-theme="dark"] .admin-side span,
+html[data-theme="dark"] .admin-main p,
+html[data-theme="dark"] .runtime-terminal .terminal-heading,
+html[data-theme="dark"] .runtime-trace .terminal-heading,
+html[data-theme="dark"] .trace-row,
+html[data-theme="dark"] .trace-row small,
+html[data-theme="dark"] .amenity-modules span,
+html[data-theme="dark"] .cloud-observe span,
+html[data-theme="dark"] .filter-empty,
+html[data-theme="dark"] .project-meta,
+html[data-theme="dark"] .marquee-track,
+html[data-theme="dark"] .scroll-cue {
+  color: #a8afb9;
+}
+
+html[data-theme="dark"] .detail-block code {
+  color: #d7dce3;
+  background: #101317;
+}
+
+/* Chips should never look disabled just because the theme changed. */
+html[data-theme="light"] .case-meta span,
+html[data-theme="light"] .review-summary-bar span,
+html[data-theme="light"] .amenity-real-card span,
+html[data-theme="light"] .slot-row span,
+html[data-theme="light"] .admin-actions-mini span {
+  color: #4f5862;
+  border-color: rgba(23,25,28,.17);
+}
+
+html[data-theme="dark"] .case-meta span,
+html[data-theme="dark"] .review-summary-bar span,
+html[data-theme="dark"] .amenity-real-card span,
+html[data-theme="dark"] .slot-row span,
+html[data-theme="dark"] .admin-actions-mini span {
+  color: #b3bac3;
+}
+
+/* Stronger label hierarchy inside project/case diagrams. */
+.case-visual-head,
+.case-visual-label,
+.arch-label,
+.arch-layer-label,
+.terminal-heading,
+.surface-topbar span {
+  text-transform: uppercase;
+  letter-spacing: .065em;
+}
+
+.arch-connector span,
+.case-data-flow span,
+.case-data-flow small,
+.cloud-bus b {
+  font-size: .66rem;
+  font-weight: 600;
+}
+
+html[data-theme="light"] .arch-connector span,
+html[data-theme="light"] .case-data-flow span,
+html[data-theme="light"] .case-data-flow small,
+html[data-theme="light"] .cloud-bus b {
+  color: #535c66;
+}
+
+html[data-theme="dark"] .arch-connector span,
+html[data-theme="dark"] .case-data-flow span,
+html[data-theme="dark"] .case-data-flow small,
+html[data-theme="dark"] .cloud-bus b {
+  color: #abb2bc;
+}
