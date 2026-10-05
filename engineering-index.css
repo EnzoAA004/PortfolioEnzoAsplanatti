@@ -515,3 +515,8 @@ html[data-theme="dark"] .engineering-index-shell {
     transition: none !important;
   }
 }
+
+
+.engineering-panel[hidden] {
+  display: none !important;
+}
