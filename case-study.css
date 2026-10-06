@@ -339,8 +339,8 @@
 
 .case-architecture-grid {
   display: grid;
-  grid-template-columns: minmax(250px,.45fr) minmax(0,1.55fr);
-  gap: 70px;
+  grid-template-columns: minmax(380px,.62fr) minmax(0,1.38fr);
+  gap: 88px;
   align-items: start;
 }
 
@@ -357,8 +357,9 @@
 }
 
 .case-sticky h2 {
+  max-width: 430px;
   margin: 8px 0 0;
-  font-size: clamp(2.4rem,4.5vw,4.3rem);
+  font-size: clamp(2.4rem,4vw,4.1rem);
   line-height: .96;
   letter-spacing: -.06em;
   font-weight: 600;
