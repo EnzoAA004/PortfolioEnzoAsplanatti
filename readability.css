@@ -83,6 +83,238 @@ li {
   font-weight: 500;
 }
 
+/* Recruiter-first orientation layer: compact, evidence-led and theme-safe. */
+.recruiter-snapshot {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(150px, .28fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+  margin-top: clamp(42px, 6vw, 76px);
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.snapshot-heading {
+  display: grid;
+  gap: 8px;
+}
+
+.snapshot-heading h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  letter-spacing: -.04em;
+}
+
+.snapshot-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.snapshot-points p {
+  display: grid;
+  gap: 5px;
+  min-height: 54px;
+  margin: 0;
+  padding: 0 20px;
+  border-left: 1px solid var(--line);
+}
+
+.snapshot-points strong,
+.snapshot-points span {
+  display: block;
+}
+
+.snapshot-points strong {
+  color: var(--electric);
+  font-family: var(--font-mono);
+  font-size: var(--micro-readable);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.snapshot-points span {
+  color: var(--label-strong);
+  font-size: var(--copy-md);
+  line-height: 1.45;
+}
+
+.featured-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(114,220,255,.045), transparent 28rem),
+    var(--bg-soft);
+}
+
+.featured-heading {
+  margin-bottom: 38px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.featured-card {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--text);
+  background: var(--panel);
+  transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease;
+}
+
+.featured-card:hover,
+.featured-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--electric) 48%, var(--line));
+  background: var(--panel-2);
+  box-shadow: 0 20px 54px rgba(0,0,0,.14);
+}
+
+.featured-card-index,
+.featured-card-meta {
+  color: var(--label-soft);
+  font-family: var(--font-mono);
+  font-size: var(--micro-readable);
+  font-weight: 650;
+  letter-spacing: .07em;
+}
+
+.featured-card-index {
+  color: var(--electric);
+}
+
+.featured-card h3 {
+  margin: 36px 0 13px;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.featured-card p {
+  margin: 0;
+  color: var(--label-strong);
+  font-size: var(--copy-md);
+  line-height: 1.58;
+}
+
+.featured-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.featured-card-meta b {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.featured-more {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--ui-sm);
+  font-weight: 650;
+}
+
+.featured-more b {
+  color: var(--electric);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+html[data-theme="light"] .featured-section {
+  background:
+    radial-gradient(circle at 82% 10%, rgba(8,122,155,.05), transparent 28rem),
+    var(--bg-soft);
+}
+
+html[data-theme="light"] .featured-card {
+  box-shadow: 0 16px 48px rgba(42,36,21,.055);
+}
+
+@media (max-width: 900px) {
+  .recruiter-snapshot {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .snapshot-points p:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .snapshot-points,
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-points p,
+  .snapshot-points p:first-child {
+    min-height: 0;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .snapshot-points p:first-child {
+    border-top: 0;
+  }
+
+  .featured-card {
+    min-height: 230px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-card {
+    transition: none;
+  }
+}
+
+/* Intermediate desktop audit: keep 1366px comfortable without shrinking the system. */
+@media (min-width: 1081px) and (max-width: 1400px) {
+  .hero-v2 {
+    padding-top: 126px;
+  }
+
+  .hero-shell {
+    gap: clamp(34px, 5vw, 64px);
+  }
+
+  .display-title {
+    font-size: clamp(3.6rem, 7vw, 6.5rem) !important;
+  }
+
+  .hero-system {
+    min-height: 520px;
+  }
+
+  .system-frame {
+    width: min(100%, 470px);
+  }
+
+  .hero-metrics {
+    margin-top: 54px;
+  }
+}
+
 .capability p,
 .archive-card > p,
 .principle p,

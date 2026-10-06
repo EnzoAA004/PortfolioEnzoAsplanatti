@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Enzo Asplanatti — Software Engineer</title>
+  <desc id="desc">Backend, full stack, cloud delivery and distributed systems portfolio.</desc>
+  <defs><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#30332f" stroke-width="1"/></pattern><linearGradient id="glow" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#d7b56d" stop-opacity=".25"/><stop offset="1" stop-color="#72d6d0" stop-opacity=".08"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="#11110f"/><rect width="1200" height="630" fill="url(#grid)" opacity=".7"/><rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M70 100H1130M70 530H1130" stroke="#d7b56d" stroke-width="2" opacity=".8"/>
+  <text x="70" y="176" fill="#d7b56d" font-family="monospace" font-size="24" letter-spacing="5">EA° / ENGINEERING PORTFOLIO</text>
+  <text x="70" y="300" fill="#f2efe7" font-family="Arial, sans-serif" font-size="76" font-weight="700">Enzo Asplanatti</text>
+  <text x="74" y="365" fill="#72d6d0" font-family="monospace" font-size="30" letter-spacing="3">SOFTWARE ENGINEER</text>
+  <text x="74" y="445" fill="#aaa79d" font-family="Arial, sans-serif" font-size="26">Backend · Full Stack · Cloud Delivery · Distributed Systems</text>
+  <text x="1130" y="576" fill="#aaa79d" font-family="monospace" font-size="18" text-anchor="end">enzoaa004.github.io/PortfolioEnzoAsplanatti</text>
+</svg>

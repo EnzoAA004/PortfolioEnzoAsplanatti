@@ -18,6 +18,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Saxo / InstrumentalSW — Case Study | Enzo Asplanatti" />
     <meta property="og:description" content="Arquitectura y decisiones de ingeniería detrás de una plataforma de transcripción musical asistida por IA." />
+    <meta property="og:url" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-saxo.html" />
+    <meta property="og:image" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/og-default.svg" />
+    <meta property="og:image:alt" content="Saxo / InstrumentalSW case study" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saxo / InstrumentalSW — Case Study | Enzo Asplanatti" />
+    <meta name="twitter:description" content="Arquitectura y decisiones de ingeniería detrás de una plataforma de transcripción musical asistida por IA." />
+    <meta name="twitter:image" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/og-default.svg" />
     <link rel="canonical" href="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-saxo.html" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,10 +45,11 @@
   >
     <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
     <nav class="case-progress" aria-label="Case study progress">
-      <a href="#context" data-case-nav="context" data-label="Context"></a>
-      <a href="#evidence" data-case-nav="evidence" data-label="Interface"></a>
-      <a href="#architecture" data-case-nav="architecture" data-label="Architecture"></a>
-      <a href="#decisions" data-case-nav="decisions" data-label="Decisions"></a>
+      <a href="#context" data-case-nav="context" data-label="Context" aria-label="Context"></a>
+      <a href="#contribution" data-case-nav="contribution" data-label="Contribution" aria-label="Contribution"></a>
+      <a href="#evidence" data-case-nav="evidence" data-label="Interface" aria-label="Interface"></a>
+      <a href="#architecture" data-case-nav="architecture" data-label="Architecture" aria-label="Architecture"></a>
+      <a href="#decisions" data-case-nav="decisions" data-label="Decisions" aria-label="Decisions"></a>
       <a href="#status" data-case-nav="status" data-label="Status"></a>
     </nav>
     <div class="page-loader" aria-hidden="true">
@@ -133,11 +141,26 @@
         </div>
       </section>
 
+      <section class="case-section case-contribution-section" id="contribution" data-case-section="contribution">
+        <div class="container">
+          <div class="case-section-head reveal">
+            <span class="case-section-kicker">02 / CONTRIBUTION</span>
+            <h2 data-es="Qué construí alrededor de una salida imperfecta." data-en="What I built around an imperfect output.">Qué construí alrededor de una salida imperfecta.</h2>
+          </div>
+          <div class="case-contribution-grid">
+            <article class="case-contribution-card reveal"><span>PRODUCT API</span><h3 data-es="Límite de producto" data-en="Product boundary">Límite de producto</h3><p data-es="Definí el flujo donde Spring Boot expone el contrato del producto, mantiene las revisiones y evita que el frontend dependa directamente del servicio de IA." data-en="I defined the flow where Spring Boot exposes the product contract, keeps revisions and prevents the frontend from depending directly on the AI service.">Definí el flujo donde Spring Boot expone el contrato del producto, mantiene las revisiones y evita que el frontend dependa directamente del servicio de IA.</p><div class="contribution-evidence"><span>Spring Boot</span><span>409 conflict</span><span>versioned contracts</span></div></article>
+            <article class="case-contribution-card reveal"><span>INTEGRATION</span><h3 data-es="Flujo revisable" data-en="Reviewable flow">Flujo revisable</h3><p data-es="Integré upload, procesamiento, revisión humana, edición explícita y descarga de MIDI, MusicXML y SVG a través de estados y artefactos verificables." data-en="I integrated upload, processing, human review, explicit editing and MIDI, MusicXML and SVG downloads through verifiable states and artifacts.">Integré upload, procesamiento, revisión humana, edición explícita y descarga de MIDI, MusicXML y SVG a través de estados y artefactos verificables.</p><div class="contribution-evidence"><span>Next.js</span><span>FastAPI</span><span>human-in-the-loop</span></div></article>
+            <article class="case-contribution-card reveal"><span>QUALITY</span><h3 data-es="Integridad y pruebas" data-en="Integrity and tests">Integridad y pruebas</h3><p data-es="Implementé controles de SHA-256, revisiones inmutables, control de concurrencia y quality gates documentados para que una edición no reemplace silenciosamente otra." data-en="I implemented SHA-256 checks, immutable revisions, concurrency control and documented quality gates so one edit cannot silently replace another.">Implementé controles de SHA-256, revisiones inmutables, control de concurrencia y quality gates documentados para que una edición no reemplace silenciosamente otra.</p><div class="contribution-evidence"><span>SHA-256</span><span>TDD</span><span>≥90% gates</span></div></article>
+          </div>
+          <p class="contribution-note" data-es="Aporte técnico respaldado por los componentes del frontend, los repositorios de Backend y AI Module enlazados arriba, y las decisiones de integridad documentadas en este caso." data-en="Technical contribution backed by the frontend components, the Backend and AI Module repositories linked above, and the integrity decisions documented in this case.">Aporte técnico respaldado por los componentes del frontend, los repositorios de Backend y AI Module enlazados arriba, y las decisiones de integridad documentadas en este caso.</p>
+        </div>
+      </section>
+
       <section class="case-section case-evidence-section" id="evidence" data-case-section="evidence">
         <div class="container">
           <div class="evidence-intro reveal">
             <div>
-              <span class="case-section-kicker">02 / PRODUCT SURFACES</span>
+              <span class="case-section-kicker">03 / PRODUCT SURFACES</span>
               <h2 data-es="Interfaz reconstruida desde los componentes reales." data-en="Interface reconstructed from the real components.">Interfaz reconstruida desde los componentes reales.</h2>
             </div>
             <div>
@@ -218,7 +241,7 @@
       <section class="case-section case-architecture-section" id="architecture" data-case-section="architecture">
         <div class="container case-architecture-grid">
           <div class="case-sticky reveal">
-            <span class="case-section-kicker">03 / ARCHITECTURE</span>
+            <span class="case-section-kicker">04 / ARCHITECTURE</span>
             <h2 data-es="Separar responsabilidades antes de escalar complejidad." data-en="Separate responsibilities before scaling complexity.">Separar responsabilidades antes de escalar complejidad.</h2>
             <p data-es="La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna." data-en="The architecture keeps UI, product logic and processing separate. It also lets persistence, queueing and object storage evolve without turning the browser into a direct client of internal infrastructure.">La arquitectura evita que UI, producto y procesamiento se mezclen. También permite que persistencia, cola y object storage evolucionen sin convertir al navegador en cliente directo de infraestructura interna.</p>
           </div>
@@ -239,7 +262,7 @@
       <section class="case-section" id="decisions" data-case-section="decisions">
         <div class="container">
           <div class="case-section-head reveal">
-            <span class="case-section-kicker">04 / ENGINEERING DECISIONS</span>
+            <span class="case-section-kicker">05 / ENGINEERING DECISIONS</span>
             <h2 data-es="Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido." data-en="Decisions designed so the system can be explained, tested and corrected.">Decisiones pensadas para que el sistema pueda ser explicado, probado y corregido.</h2>
           </div>
           <div class="case-decisions-grid">
@@ -254,7 +277,7 @@
       <section class="case-section case-status-section" id="status" data-case-section="status">
         <div class="container">
           <div class="case-section-head reveal">
-            <span class="case-section-kicker">05 / STATUS</span>
+            <span class="case-section-kicker">06 / STATUS</span>
             <h2 data-es="Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución." data-en="Show what exists without presenting evolving work as finished.">Mostrar lo que existe, sin vender como terminado lo que todavía está en evolución.</h2>
           </div>
           <div class="case-status-board reveal">

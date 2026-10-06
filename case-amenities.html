@@ -13,11 +13,18 @@
         }
       })();
     </script>
-    <meta name="description" content="Case study de Residential Amenities Platform: ASP.NET Core, Angular/Ionic, PostgreSQL y staging real en Azure con Terraform, Container Apps, OIDC y smoke checks." />
+    <meta name="description" content="Case study de Residential Amenities Platform: ASP.NET Core, Angular/Ionic, PostgreSQL, Terraform, Container Apps, OIDC y delivery preparado para staging Azure." />
     <meta name="theme-color" content="#f4f1e8" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Residential Amenities Platform — Case Study | Enzo Asplanatti" />
     <meta property="og:description" content="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio." />
+    <meta property="og:url" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-amenities.html" />
+    <meta property="og:image" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/og-default.svg" />
+    <meta property="og:image:alt" content="Residential Amenities Platform case study" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Residential Amenities Platform — Case Study | Enzo Asplanatti" />
+    <meta name="twitter:description" content="Producto full stack para reservas, pagos y administración de amenities con reglas reales de negocio." />
+    <meta name="twitter:image" content="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/og-default.svg" />
     <link rel="canonical" href="https://enzoaa004.github.io/PortfolioEnzoAsplanatti/case-amenities.html" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,10 +45,11 @@
   >
     <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
     <nav class="case-progress" aria-label="Case study progress">
-      <a href="#context" data-case-nav="context" data-label="Context"></a>
-      <a href="#evidence" data-case-nav="evidence" data-label="Interface"></a>
-      <a href="#architecture" data-case-nav="architecture" data-label="Architecture"></a>
-      <a href="#decisions" data-case-nav="decisions" data-label="Decisions"></a>
+      <a href="#context" data-case-nav="context" data-label="Context" aria-label="Context"></a>
+      <a href="#contribution" data-case-nav="contribution" data-label="Contribution" aria-label="Contribution"></a>
+      <a href="#evidence" data-case-nav="evidence" data-label="Interface" aria-label="Interface"></a>
+      <a href="#architecture" data-case-nav="architecture" data-label="Architecture" aria-label="Architecture"></a>
+      <a href="#decisions" data-case-nav="decisions" data-label="Decisions" aria-label="Decisions"></a>
       <a href="#delivery" data-case-nav="delivery" data-label="Delivery"></a>
     </nav>
     <div class="page-loader" aria-hidden="true"><div class="loader-mark">EA<span>°</span></div><div class="loader-line"><i></i></div><span class="loader-copy">CASE STUDY / AMENITIES</span></div>
@@ -69,9 +77,9 @@
             <a class="case-back" href="index.html#projects">← <span data-es="Volver a proyectos" data-en="Back to projects">Volver a proyectos</span></a>
             <div class="case-number"><span>CASE 02</span><i></i><span>PRODUCT · FULL STACK · DELIVERY</span></div>
             <h1 class="case-title motion-title">Residential <em>Amenities</em></h1>
-            <p class="case-lead" data-es="Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio y desplegado en un staging real de Azure con pipeline OIDC, imágenes Docker y smoke checks automatizados." data-en="A product for managing amenity reservations, availability, payments and administration in a pilot building, designed from real business rules and deployed to a real Azure staging environment with OIDC delivery, Docker images and automated smoke checks.">Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio y desplegado en un staging real de Azure con pipeline OIDC, imágenes Docker y smoke checks automatizados.</p>
+            <p class="case-lead" data-es="Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio. El repositorio incluye la implementación de IaC, contenedores y delivery OIDC; el primer apply real de Azure permanece pendiente de credenciales y aprobación de costos." data-en="A product for managing amenity reservations, availability, payments and administration in a pilot building, designed from real business rules. The repository includes IaC, containers and OIDC delivery implementation; the first real Azure apply remains pending credentials and cost approval.">Un producto para gestionar reservas, disponibilidad, pagos y administración de amenities en un edificio piloto, diseñado desde reglas reales de negocio. El repositorio incluye la implementación de IaC, contenedores y delivery OIDC; el primer apply real de Azure permanece pendiente de credenciales y aprobación de costos.</p>
             <div class="case-meta"><span>ASP.NET Core</span><span>Angular</span><span>Ionic</span><span>PostgreSQL</span><span>Docker</span><span>Terraform</span><span>Azure Container Apps</span><span>GitHub Actions</span></div>
-            <div class="case-hero-actions"><a class="magnetic" href="https://resamen-staging-web.lemonsea-e25fd13d.canadacentral.azurecontainerapps.io" target="_blank" rel="noreferrer"><span data-es="Abrir staging Azure" data-en="Open Azure staging">Abrir staging Azure</span> ↗</a><a class="magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform" target="_blank" rel="noreferrer"><span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span> ↗</a></div>
+            <div class="case-hero-actions"><a class="magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform/blob/main/.github/workflows/deploy-staging.yml" target="_blank" rel="noreferrer"><span data-es="Ver workflow de staging" data-en="View staging workflow">Ver workflow de staging</span> ↗</a><a class="magnetic" href="https://github.com/EnzoAA004/residential-amenities-platform" target="_blank" rel="noreferrer"><span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span> ↗</a></div>
           </div>
 
           <div class="case-hero-visual">
@@ -82,7 +90,7 @@
                 <div class="amenities-product-flow"><div><small>CLIENT</small><strong>Angular / Ionic</strong></div><span>→</span><div><small>API</small><strong>ASP.NET Core</strong></div><span>→</span><div><small>DATA</small><strong>PostgreSQL</strong></div></div>
               </div>
             </div>
-            <div class="case-visual-caption"><em>$</em> delivery.status<br><strong>Azure staging live · Terraform state converged · OIDC deploy · ACR push · client/API smoke check passed</strong></div>
+            <div class="case-visual-caption"><em>$</em> delivery.status<br><strong>IaC ready · OIDC workflow · ACR image path · smoke checks defined</strong></div>
           </div>
         </div>
       </section>
@@ -99,11 +107,26 @@
         </div>
       </section>
 
+      <section class="case-section case-contribution-section" id="contribution" data-case-section="contribution">
+        <div class="container">
+          <div class="case-section-head reveal">
+            <span class="case-section-kicker">02 / CONTRIBUTION</span>
+            <h2 data-es="Qué construí para convertir reglas de operación en software verificable." data-en="What I built to turn operating rules into verifiable software.">Qué construí para convertir reglas de operación en software verificable.</h2>
+          </div>
+          <div class="case-contribution-grid">
+            <article class="case-contribution-card reveal"><span>DOMAIN + API</span><h3 data-es="Reglas del dominio" data-en="Domain rules">Reglas del dominio</h3><p data-es="Implementé reservas compartidas, exclusivas y de eventos, disponibilidad, pricing autoritativo, holds, expiración y operaciones administrativas sobre ASP.NET Core y PostgreSQL." data-en="I implemented shared, exclusive and event reservations, availability, authoritative pricing, holds, expiration and administrative operations on ASP.NET Core and PostgreSQL.">Implementé reservas compartidas, exclusivas y de eventos, disponibilidad, pricing autoritativo, holds, expiración y operaciones administrativas sobre ASP.NET Core y PostgreSQL.</p><div class="contribution-evidence"><span>ASP.NET Core</span><span>PostgreSQL</span><span>RBAC</span></div></article>
+            <article class="case-contribution-card reveal"><span>PRODUCT CLIENT</span><h3 data-es="Flujos full stack" data-en="Full-stack flows">Flujos full stack</h3><p data-es="Construí y conecté los flujos de cliente residente y administración: amenities, QR, reservas, pagos online/efectivo, historial, configuración y revisión." data-en="I built and connected resident and administration client flows: amenities, QR, reservations, online/cash payments, history, configuration and review.">Construí y conecté los flujos de cliente residente y administración: amenities, QR, reservas, pagos online/efectivo, historial, configuración y revisión.</p><div class="contribution-evidence"><span>Angular</span><span>Ionic</span><span>Mercado Pago</span></div></article>
+            <article class="case-contribution-card reveal"><span>DELIVERY + SECURITY</span><h3 data-es="Camino a staging" data-en="Path to staging">Camino a staging</h3><p data-es="Preparé Docker, Terraform, GitHub Actions con OIDC, RBAC acotado, estado remoto y smoke checks como código. La infraestructura está preparada, pero no afirmo un despliegue Azure validado sin el apply real." data-en="I prepared Docker, Terraform, GitHub Actions with OIDC, scoped RBAC, remote state and smoke checks as code. The infrastructure is prepared, but I do not claim a validated Azure deployment without the real apply.">Preparé Docker, Terraform, GitHub Actions con OIDC, RBAC acotado, estado remoto y smoke checks como código. La infraestructura está preparada, pero no afirmo un despliegue Azure validado sin el apply real.</p><div class="contribution-evidence"><span>Docker</span><span>Terraform</span><span>OIDC</span></div></article>
+          </div>
+          <p class="contribution-note" data-es="Aporte atribuido al trabajo documentado en el monorepo privado enlazado. La evidencia disponible incluye código, tests, CI, documentación de arquitectura y workflow de deployment; no incluye todavía una validación pública de Azure staging." data-en="Contribution attributed to the work documented in the linked private monorepo. Available evidence includes code, tests, CI, architecture documentation and a deployment workflow; it does not yet include public validation of Azure staging.">Aporte atribuido al trabajo documentado en el monorepo privado enlazado. La evidencia disponible incluye código, tests, CI, documentación de arquitectura y workflow de deployment; no incluye todavía una validación pública de Azure staging.</p>
+        </div>
+      </section>
+
       <section class="case-section case-evidence-section" id="evidence" data-case-section="evidence">
         <div class="container">
           <div class="evidence-intro reveal">
             <div>
-              <span class="case-section-kicker">02 / PRODUCT SURFACES</span>
+              <span class="case-section-kicker">03 / PRODUCT SURFACES</span>
               <h2 data-es="Flujos de residente y administración basados en el cliente real." data-en="Resident and administration flows based on the real client.">Flujos de residente y administración basados en el cliente real.</h2>
             </div>
             <div>
@@ -176,7 +199,7 @@
 
       <section class="case-section case-architecture-section" id="architecture" data-case-section="architecture">
         <div class="container case-architecture-grid">
-          <div class="case-sticky reveal"><span class="case-section-kicker">03 / ARCHITECTURE</span><h2 data-es="Producto completo antes que infraestructura decorativa." data-en="Complete product before decorative infrastructure.">Producto completo antes que infraestructura decorativa.</h2><p data-es="La prioridad fue cerrar primero dominio, cliente, pagos, seguridad y operación. Después llevé esa arquitectura a un staging real en Azure: Terraform administra Container Apps, PostgreSQL privado, Blob Storage, ACR, networking e identidad administrada; GitHub Actions autentica por OIDC con RBAC acotado, construye y publica imágenes, despliega revisiones y valida el flujo con smoke checks sobre cliente y API." data-en="The priority was closing the domain, client, payments, security and operations first. I then took that architecture to a real Azure staging environment: Terraform manages Container Apps, private PostgreSQL, Blob Storage, ACR, networking and managed identity; GitHub Actions authenticates through OIDC with scoped RBAC, builds and pushes images, deploys revisions and validates the path with client/API smoke checks.">La prioridad fue cerrar primero dominio, cliente, pagos, seguridad y operación. Después llevé esa arquitectura a un staging real en Azure: Terraform administra Container Apps, PostgreSQL privado, Blob Storage, ACR, networking e identidad administrada; GitHub Actions autentica por OIDC con RBAC acotado, construye y publica imágenes, despliega revisiones y valida el flujo con smoke checks sobre cliente y API.</p></div>
+          <div class="case-sticky reveal"><span class="case-section-kicker">04 / ARCHITECTURE</span><h2 data-es="Producto completo antes que infraestructura decorativa." data-en="Complete product before decorative infrastructure.">Producto completo antes que infraestructura decorativa.</h2><p data-es="La prioridad fue cerrar primero dominio, cliente, pagos, seguridad y operación. El repositorio deja preparada la arquitectura de staging: Terraform define Container Apps, PostgreSQL privado, Blob Storage, ACR, networking e identidad administrada; GitHub Actions autentica por OIDC con RBAC acotado, construye imágenes y deja definidos los smoke checks para validar cliente y API después del apply real." data-en="The priority was closing the domain, client, payments, security and operations first. The repository prepares the staging architecture: Terraform defines Container Apps, private PostgreSQL, Blob Storage, ACR, networking and managed identity; GitHub Actions authenticates through OIDC with scoped RBAC, builds images and defines smoke checks to validate client and API after the real apply.">La prioridad fue cerrar primero dominio, cliente, pagos, seguridad y operación. El repositorio deja preparada la arquitectura de staging: Terraform define Container Apps, PostgreSQL privado, Blob Storage, ACR, networking e identidad administrada; GitHub Actions autentica por OIDC con RBAC acotado, construye imágenes y deja definidos los smoke checks para validar cliente y API después del apply real.</p></div>
           <div class="case-architecture-canvas reveal">
             <div class="arch-flow">
               <div class="arch-layer"><span class="arch-layer-label">CLIENT</span><div class="arch-layer-content"><div class="arch-box accent"><small>ANGULAR + IONIC</small><strong>Resident + Administrator product flows</strong></div></div></div>
@@ -193,7 +216,7 @@
 
       <section class="case-section" id="decisions" data-case-section="decisions">
         <div class="container">
-          <div class="case-section-head reveal"><span class="case-section-kicker">04 / ENGINEERING DECISIONS</span><h2 data-es="Reglas de negocio convertidas en invariantes del sistema." data-en="Business rules turned into system invariants.">Reglas de negocio convertidas en invariantes del sistema.</h2></div>
+          <div class="case-section-head reveal"><span class="case-section-kicker">05 / ENGINEERING DECISIONS</span><h2 data-es="Reglas de negocio convertidas en invariantes del sistema." data-en="Business rules turned into system invariants.">Reglas de negocio convertidas en invariantes del sistema.</h2></div>
           <div class="case-decisions-grid">
             <article class="case-decision reveal"><span class="decision-index">01</span><h3 data-es="Pricing autoritativo y snapshot histórico" data-en="Authoritative pricing and historical snapshots">Pricing autoritativo y snapshot histórico</h3><p data-es="El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado." data-en="The client does not decide price. The API calculates and preserves the value applied to the reservation so future configuration changes do not rewrite history.">El cliente no decide el precio. La API calcula y conserva el valor aplicado en la reserva para que cambios futuros de configuración no reescriban el pasado.</p><div class="decision-tech"><span>server authority</span><span>historical snapshot</span></div></article>
             <article class="case-decision reveal"><span class="decision-index">02</span><h3 data-es="Holds y expiración alrededor del pago" data-en="Holds and expiration around payment">Holds y expiración alrededor del pago</h3><p data-es="Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior." data-en="A pending reservation can hold availability for a controlled window. Expiration is treated as part of the domain rather than a later manual correction.">Una reserva pendiente puede bloquear disponibilidad por una ventana controlada. El diseño trata la expiración como parte del dominio, no como una corrección manual posterior.</p><div class="decision-tech"><span>advisory locks</span><span>holds</span><span>expiration</span></div></article>
@@ -205,9 +228,9 @@
 
       <section class="case-section case-status-section" id="delivery" data-case-section="delivery">
         <div class="container">
-          <div class="case-section-head reveal"><span class="case-section-kicker">05 / DELIVERY</span><h2 data-es="Infraestructura aplicada, imágenes publicadas y staging Azure validado de extremo a extremo." data-en="Infrastructure applied, images published and Azure staging validated end to end.">Infraestructura aplicada, imágenes publicadas y staging Azure validado de extremo a extremo.</h2></div>
+          <div class="case-section-head reveal"><span class="case-section-kicker">06 / DELIVERY</span><h2 data-es="Infraestructura preparada, con validación real todavía pendiente." data-en="Infrastructure prepared, with real validation still pending.">Infraestructura preparada, con validación real todavía pendiente.</h2></div>
           <div class="case-status-board reveal">
-            <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="LIVE / VALIDADO" data-en="LIVE / VALIDATED">LIVE / VALIDADO</span></div><h3 data-es="Staging reproducible con IaC y entrega automatizada" data-en="Reproducible staging with IaC and automated delivery">Staging reproducible con IaC y entrega automatizada</h3><ul class="case-status-list"><li>Backend ASP.NET Core + cliente Angular/Ionic desplegados en Azure Container Apps</li><li>PostgreSQL Flexible Server privado + base administrada por Terraform</li><li>Blob Storage privado + Managed Identity para acceso de aplicación</li><li>ACR con imágenes Docker versionadas por commit SHA</li><li>GitHub Actions → Azure por OIDC sin secretos de larga duración</li><li>RBAC del deploy acotado al resource group de staging</li><li>Remote Terraform state en Azure Storage</li><li>Smoke check público del cliente y proxy hacia /api/health aprobado</li></ul></div>
+            <div class="case-status-column is-done"><div class="status-title"><i></i><span data-es="IMPLEMENTADO EN CÓDIGO" data-en="IMPLEMENTED IN CODE">IMPLEMENTADO EN CÓDIGO</span></div><h3 data-es="Ruta de staging preparada" data-en="Staging path prepared">Ruta de staging preparada</h3><ul class="case-status-list"><li>Dockerfiles de backend y cliente</li><li>Terraform para red, Container Apps, PostgreSQL, Blob y ACR</li><li>GitHub Actions → Azure por OIDC</li><li>RBAC acotado y estado remoto documentados</li><li>Smoke checks definidos para cliente y API</li></ul></div>
             <div class="case-status-column is-next"><div class="status-title"><i></i><span data-es="SIGUIENTE FASE" data-en="NEXT PHASE">SIGUIENTE FASE</span></div><h3 data-es="Hardening operativo" data-en="Operational hardening">Hardening operativo</h3><ul class="case-status-list"><li data-es="Agregar alertas y dashboards útiles sobre salud, errores y consumo." data-en="Add useful alerts and dashboards for health, errors and consumption.">Agregar alertas y dashboards útiles sobre salud, errores y consumo.</li><li data-es="Profundizar estrategia de rollback y promoción entre ambientes." data-en="Deepen rollback and environment-promotion strategy.">Profundizar estrategia de rollback y promoción entre ambientes.</li><li data-es="Mantener control explícito de costos y ciclo de vida del staging." data-en="Keep explicit cost and staging lifecycle controls.">Mantener control explícito de costos y ciclo de vida del staging.</li></ul></div>
           </div>
         </div>
