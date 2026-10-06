@@ -243,9 +243,8 @@
 /* Keep case-study content comfortably centered on wide screens. */
 .case-hero .container,
 .case-section .container,
-.case-next .container,
-.site-header .container {
-  width: min(100% - 96px, 1500px);
+.case-next .container {
+  width: min(calc(100% - 120px), 1360px);
   margin-inline: auto;
 }
 
@@ -945,9 +944,8 @@
 @media (max-width: 1000px) {
   .case-hero .container,
   .case-section .container,
-  .case-next .container,
-  .site-header .container {
-    width: min(100% - 48px, 1500px);
+  .case-next .container {
+    width: min(calc(100% - 48px), 1360px);
   }
 
   .case-hero-shell,
@@ -988,9 +986,8 @@
 @media (max-width: 760px) {
   .case-hero .container,
   .case-section .container,
-  .case-next .container,
-  .site-header .container {
-    width: min(100% - 28px, 1500px);
+  .case-next .container {
+    width: min(calc(100% - 28px), 1360px);
   }
 
   .case-hero {
