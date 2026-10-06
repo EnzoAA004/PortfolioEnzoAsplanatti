@@ -629,9 +629,9 @@
 
 .case-next-card {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 30px;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+  align-items: center;
   padding: clamp(30px,5vw,58px);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -656,17 +656,25 @@
 }
 
 .case-next-card a {
-  min-height: 48px;
+  min-height: 52px;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 0 16px;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 22px;
   border: 1px solid var(--accent);
   border-radius: 999px;
   color: #090a0c;
   background: var(--accent);
   font-family: var(--mono);
   font-size: .6rem;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.case-next-card a span {
+  color: inherit;
 }
 
 /* Saxo hero graphic */
