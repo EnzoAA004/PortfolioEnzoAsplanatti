@@ -240,6 +240,33 @@
   border-top: 1px solid var(--line);
 }
 
+/* Keep case-study content comfortably centered on wide screens. */
+.case-hero .container,
+.case-section .container,
+.case-next .container,
+.site-header .container {
+  width: min(100% - 96px, 1500px);
+  margin-inline: auto;
+}
+
+.case-hero-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(500px, 620px);
+  gap: clamp(56px, 6vw, 96px);
+  align-items: center;
+}
+
+.case-hero-shell > :first-child {
+  max-width: 760px;
+}
+
+.case-title,
+.case-lead,
+.case-meta,
+.case-hero-actions {
+  max-width: 760px;
+}
+
 .case-section-head {
   display: grid;
   grid-template-columns: .55fr 1.45fr;
@@ -916,9 +943,20 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
+  .case-hero .container,
+  .case-section .container,
+  .case-next .container,
+  .site-header .container {
+    width: min(100% - 48px, 1500px);
+  }
+
   .case-hero-shell,
   .case-architecture-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-hero-shell {
+    gap: 36px;
   }
 
   .case-hero {
@@ -948,6 +986,13 @@
 }
 
 @media (max-width: 760px) {
+  .case-hero .container,
+  .case-section .container,
+  .case-next .container,
+  .site-header .container {
+    width: min(100% - 28px, 1500px);
+  }
+
   .case-hero {
     padding-top: 120px;
   }
