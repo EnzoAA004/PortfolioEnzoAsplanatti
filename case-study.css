@@ -249,9 +249,11 @@
 }
 
 .case-hero-shell {
+  width: min(100%, 1240px);
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(500px, 620px);
-  gap: clamp(56px, 6vw, 96px);
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 560px);
+  gap: clamp(64px, 6vw, 88px);
   align-items: center;
 }
 
